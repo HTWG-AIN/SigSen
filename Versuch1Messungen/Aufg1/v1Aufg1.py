@@ -2,7 +2,7 @@
 """
 Created on Mon Oct 26 15:23:13 2015
 
-@author: edc07
+@author: Julian Altmeyer, Marcel Kieser
 """
 import numpy as np
 from TekTDS2000 import *
@@ -21,4 +21,3 @@ for i in range(len(dists)):
     res[i,2] = np.max(y) -np.min(y) # Delta V
 
 np.savetxt("v2data.csv", res, delimiter=",")
-#scope.plot(1, filename="v1Signal.png")
