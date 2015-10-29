@@ -15,7 +15,7 @@ data = np.genfromtxt('Messungsdaten.txt', delimiter=",")
 oszi = np.genfromtxt('MessungOszi.csv', delimiter=",")
 
 # Anzeige
-fig, ax = plt.subplots(figsize=(15,5))
+fig, ax = plt.subplots(figsize=(7,5))
 ax.plot(data[:,0] , data[:,1], color = "orange", label="Einschwingvorgang ignoriert")
 ax.plot(oszi[:,0] , oszi[:,1], color = "blue", label="Einschwingvorgang berücksichtigt")
 ax.set_xlabel("Distanz [cm]")
