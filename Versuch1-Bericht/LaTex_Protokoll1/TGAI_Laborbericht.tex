@@ -274,34 +274,73 @@ kontinuierlich darüber wegen Einschwingvorgang 1000 werte
 %
 % CHAPTER Versuch 2
 %
-\chapter{Versuch 2}
+\chapter{Versuch 2 - Modellierung der Kennlinie durch lineare Regression}
 \label{chap:VERSUCH_2}
 
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
-mit ergebnissen aus versuch1 wird gerechnet
+
+Die Ergebnisse aus Versuch 1 reichen noch nicht aus, um den Sensor als Abstandsmesser verwenden zu können. Deshalb ist eine Umrechnungsvorschrift zu finden, mit der man aus den gemessenen Spannungswerten die dazugehörigen Entfernungswerte berechnen kann.
+Diese Übertragungsfunktion kann mit Hilfe einer linearen Regression ermittelt werden.
+
+%[\ref{chap:VERSUCH_1}]
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
-1.Eingangs und Ausgangswerte logarithmiert
-  lineare Regression
-  Bild Zusammenhang
+Die in Versuch 1 ermittelte Kennlinie, sowie Ergebnisse der linearen Regression sind nachfolgend Graphisch dargestellt.
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.8]{src/Kennlinie2.png}
+\caption{Kennlinie vor und nach der Logarithmierung}
+\label{fig:KENNLINIE_LOG_ORIG}
+\end{figure}
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.8]{src/Kennlinie1.png}
+\caption{Ursprüngliche, gemessene Kennlinie und Kennlinie nach der Regression}
+\label{fig:KENNLINIE_FINAL}
+\end{figure}
+
+%1.Eingangs und Ausgangswerte logarithmiert
+%  lineare Regression
+%  Bild Zusammenhang
   
+\newpage
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
-Ermittlung der Kennlinie:
 
-2. logarithmierte Betrachtung y = a+x+b Bild Gerade
-	es müssen keine werte entfernt werden. Messwerte bilden eine Gerade. Keine  	    extremen Ausreiser auch nicht bei geringen Spannungen bzw. weiter Entfernung
-	y =eb..
-3. Steigung a = -1,6 Schnittpunkt mit Y-Achse b = 3
-  daraus ergibt sich eine Kennlinie wie folgt: y = ...
+%\begin{equation}\label{eq:MATH_FORM}
+%T[k]=C-A\cdot\cos\left[\frac{\pi \cdot H_{C}[k-1]}{S}\right]   \mbox{    für } k = %1,2,...,\left(2^{N}-1\right)
+%\end{equation}
+Da der Sharp-Sensor eine nichtlineare Kennlinie der Form
+\begin{equation}\label{eq:NICHT_LIN_KENN}
+y=x^a
+\end{equation}
+ besitzt, müssen die Eingangs- und Ausganswerte zunächst logarithmiert werden. Dadurch entsteht näherungsweise eine Gerade, bei der die lineare Regression verwendet werden kann (Abb.  \ref{fig:KENNLINIE_LOG_ORIG}).
+Aus der Regression erhalten wir die Parameter a = -1.6 und b = 3.0 und somit folgende Gerade:
+\begin{equation}\label{eq:NICHT_LIN_KENN}
+y= -1.6 \cdot x + 3
+\end{equation}
+Nun muss die vorherige Logarithmierung wieder rückgerechnet werden und wir erhalten die nichtlineare Kennlinie des Sensors wie folgt:
+\begin{equation}
+y= e^3 \cdot x^{-1.6}
+\end{equation}
+In der Abbildung \ref{fig:KENNLINIE_FINAL} ist die ursprüngliche Kennlinie vor der Regression, sowie die errechnete Kennlinie nach der Regression zu sehen.
+\paragraph{}
+
+%2. logarithmierte Betrachtung y = a+x+b Bild Gerade
+%	es müssen keine werte entfernt werden. Messwerte bilden eine Gerade. Keine  	    %extremen Ausreiser auch nicht bei geringen Spannungen bzw. weiter Entfernung
+%	y =eb..
+%3. Steigung a = -1,6 Schnittpunkt mit Y-Achse b = 3
+%  daraus ergibt sich eine Kennlinie wie folgt: y = ...
 
 \section{Interpretation}
 \label{chap:VERSUCH_2_INTERPRETATION}
-interpretation der kennlinie: 
-aus negativen wert des a ergibt sich abnehmender Zusammenhang der Potenzfunktion : Mit zunehmender Spannung nimmt die Distanz ab
+
+Die gefundene Kennlinie (Abbildung \ref{fig:KENNLINIE_FINAL}) ist in der Form einer abnehmenden Potenzfunktion. Niedrige Spannungswerte entsprechen einem großen Abstand bzw. hohe Spannungswerte einem geringen Abstand, d.h. die Distanz nimmt mit zunehmender Spannung ab. Verschiedene Spannungswerte können nun mit der Übertragungsfunktion in den dazugehörigen Abstand umgerechnet werden.
+%interpretation der kennlinie: 
+%aus negativen wert des a ergibt sich abnehmender Zusammenhang der Potenzfunktion : Mit %zunehmender Spannung nimmt die Distanz ab
 
 
 

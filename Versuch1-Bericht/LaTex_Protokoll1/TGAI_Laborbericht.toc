@@ -10,7 +10,7 @@
 \contentsline {section}{\numberline {2.2}Messwerte}{3}{section.2.2}
 \contentsline {section}{\numberline {2.3}Auswertung}{3}{section.2.3}
 \contentsline {section}{\numberline {2.4}Interpretation}{3}{section.2.4}
-\contentsline {chapter}{\numberline {3}Versuch 2}{4}{chapter.3}
+\contentsline {chapter}{\numberline {3}Versuch 2 - Modellierung der Kennlinie durch lineare Regression}{4}{chapter.3}
 \contentsline {section}{\numberline {3.1}Fragestellung, Messprinzip, Aufbau, Messmittel}{4}{section.3.1}
 \contentsline {section}{\numberline {3.2}Messwerte}{4}{section.3.2}
 \contentsline {section}{\numberline {3.3}Auswertung}{4}{section.3.3}

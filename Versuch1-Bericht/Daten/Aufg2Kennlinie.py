@@ -34,15 +34,20 @@ print(logy)
 
 # beide kurven abbilden
 # Rahmen bauen
-fig, ax = plt.subplots(figsize=(5,5))
+fig, ax = plt.subplots(figsize=(7,5))
 # daten ausgeben plot(x,y)
 #print(data[:,1])
-ax.plot(data[:,1] , data[:,0], color = "blue")
-ax.plot(logx, logy, color = "orange", linestyle = "-", linewidth = 2.3)
+ax.plot(data[:,1] , data[:,0], color = "blue", label = "original")
+ax.plot(logx, logy, color = "orange", linestyle = "-", linewidth = 2.3, label = "logarithmiert")
+ax.set_xlabel("Spannung [V]")
+ax.set_ylabel("Distanz [cm] ")
+ax.legend(loc='upper right')
 #nochmal log in gross
-fig, ax = plt.subplots(figsize=(10,5))
-ax.plot(logx, logy, color = "orange", linestyle = "-", linewidth = 2.3)
-
+fig, ax = plt.subplots(figsize=(5,5))
+ax.plot(logx, logy, color = "orange", linestyle = "-", linewidth = 2.3, label = "logarithmiert")
+ax.set_xlabel("Spannung [V]")
+ax.set_ylabel("Distanz [cm] ")
+ax.legend(loc='upper right')
 
 #
 # lineare reg
@@ -67,9 +72,11 @@ for x in range(len(xValues)):
 
 
 #Anzeige
-fig, ax = plt.subplots(figsize=(10,10))
+fig, ax = plt.subplots(figsize=(7,5))
 # daten ausgeben plot(x,y)
-ax.plot(data[:,1] , data[:,0], color = "orange")
-ax.plot(res[:,0] , res[:,1], color = "blue")
-
+ax.plot(data[:,1] , data[:,0], color = "orange", label = "Gemessene Kennlinie")
+ax.plot(res[:,0] , res[:,1], color = "blue", label = "Berechnete Kennlinie")
+ax.set_xlabel("Spannung [V]")
+ax.set_ylabel("Distanz [cm] ")
+ax.legend(loc='upper right');
 
