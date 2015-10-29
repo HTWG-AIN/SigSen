@@ -228,47 +228,107 @@
 %
 \chapter{Einleitung}
 \label{chap:EINL}
-
 \cite{Franz2015j}
+
+In diesem Versuch werden die in der Vorlesung behandelten Techniken zur Kalibrierung, Fehleranalyse und Fehlerrechnung auf den Fall eines Entfernungmessers angewandt. Der Entfernungsmesser basiert auf dem häufig in der Robotik eingesetzten Distanzsensor GP2Y0A21YK0F der Firma Sharp (s. Datenblatt in Moodle), der nach dem Triangulationsprinzip arbeitet.
+
 
 %
 % CHAPTER Versuch 1
 %
-\chapter{Versuch 1 - Kalibrierung und Einsatz eines
-Infrarot-Entfernungsmessers}
+\chapter{Versuch 1 - Ermittlung der Kennlinie des Abstandssensors}
 \label{chap:VERSUCH_1}
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_1_FRAGESTELLUNG}
 
-1.  Kalibrierung des Sensors
-2. Modellierung der Kennlinie durch lineare Regression
-3. Einsatz des sensors
+Wie sieht das Verhältnis von Distanz zu Spannung aus dargestellt durch eine Kennlinie? Im Folgenden soll diese Kennlinie mittels
+  Messung der Ausgangsspannung des Sensors für 20 verschiedene   Entfernungswerte im Bereich von 10 - 70 cm ermittelt werden. Gemessen werden Distanz, Mittelwert der Spannung und $\Delta$V des Rauschens. Es werden zwei Arten von Messungen durchgeführt eine ohne Berücksichtigung und eine mit Berücksichtigung des Einschwingvorgang des Sensors. 
 
-In diesem Versuch werden die in der Vorlesung behandelten Techniken zur Kalibrierung, Fehleranalyse und Fehlerrechnung auf den Fall eines Entfernungmessers angewandt. Der Entfernungsmesser basiert auf dem häufig in der Robotik eingesetzten Distanzsensor GP2Y0A21YK0F der Firma Sharp (s. Datenblatt in Moodle), der nach dem Triangulationsprinzip arbeitet.
+\paragraph{} Messprinzip: Mit Hilfe des Triangulationsprinzip wird die Distanz über den Sharp Sensor als Spannung in Volt ermittelt. Die Distanz wird mit einem Meterstab gemessen. 
+Das DeltaV wird durch die Differenz des Maximalen und Minimalen Spannungswerts ermittelt.
 
-\paragraph{} Messprinzip: Diese Sensoren besitzen eine Infrarot-LED mit einer Linse, die einen schmalen Lichtstrahl aussendet. Dieser wird von dem Objekt, zu dem die Distanz gemessen werden soll, reflektiert und dann durch die zweite Linse zu einem optischen Positionssensor (OPS, engl. position sensitive detector PSD, s. Zeichnung) gelenkt. Die Leitfähigkeit dieses OPS ist abhängig davon, an welcher Stelle der Lichtstrahl einfällt. Sie wird mit einem Signalprozessor in eine Spannung umgewandelt, die am Ausgang des Sensors ausgegeben wird.
+\paragraph{} Aufbau und Messmittel: Der Aufbau der Messeinrichtung ist auf Abbildung \ref{fig:VersuchsAufbauAufg1} zu erkennen. Als Normal wird ein Meterstab verwendet. Ein Brett zur Reflexion des Lichtstrahls des Distanzsensors sowie ein Oszilloskop und Netzgerät.
 
-\paragraph{} Aufbau und Messmittel: Meterstab(Normal), Brett, Oszi, Netzgerät, Distanzsensor, Din-A4 Blatt,
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/VersuchsAufbauAufg1.png}
+	\caption{Aufbau des  Versuchs zur Ermittlung der Kennlinie des Abstandssensors}
+	\label{fig:VersuchsAufbauAufg1}
+\end{figure}
+
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
 
-Beschreibung der ozi Messwerte, erste 1000 abgeschnitten, 2500 Messungen...
+In Tabelle \ref{tab:Aufg1Tabelle} sind die eigens abgelesenen Werte sowie die des Oszilloskops abgebildet. Letztere bestehen aus dem Mittelwert von 1500 Spannungswerten und ignorieren dabei den Einschwingvorgang des Sensors.
 
-Tabelle unserer Messwerte
-         unsere werte           oszi werte
-Distanz Mittelwert Delta   Mittelwert Delta
+\begin{table}[H]
+\begin{tabular}{|r||r|r|r|r|}
+\hline 
+ & \multicolumn{2}{r|}{abgelesene Werte} & \multicolumn{2}{r|}{Oszilloskop Werte}\\ 
+\hline 
+Distanz [cm] & Mittelwert [V] & Delta [mV] & Mittelwert [V] & Delta [mV]\\ 
+\hline 
+10,0 & 1,5 & 80 & 1,48 & 80 \\ 
+\hline 
+13,2 & 1,3 & 120 & 1,28 & 80 \\ 
+\hline 
+16,3 & 1,19 & 100 & 1,17 & 80 \\ 
+\hline
+19,4 & 1,05 & 32 & 1,03 & 32 \\
+\hline
+22,6 & 0,949 & 32 & 0,93 & 40 \\
+\hline
+25,8 & 0,881 & 32 & 0,86 & 24\\
+\hline
+28,9 & 0,82 & 32 & 0,80 &  32\\
+\hline
+32,1 & 0,778 & 32 & 0,76 &  32\\
+\hline
+35,3 & 0,714 & 24 & 0,70 & 32 \\
+\hline
+38,4 & 0,681 & 64 & 0,67 &  64\\
+\hline
+41,6 & 0,639 & 88 & 0,63 &  64\\
+\hline
+44,7  & 0,638 & 80 & 0,63 &  64\\
+\hline
+47,9  & 0,597 & 80 & 0,59 &  72\\  
+\hline
+51,1 & 0,581 & 40 & 0,57 &  64\\ 
+\hline
+54,2 & 0,562 & 56 & 0,55 &  56\\ 
+\hline
+57,4 & 0,539 & 40 & 0,53 &  56\\ 
+\hline
+60,5 & 0,503 & 56 & 0,50 &  24\\ 
+\hline
+63,7 & 0,486 & 40 & 0,48 &  24\\ 
+\hline
+66,8 & 0,469 & 40 & 0,46 &  32\\ 
+\hline
+70,0 & 0,453 & 40 & 0,44 &  24\\ 
+\hline
+\end{tabular} 
+\caption{Ergebnisse der abgelesenen Werte und Werte des Oszilloskops }
+\label{tab:Aufg1Tabelle}
+\end{table}
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
- Bild unsereMessung zu MessungOszi
+Im Diagramm (Abbildung \ref{fig:Diagramm1}) ist die Osziloskop Kennlinie durchgehend unterhalb der Linie der abgelesenen Daten.
 
-\includegraphics[width = 18.00cm]{src/Diagramm1.png}	
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/Diagramm1.png}
+	\caption{verlauf}
+	\label{fig:Diagramm1}
+\end{figure}	
 
 \section{Interpretation}
 \label{chap:VERSUCH_1_INTERPRETATION}
-kontinuierlich darüber wegen Einschwingvorgang 1000 werte
+Die Differenz zwischen Oszilloskop Werten und abgelesenen Werten lässt sich durch den nicht berücksichtigten Einschwingvorgang der ersten 1000 Daten erklären.
 
 
 %

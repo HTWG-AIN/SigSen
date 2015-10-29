@@ -17,7 +17,7 @@ oszi = np.genfromtxt('MessungOszi.csv', delimiter=",")
 # Anzeige
 fig, ax = plt.subplots(figsize=(7,5))
 ax.plot(data[:,0] , data[:,1], color = "orange", label="Einschwingvorgang ignoriert")
-ax.plot(oszi[:,0] , oszi[:,1], color = "blue", label="Einschwingvorgang berücksichtigt")
+ax.plot(oszi[:,0] , oszi[:,1], color = "blue", label="Oszilloskop Einschwingvorgang berücksichtigt")
 ax.set_xlabel("Distanz [cm]")
 ax.set_ylabel("Mittelwert der Spannung [V]")
 ax.legend(loc='upper right');
