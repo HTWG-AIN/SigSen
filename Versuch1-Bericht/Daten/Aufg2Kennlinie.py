@@ -56,7 +56,8 @@ ax.legend(loc='upper right')
 # a = steigung,b = schnittpunkt,korrelationskoeffizient,p-wert,Standart Fehler
 # linData = stats.linregress(data)
 a,b,r,p,R2 = stats.linregress(logx,logy)
-print(a,b)
+print("a = "+ str(a))
+print("b = "+ str(b))
 
 #fkt fuer berechnung der neuen y werte, welche die alten annähernd beschreiben sollten
 def umkehrFkt(x):

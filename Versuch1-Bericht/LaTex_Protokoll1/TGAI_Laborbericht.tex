@@ -246,7 +246,7 @@ Wie sieht das Verhältnis von Distanz zu Spannung aus dargestellt durch eine Ken
   Messung der Ausgangsspannung des Sensors für 20 verschiedene   Entfernungswerte im Bereich von 10 - 70 cm ermittelt werden. Gemessen werden Distanz, Mittelwert der Spannung und $\Delta$V des Rauschens. Es werden zwei Arten von Messungen durchgeführt eine ohne Berücksichtigung und eine mit Berücksichtigung des Einschwingvorgang des Sensors. 
 
 \paragraph{} Messprinzip: Mit Hilfe des Triangulationsprinzip wird die Distanz über den Sharp Sensor als Spannung in Volt ermittelt. Die Distanz wird mit einem Meterstab gemessen. 
-Das DeltaV wird durch die Differenz des Maximalen und Minimalen Spannungswerts ermittelt.
+Das $\Delta$V wird durch die Differenz des Maximalen und Minimalen Spannungswerts ermittelt.
 
 \paragraph{} Aufbau und Messmittel: Der Aufbau der Messeinrichtung ist auf Abbildung \ref{fig:VersuchsAufbauAufg1} zu erkennen. Als Normal wird ein Meterstab verwendet. Ein Brett zur Reflexion des Lichtstrahls des Distanzsensors sowie ein Oszilloskop und Netzgerät.
 
@@ -322,7 +322,7 @@ Im Diagramm (Abbildung \ref{fig:Diagramm1}) ist die Osziloskop Kennlinie durchge
 \begin{figure}[H]
 	\centering\small
 	\includegraphics[width=\textwidth]{src/Diagramm1.png}
-	\caption{verlauf}
+	\caption{Kennlinie der abgelesenen Werte und der Oszilloskop Werte}
 	\label{fig:Diagramm1}
 \end{figure}	
 
@@ -342,7 +342,7 @@ Die Differenz zwischen Oszilloskop Werten und abgelesenen Werten lässt sich dur
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
 
 Die Ergebnisse aus Versuch 1 reichen noch nicht aus, um den Sensor als Abstandsmesser verwenden zu können. Deshalb ist eine Umrechnungsvorschrift zu finden, mit der man aus den gemessenen Spannungswerten die dazugehörigen Entfernungswerte berechnen kann.
-Diese Übertragungsfunktion kann mit Hilfe einer linearen Regression ermittelt werden.
+Diese Übertragungsfunktion wird im folgenden mit Hilfe einer linearen Regression ermittelt.
 
 %[\ref{chap:VERSUCH_1}]
 
@@ -383,7 +383,7 @@ Aus der Regression erhalten wir die Parameter a = -1.6 und b = 3.0 und somit fol
 y= -1.6 \cdot x + 3
 \end{equation}
 Nun muss die vorherige Logarithmierung wieder rückgerechnet werden und wir erhalten die nichtlineare Kennlinie des Sensors wie folgt:
-\begin{equation}
+\begin{equation}\label{eq:_KENNLINIE}
 y= e^3 \cdot x^{-1.6}
 \end{equation}
 In der Abbildung \ref{fig:KENNLINIE_FINAL} ist die ursprüngliche Kennlinie vor der Regression, sowie die errechnete Kennlinie nach der Regression zu sehen.
@@ -408,41 +408,102 @@ Die gefundene Kennlinie (Abbildung \ref{fig:KENNLINIE_FINAL}) ist in der Form ei
 %
 % CHAPTER Versuch 3
 %
-\chapter{Versuch 3}
+\chapter{Versuch 3 - Flächenmessung mit Fehlerrechnung}
 \label{chap:VERSUCH_3}
-Ermittlung des Fehlers
+
+
+
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_3_FRAGESTELLUNG}
+Die in Versuch 2 ermittelte Kennlinie ermöglicht nun die Umwandlung von gemessenen Spannungen in Distanzen. Mit Hilfe der Messeinrichtung, bestehend aus Sharp-Sensor Oszilloskop und Kennlinie, ermitteln wir nachfolgend die Breite, Höhe und die Fläche eines Din-A4 Blattes. Dabei wird jeweils der Messfehler mittels des Gaußschen Fehlerfortpflanzungsgesetz berücksichtigt. Die dabei entstehenden Ergebnisse sind danach mit den realen Werten eines Din-A4 Blattes zu vergleichen. Mögliche Abweichungen sind auf eventuelle systematische Fehler in der Kennlinie zu überprüfen.
+
+Messprinzip, Messmittel und Aufbau zur Messung der Distanzen sind wie in Versuch1. (siehe Kapitel \ref{chap:VERSUCH_1_FRAGESTELLUNG}) Zusätzlich wird ein Din-A4 Blatt zur Bestimmung der Distanz verwendet.
 
 \section{Messwerte}
 \label{chap:VERSUCH_3_MESSWERTE}
-Messung des DinA4 Blattes in tabelle2
+Der Mittelwert der Spannung für Länge und Breite eines Din-A4 Blattes ist in der Tabelle \ref{tab:Aufg3Tabelle} abgebildet. Es sind zum einen abgelesene Werte abgebildet und zum anderen Oszilloskop Werte aus 1500 ermittelten Daten mit Berücksichtigung des Einschwingvorgangs. Nachfolgende Berechnungen beziehen sich auf die Oszilloskop Werte.
+
+\begin{table}[H]
+\begin{tabular}{|r||r|r|r|r|}
+\hline 
+  & abgelesene Werte & Oszilloskop Werte \\ 
+\hline 
+Distanz [cm] & Mittelwert [V] & Mittelwert [V] \\ 
+\hline 
+ 29,7 & 0,846 & 0,814\\ 
+\hline
+ 21 & 1,02 & 1,004 \\ 
+\hline 
+\end{tabular} 
+\caption{Mittelwert der Spannung jeweils für die Länge und Breite eines Din-A4 Blattes}
+\label{tab:Aufg3Tabelle}
+\end{table}
 
 \section{Auswertung}
 \label{chap:VERSUCH_3_AUSWERTUNG}
+\textbf{Breite und Länge}
+\paragraph{} Ermittlung des Messfehlers mit Hilfe der Standardabweichung für den Mittelwert $ s_{\bar{x}} $ :
+\begin{equation}\label{eq:Standardabw_Mittelwert}
+s_{\bar{x}} = \sqrt{\dfrac{1}{n(n-1)}\sum_{i=1}^n(\bar{x}-x_{i})^2}
+\end{equation}
+Für $ s_{\bar{x}} $ ergibt sich ein Wert von 0.00032. 
+Nachfolgend wird von einem Korrekturfaktor $ t = 1,0 $ bei 68\% Sicherheit und $ t = 1,96 $ bei 95\% Sicherheit ausgegangen.
+Mit den Mittelwerten aus Tabelle \ref{tab:Aufg3Tabelle} und $ s_{\bar{x}} $ ergibt sich folgende Spannungsmessung mit einem Vertrauensbereich für eine Sicherheit von 68\%:
+\begin{equation}\label{eq:Messergebnis68L}
+x_{68\%}^{L} = 0,814 \pm \Delta\bar{x}_{68\%}^{L} \enspace [V] \enspace mit \enspace \Delta\bar{x}_{68\%}^{L} = t \cdot s_{\bar{x}} = 0,00032
+\end{equation}
+\begin{equation}\label{eq:Messergebnis68B}
+x_{68\%}^{B} = 1,004 \pm \Delta\bar{x}_{68\%}^{B} \enspace [V] \enspace mit \enspace \Delta\bar{x}_{68\%}^{B} = t \cdot s_{\bar{x}} = 0,00032
+\end{equation}
+Für eine Sicherheit von 95\%:
+\begin{equation}\label{eq:Messergebnis95L}
+x_{95\%}^{L} = 0,814 \pm \Delta\bar{x}_{95\%}^{L} \enspace [V]  \enspace mit \enspace \Delta\bar{x}_{95\%}^{L} = t \cdot 2s_{\bar{x}} = 0,0013
+\end{equation}
+\begin{equation}\label{eq:Messergebnis95B}
+x_{95\%}^{B} = 1,004 \pm \Delta\bar{x}_{95\%}^{B} \enspace [V]  \enspace mit \enspace \Delta\bar{x}_{95\%}^{B} = t \cdot 2s_{\bar{x}} = 0,0013
+\end{equation}
+
+Mit der Kennlinie (Formel \ref{eq:_KENNLINIE} ) lässt sich mit Hilfe des Gaußschen Fehlerfortpflanzungsgesetzes folgende Formel ableiten:
+\begin{equation}\label{eq:GaussFehler}
+\Delta y = a \cdot e^{b} \cdot x^{a-1} \cdot \Delta x
+\end{equation}
+wobei durch einsetzen von $ \Delta\bar{x}_{68\%} $ und $ \Delta\bar{x}_{95\%} $ sich die $\Delta y$ Werte ergeben. Bei Anwendung der Kennlinie (Formel \ref{eq:_KENNLINIE} ) ergibt sich somit eine Länge von 27,97 $\pm$ 0,017 [cm](68\%) bzw. 27,97 $\pm$ 0,069 [cm] (95\%) und eine Breite von 19,98 $\pm$ 0,01 [cm] (68\%) bzw. 19,98 $\pm$ 0,039 [cm](95\%) .
+
+\paragraph{}\textbf{Fläche}
+\paragraph{}Zur Berechnung der Fläche wird mit Hilfe des Gaußschen Fehlerfortpflanzungsgesetzes folgende Formel abgeleitet:
+\begin{equation}\label{eq:GaussFehler2}
+\Delta y =\sqrt{\left(  a \cdot e^{2b} \cdot x_{2}^{a} \cdot x_{1}^{a-1} \cdot \Delta x_{1}\right)^2 + \left(  a \cdot e^{2b} \cdot x_{1}^{a} \cdot x_{2}^{a-1} \cdot \Delta x_{2}\right)^2}
+\end{equation}
+wobei $x_{1}$ dem Mittelwert der Spannung der Breite und  $x_{2}$ dem Mittelwert der Spannung der Länge entspricht. Somit ergibt sich unter Verwendung der berechneten $\Delta y$ (Formel \ref{eq:Messergebnis68L},
+\ref{eq:Messergebnis68B}, \ref{eq:Messergebnis95L}, \ref{eq:Messergebnis95B}) und Multiplikation von Länge und Breite die  Fläche von 558,89 $\pm$ 0,099 [$cm^{2}$](68\%) bzw. 558,89 $\pm$ 1,521 [$cm^{2}$] (95\%).
 
 \section{Interpretation}
 \label{chap:VERSUCH_3_INTERPRETATION}
-1cm Systematischer Fehler
+Vergleicht man die erhaltenen Werte der Länge, Breite und Fläche stellt man eine Abweichung von den realen Werten fest.(siehe Tabelle \ref{tab:Aufg3Tabelle2} Zeile 3)
+
+\begin{table}[H]
+\begin{tabular}{|r||r|r|r|r|}
+\hline 
+  & Länge [cm] &  Breite [cm] & Fläche[cm] \\ 
+\hline 
+ real & 29,7 & 21 & 623,7 \\ 
+\hline 
+ gemessen & 27,97 & 19,98 & 558,89 \\ 
+\hline
+$\Delta$ & 1,73 & 1,02 & 64,81 \\ 
+\hline 
+ angepasst & 29,37 & 21,38 & 627,98 \\ 
+\hline
+neues $\Delta$ & 0,33 & -0,38 & -4,28 \\ 
+\hline 
+\end{tabular} 
+\caption{Messdifferenzen von Länge, Breite, Fläche}
+\label{tab:Aufg3Tabelle2}
+\end{table}
+
+Zu erkennen ist eine systematische Unterschätzung der Distanz welche durch Anpassung der Kennlinie um einen konstanten Faktor k = 1,4 aufgehoben werden kann. (siehe Tabelle \ref{tab:Aufg3Tabelle2} Zeile 4,5) 
 
 
-%
-% CHAPTER Versuch 4
-%
-\chapter{Versuch 4}
-\label{chap:VERSUCH_4}
-
-\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
-\label{chap:VERSUCH_4_FRAGESTELLUNG}
-
-\section{Messwerte}
-\label{chap:VERSUCH_4_MESSWERTE}
-
-\section{Auswertung}
-\label{chap:VERSUCH_4_AUSWERTUNG}
-
-\section{Interpretation}
-\label{chap:VERSUCH_4_INTERPRETATION}
 %
 % CHAPTER Anhang
 %
