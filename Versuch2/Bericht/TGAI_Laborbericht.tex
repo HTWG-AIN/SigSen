@@ -151,13 +151,13 @@
 %-------------------
 \newcommand{\strLecture}{Signale, Systeme und Sensoren}
 \newcommand{\strDate}{\today}
-\newcommand{\strAuthorA}{A. Author}
-\newcommand{\strAuthorB}{B. Author}
-\newcommand{\strAuthorAEmail}{aauthor@htwg-konstanz.de}
-\newcommand{\strAuthorBEmail}{bauthor@htwg-konstanz.de}
+\newcommand{\strAuthorA}{M. Kieser}
+\newcommand{\strAuthorB}{J. Altmeyer}
+\newcommand{\strAuthorAEmail}{makieser@htwg-konstanz.de}
+\newcommand{\strAuthorBEmail}{jualtmey@htwg-konstanz.de}
 % Versuchsbeschreibung 
-\newcommand{\strTopic}{VERSUCH NAME}
-\newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
+\newcommand{\strTopic}{Kalibrierung von Digitalkameras}
+\newcommand{\strAbstract}{Dieser Versuch behandelt die Kalibrierung einer digitalen Kamera. }
 % hyperref customization
 \hypersetup{
 	pdftitle    ={\strTopic}, % title
@@ -363,12 +363,12 @@ Abbildung \ref{fig:WEISSBILD} zeigt das finale Weißbild kontrastmaximiert.
 \label{chap:VERSUCH_3_AUSWERTUNG}
 
 Um das thermische Rauschen zu eliminieren, wird der Mittelwert von den zehn aufgenommenen Weißbildern berechnet. Von diesem gemittelten Weißbild wird noch das Dunkelbild subtrahiert.
-Dadurch erhalten wir unser finales Weißbild. Abbildung \ref{fig:WEISSBILD} stellt dieses Weißbild kontrastmaximiert dar.
+Dadurch erhalten wir unser finales Weißbild. Abbildung \ref{fig:WEISSBILD} stellt dieses Weißbild kontrastmaximiert dar. Die Umsetzung in Python ist in Listing \ref{chap:APPENDIX_SOURCECODE_V1} in der Methode "versuch3()"  nachvollziehbar.
 
 \section{Interpretation}
 \label{chap:VERSUCH_3_INTERPRETATION}
 
-In Abbildung \ref{fig:WEISSBILD} ist sehr schön die Vignettierung zu sehen. Am rechten Bildrand und teilweise in der unteren linken Ecke sind abgedunkelte Stellen zu sehen.
+In Abbildung \ref{fig:WEISSBILD} ist sehr schön die Vignettierung zu sehen. Am rechten Bildrand und teilweise in der unteren linken Ecke sind abgedunkelte Stellen zu erkennen.
 %
 % CHAPTER Versuch 4
 %
@@ -382,10 +382,12 @@ Zudem wird das Bild des Grauwertkeils mittels Weiß- und Dunkelbild korrigiert.
 \label{chap:VERSUCH_4_FRAGESTELLUNG}
 
 Ergibt sich eine Verbesserung des Bildes durch unsere Kalibrierung? Hat unser Bildsensor fehlerhafte Pixel? Um dies zu beantworten, wird das Dunkelbild auf Hot Pixels bzw. Stuck Pixels und das Weißbild auf Dead Pixels untersucht.
-Des weiteren wird unser Grauwertkeil Bild aus Versuch 1 mit dem Programm [?] korrigiert.
+Des weiteren wird unser Grauwertkeil Bild aus Versuch 1 mit dem Programm \ref{chap:APPENDIX_SOURCECODE_V1} korrigiert.
 
 \section{Messwerte}
 \label{chap:VERSUCH_4_MESSWERTE}
+
+Folgend sind die Mittelwerte und Standardabweichungen der Unterbilder des Grauwertkeils nach der Korrektur, sowie ein Vergleich der beiden Grauwertkeil Bilder dargestellt.
 
 \begin{table}[H]
 \centering 
@@ -422,15 +424,15 @@ Unterbild 5 & 162.44 & 3.12 \\
 \section{Auswertung}
 \label{chap:VERSUCH_4_AUSWERTUNG}
 
-Mit Hilfe des Dunkel- und Weißbildes haben wir nun die Kennlinie für alle Pixel des Sensors gefunden. Unser Bild des Grauwertkeils kann dadurch korrigiert werden. Dazu wird von dem aufgenommenen Bild zuerst das Dunkelbild subtrahiert. Danach wird es durch das Weißbild dividiert und wir erhalten das korrigierte Grauwertkeil Bild (Abbildung). Siehe dazu auch Listing [?].
+Mit Hilfe des Dunkel- und Weißbildes haben wir nun die Kennlinie für alle Pixel des Sensors gefunden. Unser Bild des Grauwertkeils kann dadurch korrigiert werden. Dazu wird von dem aufgenommenen Bild zuerst das Dunkelbild subtrahiert. Danach wird es durch das Weißbild dividiert und wir erhalten das korrigierte Grauwertkeil Bild (Abbildung \ref{fig:GRAUWERT_KOR}). Siehe dazu auch Listing \ref{chap:APPENDIX_SOURCECODE_V1} die Funktion "versuch4()".
 
 \section{Interpretation}
 \label{chap:VERSUCH_4_INTERPRETATION}
 
-In dem Dunkelbild (Abbildung) und dem Weißbild (Abbildung \ref{fig:WEISSBILD}) sind keine fehlerhaften Pixel zu erkennen, weder ein Dead Pixel im Weißbild noch ein Stuck oder Hot Pixel im Dunkelbild.
+In dem Dunkelbild (Abbildung \ref{fig:DunkelBildMittel}) und dem Weißbild (Abbildung \ref{fig:WEISSBILD}) sind keine fehlerhaften Pixel zu erkennen, weder ein Dead Pixel im Weißbild noch ein Stuck oder Hot Pixel im Dunkelbild.
 
 \paragraph{}
-Das korrigierte Grauwertkeil Bild (Abbildung \ref{fig:GRAUWERT_KOR}) unterscheidet sich nur sehr gering von dem ursprünglichen Bild (Abbildung \ref{fig:GRAUWERT}). Bei genauem Hinsehen ist zu erkennen, dass das korrigierte Bild am rechten Bildrand etwas heller ist als das Original. Dies spiegelt sich auch beim Vergleich der beiden Tabellen \ref{tab:UNTERBILDER_KOR} und wieder. Der Mittelwert des Unterbildes 5, also die Graustufe ganz rechts im Bild, ist größer geworden, d.h. die Helligkeit ist gestiegen.
+Das korrigierte Grauwertkeil Bild (Abbildung \ref{fig:GRAUWERT_KOR}) unterscheidet sich nur sehr gering von dem ursprünglichen Bild (Abbildung \ref{fig:GRAUWERT}). Bei genauem Hinsehen ist zu erkennen, dass das korrigierte Bild am rechten Bildrand etwas heller ist als das Original. Dies spiegelt sich auch beim Vergleich der beiden Tabellen \ref{tab:UNTERBILDER_KOR} und \ref{tab:Unterbilder} wieder. Der Mittelwert des Unterbildes 5, also die Graustufe ganz rechts im Bild, ist größer geworden, d.h. die Helligkeit ist gestiegen.
 Dies war zu Erwarten, da wir in Versuch 3 in diesem Bereich eine deutliche Vignettierung festgestellt haben. Alle anderen Werte sind nahezu gleich geblieben.
 %
 % CHAPTER Anhang
@@ -448,7 +450,7 @@ Dies war zu Erwarten, da wir in Versuch 3 in diesem Bereich eine deutliche Vigne
 \section{Quellcode}
 \label{chap:APPENDIX_SOURCECODE}
 
-\subsection{Quellcode Versuch 1}
+\subsection{Quellcode für Versuche 1 - 4}
 \label{chap:APPENDIX_SOURCECODE_V1}
 \begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V4, captionpos=b, label=lst:CodeV2]
 # -*- coding: utf-8 -*-
@@ -585,18 +587,9 @@ if __name__ == "__main__":
 
     
 \end{lstlisting}
-\subsection{Quellcode Versuch 2}
-\label{chap:APPENDIX_SOURCECODE_V2}
 
-\subsection{Quellcode Versuch 3}
-\label{chap:APPENDIX_SOURCECODE_V3}
-
-\subsection{Quellcode Versuch 4}
-\label{chap:APPENDIX_SOURCECODE_V4}
-
-
-\section{Messergebnisse}
-\label{chap:APPENDIX_MEASUREMENT_SOURCE}
+%\section{Messergebnisse}
+%\label{chap:APPENDIX_MEASUREMENT_SOURCE}
 
 %
 % Literaturverzeichnis
