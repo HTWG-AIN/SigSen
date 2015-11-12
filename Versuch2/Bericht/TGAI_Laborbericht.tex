@@ -271,38 +271,105 @@
 %
 % CHAPTER Versuch 3
 %
-\chapter{Versuch 3}
+\chapter{Versuch 3 - Aufnahme eines Weißbildes}
 \label{chap:VERSUCH_3}
+
+In diesem Versuch wird ein Weißbild mit der Kamera aufgenommen, um die unterschiedlichen Sensitivitäten der einzelnen Pixel herausrechnen zu können.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_3_FRAGESTELLUNG}
 
+Mit dem Dunkelbild aus Versuch 2 lassen sich nun alle Nullpunkte von jedem Pixel des Sensors bestimmen. Die Kennlinie jedes Pixels ist dadurch aber noch nicht gefunden.
+Alle Pixel unterscheiden sich nämlich in ihrer Sensitivität aufgrund von Fertigungstoleranzen. Zudem wird die Helligkeit nicht gleichmäßig über die Optik der Kamera auf den Sensor übertragen (Vignettierung), wodurch abgedunkelte Bereiche auf dem Bild entstehen können. Um dies zu kompensieren, wird ein Weißbild benötigt. Mit einer Division durch das Weißbild können später die verschiedenen Sensitivitäten der Pixel herausgerechnet werden.
+\paragraph{}
+Versuchsaufbau ist der Selbe wie in den vorherigen Versuchen. Für die Aufnahme des Weißbildes wird ein leeres Blatt Papier verwendet.
+
 \section{Messwerte}
 \label{chap:VERSUCH_3_MESSWERTE}
+
+Es wurden zehn Weißbilder mit der Kamera aufgenommen. Diese sind hier jedoch nicht aufgeführt, da sie einzeln nicht von Bedeutung sind.
+Abbildung \ref{fig:WEISSBILD} zeigt das finale Weißbild kontrastmaximiert.
+ 
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.6]{src/WeissbildContrastMax.png}
+\caption{Kontrastmaximiertes Weißbild}
+\label{fig:WEISSBILD}
+\end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_3_AUSWERTUNG}
 
+Um das thermische Rauschen zu eliminieren, wird der Mittelwert von den zehn aufgenommenen Weißbildern berechnet. Von diesem gemittelten Weißbild wird noch das Dunkelbild subtrahiert.
+Dadurch erhalten wir unser finales Weißbild. Abbildung \ref{fig:WEISSBILD} stellt dieses Weißbild kontrastmaximiert dar.
+
 \section{Interpretation}
 \label{chap:VERSUCH_3_INTERPRETATION}
 
+In Abbildung \ref{fig:WEISSBILD} ist sehr schön die Vignettierung zu sehen. Am rechten Bildrand und teilweise in der unteren linken Ecke sind abgedunkelte Stellen zu sehen.
 %
 % CHAPTER Versuch 4
 %
-\chapter{Versuch 4}
+\chapter{Versuch 4 - Pixelfehler}
 \label{chap:VERSUCH_4}
+
+In diesem Versuch wird überprüft, ob der Bildsensor fehlerhafte Pixel besitzt.
+Zudem wird das Bild des Grauwertkeils mittels Weiß- und Dunkelbild korrigiert.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_4_FRAGESTELLUNG}
 
+Ergibt sich eine Verbesserung des Bildes durch unsere Kalibrierung? Hat unser Bildsensor fehlerhafte Pixel? Um dies zu beantworten, wird das Dunkelbild auf Hot Pixels bzw. Stuck Pixels und das Weißbild auf Dead Pixels untersucht.
+Des weiteren wird unser Grauwertkeil Bild aus Versuch 1 mit dem Programm [?] korrigiert.
+
 \section{Messwerte}
 \label{chap:VERSUCH_4_MESSWERTE}
+
+\begin{table}[H]
+\centering 
+\begin{tabular}{ccc}
+\hline
+\textbf{Stufe} &\textbf{ Mittelwert} & \textbf{Standardabweichung} \\
+\hline
+Unterbild 1 & 34.19 & 3.72 \\
+\hline
+Unterbild 2 & 62.09 & 1.75 \\
+\hline
+Unterbild 3 & 103.67 & 1.40 \\
+\hline
+Unterbild 4 & 141.97 & 1.95 \\
+\hline
+Unterbild 5 & 162.44 & 3.12 \\
+\hline
+\end{tabular} 
+\caption{Unterbilder des Grauwertkeils nach der Korrektur}
+\label{tab:UNTERBILDER_KOR}
+\end{table}
+
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.6]{src/Grauwertkeil.png}
+\caption{Ursprüngliches Grauwertkeil Bild}
+\label{fig:GRAUWERT}
+\centering\small
+\includegraphics[scale=0.6]{src/KorrigierterGrauwertkeil.png}
+\caption{Korrigiertes Grauwertkeil Bild}
+\label{fig:GRAUWERT_KOR}
+\end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_4_AUSWERTUNG}
 
+Mit Hilfe des Dunkel- und Weißbildes haben wir nun die Kennlinie für alle Pixel des Sensors gefunden. Unser Bild des Grauwertkeils kann dadurch korrigiert werden. Dazu wird von dem aufgenommenen Bild zuerst das Dunkelbild subtrahiert. Danach wird es durch das Weißbild dividiert und wir erhalten das korrigierte Grauwertkeil Bild (Abbildung). Siehe dazu auch Listing [?].
+
 \section{Interpretation}
 \label{chap:VERSUCH_4_INTERPRETATION}
+
+In dem Dunkelbild (Abbildung) und dem Weißbild (Abbildung \ref{fig:WEISSBILD}) sind keine fehlerhaften Pixel zu erkennen, weder ein Dead Pixel im Weißbild noch ein Stuck oder Hot Pixel im Dunkelbild.
+
+\paragraph{}
+Das korrigierte Grauwertkeil Bild (Abbildung \ref{fig:GRAUWERT_KOR}) unterscheidet sich nur sehr gering von dem ursprünglichen Bild (Abbildung \ref{fig:GRAUWERT}). Bei genauem Hinsehen ist zu erkennen, dass das korrigierte Bild am rechten Bildrand etwas heller ist als das Original. Dies spiegelt sich auch beim Vergleich der beiden Tabellen \ref{tab:UNTERBILDER_KOR} und wieder. Der Mittelwert des Unterbildes 5, also die Graustufe ganz rechts im Bild, ist größer geworden, d.h. die Helligkeit ist gestiegen.
+Dies war zu Erwarten, da wir in Versuch 3 in diesem Bereich eine deutliche Vignettierung festgestellt haben. Alle anderen Werte sind nahezu gleich geblieben.
 %
 % CHAPTER Anhang
 %
