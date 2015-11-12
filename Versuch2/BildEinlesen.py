@@ -7,9 +7,6 @@ Created on Mon Nov  9 15:07:39 2015
 
 import numpy as np
 import cv2
-#import pyopencv
-
-#image = pyopencv.imread("Grauwertkeil.png")
 
 def getSubImages(pic):
     image1 = pic[:,0:70]
@@ -25,7 +22,6 @@ def getMeanStd(img):
 
 
 def getTableLatex(table):
-    # len(table)
     strTab = ""
     for i in range(len(table)):
         strTab += "Unterbild " + str(i+1) + \
