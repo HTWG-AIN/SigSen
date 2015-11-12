@@ -228,45 +228,107 @@
 %
 \chapter{Einleitung}
 \label{chap:EINL}
+In diesem Versuch geht es um die Kalibrierung eines Kamerasensors einer Digitalkamera. Wie alle Sensoren sind auch Kamerasensoren einer gewissen Ungenauigkeit in ihrer Wiedergabe ausgesetzt. Dabei unterscheidet sich die Ungenauigkeit in einen systematischen und einen unsystematischen Fehler. Ersterer soll in der Kalibrierung mit Hilfe eines Dunkel- und Weißbildes eliminiert werden. Dabei ist das Dunkelbild für die Eliminierung des Dunkelstroms und das Weißbild für die Eliminierung der Vignettierung zuständig. Mithilfe dieser Beiden Momentaufnahmen lässt sich eine Kennlinie ermitteln, die uns eine korrigierte Bildwiedergabe ermöglicht. 
+In den nachfolgenden Kapiteln werden wir uns nach folgender Reihenfolge bis zu einem korrigierten Bild heranarbeiten:
 
-\cite{Franz2015j}
+\begin{enumerate}
+	\item Aufnahme und Analyse eines Graukeils
+	\item Aufnahme eines Dunkelbildes zur Eliminierung von Störungen 	durch Dunkelstrom
+	\item Aufnahme eines Weissbildes zur Eliminierung der Vignettierung
+	\item Pixelfehler ermitteln und ein korrigiertes Graukeil Bild erzeugen
+\end{enumerate}
+
 
 %
 % CHAPTER Versuch 1
 %
-\chapter{Versuch 1}
+\chapter{Versuch 1 - Aufnahme und Analyse eines Grauwertkeiles}
 \label{chap:VERSUCH_1}
+Im nachfolgenden Versuch wird mit Hilfe einer Webcam ein stufenförmiger Grauwertverlauf aufgenommen. Jede Grauwertstufe wird für sich erfasst und  dessen Grauwert ermittelt. Zur Korrektur von fehlerhaften Daten werden der Mittelwert und die Standardabweichung verwendet. 
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_1_FRAGESTELLUNG}
+Zu fragen ist nach dem jeweiligen gemittelten Grauwert einer Helligkeits-Stufe. Sensorrauschen der Kamera wird aber leichte Abweichungen von einem konstanten Wert bewirken.  Die Intensität dieses Abweichens werden wir in der jeweiligen Standardabweichung betrachten.\\
+Das \textit{Messprinzip und Aufbau•} bilden sich aus einer Grauwertkeil mit verschieden hellen Grauwerten, einer Kamera die in gleichbleibender Entfernung (31cm) den Grauwertkeil bei gleichbleibenden Lichtverhältnissen aufnimmt. Die Belichtungsparameter der Kamera sind dabei Helligkeit: 45, Kontrast: 21, Sättigung: 0, Verstärkung: 35, Belichtung -3, Weissabgleich: 0.\\
+\textit{Messmittel} ist der Sensor, welcher in der Kamera eingebaut ist und die unterschiedliche Helligkeit, die einfällt misst.
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
+Es wurde ein Bild gemacht. (Siehe Abbildung \ref{fig:GRAUWERTKEIL})
+Dieses Bild wurde in 5 Unterbilder unterteilt, zur Erfassung der Helligkeit pro Stufe. 
+
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/Grauwertkeil.png}
+	\caption{Aufgenommener Grauwertkeil}
+	\label{fig:GRAUWERTKEIL}
+\end{figure}
+
+
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
+In der Tabelle \ref{tab:Unterbilder} wird der Mittelwert und die Standardabweichung pro Unterbild abgebildet. In Listing \ref{lst:CodeV2} ist der zugehörige Code in der Methode 'versuch1()' zu finden.
+
+\begin{table}[H]
+\begin{tabular}{ccc}
+\hline
+\textbf{Stufe} &\textbf{ Mittelwert} & \textbf{Standardabweichung} \\
+\hline
+Unterbild 1 & 34.41 & 3.76 \\
+\hline
+Unterbild 2 & 62.49 & 1.77 \\
+\hline
+Unterbild 3 & 104.33 & 1.42 \\
+\hline
+Unterbild 4 & 142.01 & 2.66 \\
+\hline
+Unterbild 5 & 157.00 & 0.07 \\
+\hline
+\end{tabular} 
+\caption{Unterbilder mit Mittelwert und Standardabweichung}
+\label{tab:Unterbilder}
+\end{table}
 
 \section{Interpretation}
 \label{chap:VERSUCH_1_INTERPRETATION}
+Bezüglich des Mittelwertes aus Tabelle \ref{tab:Unterbilder} ist zu sagen, dass für Unterbild1 welches das dunkelste Bild ist der niedrigste Helligkeitswert angegeben ist. Für das Unterbild5 ist der höchste Wert zu erkennen. Bei einer möglichen Bandbreite von 0-255 Helligkeitsstufen ist die Aufnahme als kontrastarm zu interpretieren.
+Bezüglich der Standardabweichung ist besonders das dunkle Unterbild1 mit einem hohen Abweichungsfaktor von fast 4 Helligkeitspunkten zu erkennen.
+Diese höhere Abweichung könnte aufgrund von kratzen aber auch vom Sensorrauschen selbst sein. In der Abbildung \ref{fig:GRAUWERTKEIL} sind hellere Linien im Bild zu erkennen, die zu einer stärkeren Streuung des Helligkeitswertes beitragen.
 
 %
 % CHAPTER Versuch 2
 %
-\chapter{Versuch 2}
+\chapter{Versuch 2 - Aufnahme eines Dunkelbildes}
 \label{chap:VERSUCH_2}
-
+Nachfolgend wird ein Dunkelbild erzeugt, zur Eliminierung von Störgrößen in der Aufnahme, die z.B. durch Dunkelstrom verursacht werden.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
+Wie sieht ein passendes Dunkelbild zu dem Versuchsaufbau aus Versuch \ref{chap:VERSUCH_1} aus? Dabei wird thermisches Rauschen durch mehrere Messungen (10 Stück) und deren Mittlung eliminiert.\\
+Messprinzip und Messmittel sind gleich zu Versuch \ref{chap:VERSUCH_1}.
+Zu beachten ist bezüglich Aufbau, dass von den \textbf{gleichen} Belichtungsparametern und Entfernung der Kamera auszugehen ist.
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
+Es wurden 10 Dunkelbilder aufgenommen und mit dem Mittelwert zu dem Bild in Abbildung \ref{fig:DunkelBildMittel} zusammengefügt.
+
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/DunkelbildContrastMax.png}
+	\caption{gemitteltes und kontrastmaximiertes Dunkelbild}
+	\label{fig:DunkelBildMittel}
+\end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
+Es wird der Mittelwert aus 10 Dunkelbildern pro Bildpunkt ermittelt und so ein Bild von Mittelwerten erstellt.
+In Listing \ref{lst:CodeV2} ist der zugehörige Code in der Methode 'versuch2()' zu finden.
 
 \section{Interpretation}
 \label{chap:VERSUCH_2_INTERPRETATION}
+Aufgrund der Bauart der Webkamera, dass besonders geringe Helligkeitswerte automatisch auf Null gesetzt werden, konnte die Ermittlung des Dunkelbildes nicht erfasst werden. Somit kommt es zu keiner Korrektur des Graukeils in den folgenden Versuchen durch das Dunkelbild. Es wird aber dennoch, aus theoretischen Sicht, mit dem Dunkelbild weitergearbeitet.\\
+Desweiteren sind auch keine hot- oder stuckpixels aus den Werten zu erkennen.
 
 %
 % CHAPTER Versuch 3
@@ -388,7 +450,141 @@ Dies war zu Erwarten, da wir in Versuch 3 in diesem Bereich eine deutliche Vigne
 
 \subsection{Quellcode Versuch 1}
 \label{chap:APPENDIX_SOURCECODE_V1}
+\begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V4, captionpos=b, label=lst:CodeV2]
+# -*- coding: utf-8 -*-
+"""
+Created on Mon Nov  9 15:07:39 2015
+@author: Julian Altmeyer, Marcel Kieser
+"""
 
+import numpy as np
+import cv2
+
+def getSubImages(pic):
+    image1 = pic[:,0:70]
+    image2 = pic[:,90:230]
+    image3 = pic[:,250:390]
+    image4 = pic[:,410:550]
+    image5 = pic[:,570:640]
+    return image1, image2, image3, image4, image5
+
+
+def getMeanStd(img):
+    return np.mean(img), np.std(img)
+
+
+def getTableLatex(table):
+    strTab = ""
+    for i in range(len(table)):
+        strTab += "Unterbild " + str(i+1) + \
+                  " & {0:.2f} & {1:.2f} \\\\\n\\hline\n".format(table[i][0],  table[i][1])
+
+    print(strTab)
+
+def maxContrast(img):
+    maxValue = np.max(img)
+    minValue = np.min(img)
+    newImage = np.copy(img)
+    
+    for y in range(newImage.shape[0]):
+        for x in range(newImage.shape[1]):
+            if (maxValue - minValue) != 0:
+                newImage[y][x] = (img[y][x] - minValue) * (255.0 / (maxValue - minValue))
+            else:
+                newImage[y][x] = 0
+    return newImage
+
+
+def versuch1():
+    grayImg = cv2.imread("Grauwertkeil.png")    
+    grayImg = cv2.cvtColor(grayImg, cv2.COLOR_BGR2GRAY)
+    sliceAndTableImg(grayImg)
+
+def sliceAndTableImg(image):    
+    img1, img2, img3, img4, img5 = getSubImages(image)
+    
+    table = []
+    table.append(getMeanStd(img1))
+    table.append(getMeanStd(img2))
+    table.append(getMeanStd(img3))
+    table.append(getMeanStd(img4))
+    table.append(getMeanStd(img5))
+    
+    getTableLatex(table)
+
+
+def versuch2():
+    dunkelbild = maxContrast(getDunkelbild())
+    cv2.imwrite("DunkelbildContrastMax.png", dunkelbild)
+
+def versuch3():
+    weissbild = maxContrast(removeOffset(getWeissbild()))
+    cv2.imwrite("WeissbildContrastMax.png", weissbild)
+        
+
+def versuch4():
+    grayImg = cv2.imread("Grauwertkeil.png")
+    grayImg = cv2.cvtColor(grayImg, cv2.COLOR_BGR2GRAY)
+    dunkelbild = getDunkelbild()
+    weissbild = getWeissbild()
+    correctImg = correctImage(grayImg, weissbild, dunkelbild)
+    cv2.imwrite("KorrigierterGrauwertkeil.png", correctImg)
+    sliceAndTableImg(correctImg)
+
+def correctImage(img, weisb, dunkelb):
+    a = img - dunkelb
+    a = a / normiereWeissbild(weisb)
+    return a    
+    
+def normiereWeissbild(weissbild):
+    w = np.double(weissbild)
+    w = np.divide(w, np.mean(w))
+    return w
+
+def getWeissbild():
+    weissbilder = []
+    #erzeuge meanImage    
+    for i in range(10):
+        weissbilder.append(cv2.imread("Weissbilder/Weissbild" + str(i) + ".png"))
+    
+    meanImage = np.zeros((480, 640), dtype=int)
+
+    for weissbild in weissbilder:
+        wbild = cv2.cvtColor(weissbild, cv2.COLOR_BGR2GRAY)
+        meanImage += wbild
+        
+    meanImage = meanImage / len(weissbilder)
+    return meanImage
+
+def getDunkelbild():
+    dunkelbilder = []
+    #erzeuge meanImage    
+    for i in range(10):
+        dunkelbilder.append(cv2.imread("Dunkelbilder/Dunkelbild" + str(i) + ".png"))
+
+    meanImage = np.zeros((480, 640), dtype=int)
+
+    for dunkelbild in dunkelbilder:
+        dbild = cv2.cvtColor(dunkelbild, cv2.COLOR_BGR2GRAY)
+        meanImage += dbild     
+    
+    meanImage = meanImage / len(dunkelbilder)
+    return meanImage
+    
+def removeOffset(eingabebild):
+    return eingabebild - getDunkelbild()
+
+def main():
+    versuch1()
+    versuch2()
+    versuch3()
+    versuch4() 
+
+if __name__ == "__main__":
+    main()
+
+    
+\end{lstlisting}
 \subsection{Quellcode Versuch 2}
 \label{chap:APPENDIX_SOURCECODE_V2}
 
