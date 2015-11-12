@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  30 OCT 2015 19:26
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  12 NOV 2015 16:01
 entering extended mode
 **TGAI_Laborbericht.tex
 (TGAI_Laborbericht.tex
@@ -1832,13 +1832,7 @@ Package hyperref Info: Option `pdfmenubar' set `true' on input line 180.
 Package hyperref Info: Option `pdffitwindow' set `false' on input line 180.
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 180.
 
-(TGAI_Laborbericht.aux (preface/cover.aux) (preface/abstract.aux)
-(preface/tableofcontents.aux) (preface/listoffigures.aux)
-(preface/listoftables.aux) (preface/lstlistoflistings.aux)
-
-LaTeX Warning: Label `eq:NICHT_LIN_KENN' multiply defined.
-
-(appendix/bibliography.aux))
+(TGAI_Laborbericht.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 188.
 LaTeX Font Info:    ... okay on input line 188.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 188.
@@ -1856,16 +1850,14 @@ LaTeX Font Info:    ... okay on input line 188.
 LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 188.
 LaTeX Font Info:    Try loading font information for TS1+cmr on input line 188.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    ... okay on input line 188.
 LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 188.
 LaTeX Font Info:    Try loading font information for LGR+cmr on input line 188.
 
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
+ ("C:\Program Files\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
 LaTeX Font Info:    ... okay on input line 188.
@@ -2023,38 +2015,46 @@ l.194 \include{preface/abstract}
 
 
 ] (preface/tableofcontents.tex
-(TGAI_Laborbericht.toc
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
- [2
 
+Package hyperref Warning: old toc file detected, not used; run LaTeX again.
 
-
-
-])
 \tf@toc=\write6
- [3]) (preface/listoffigures.tex
-(TGAI_Laborbericht.lof)
+[2
+
+
+
+
+]) (preface/listoffigures.tex
+
+Package hyperref Warning: old lof file detected, not used; run LaTeX again.
+
 \tf@lof=\write7
- [4
+[3
 
 
 
-]) (preface/listoftables.tex (TGAI_Laborbericht.lot)
+]) (preface/listoftables.tex
+
+Package hyperref Warning: old lot file detected, not used; run LaTeX again.
+
 \tf@lot=\write8
-
-[5
-
+[4
 
 
-]) (preface/lstlistoflistings.tex (TGAI_Laborbericht.lol)
+
+]) (preface/lstlistoflistings.tex
+
+Package hyperref Warning: old lol file detected, not used; run LaTeX again.
+
 \tf@lol=\write9
- [6
+[5
 
 
 
 ])
  1.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 231.
 
 Package natbib Warning: Citation `Franz2015j' on page 1 undefined on input line
  231.
@@ -2064,7 +2064,11 @@ Package natbib Warning: Citation `Franz2015j' on page 1 undefined on input line
 
 ]
  2.
-<src/VersuchsAufbauAufg1.png, id=206, 651.18282pt x 334.24875pt>
+
+LaTeX Warning: Reference `fig:VersuchsAufbauAufg1' on page 2 undefined on input
+ line 251.
+
+<src/VersuchsAufbauAufg1.png, id=161, 651.18282pt x 334.24875pt>
 File: src/VersuchsAufbauAufg1.png Graphic file (type png)
 
 <use src/VersuchsAufbauAufg1.png>
@@ -2072,8 +2076,17 @@ Package pdftex.def Info: src/VersuchsAufbauAufg1.png used on input line 255.
 (pdftex.def)             Requested size: 441.01773pt x 226.3783pt.
  [2
 
-] [3 <./src/VersuchsAufbauAufg1.png>]
-<src/Diagramm1.png, id=220, 445.665pt x 328.22626pt>
+]
+
+LaTeX Warning: Reference `tab:Aufg1Tabelle' on page 3 undefined on input line 2
+64.
+
+[3 <./src/VersuchsAufbauAufg1.png>]
+
+LaTeX Warning: Reference `fig:Diagramm1' on page 4 undefined on input line 320.
+
+
+<src/Diagramm1.png, id=174, 445.665pt x 328.22626pt>
 File: src/Diagramm1.png Graphic file (type png)
  <use src/Diagramm1.png>
 Package pdftex.def Info: src/Diagramm1.png used on input line 324.
@@ -2081,14 +2094,14 @@ Package pdftex.def Info: src/Diagramm1.png used on input line 324.
 
 [4] [5 <./src/Diagramm1.png>]
  3.
-<src/Kennlinie2.png, id=231, 443.6575pt x 328.22626pt>
+<src/Kennlinie2.png, id=187, 443.6575pt x 328.22626pt>
 File: src/Kennlinie2.png Graphic file (type png)
 
 <use src/Kennlinie2.png>
 Package pdftex.def Info: src/Kennlinie2.png used on input line 354.
 (pdftex.def)             Requested size: 354.92647pt x 262.58136pt.
 
-<src/Kennlinie1.png, id=232, 443.6575pt x 328.22626pt>
+<src/Kennlinie1.png, id=188, 443.6575pt x 328.22626pt>
 File: src/Kennlinie1.png Graphic file (type png)
 
 <use src/Kennlinie1.png>
@@ -2097,17 +2110,78 @@ Package pdftex.def Info: src/Kennlinie1.png used on input line 360.
  [6
 
 ] [7 <./src/Kennlinie2.png> <./src/Kennlinie1.png>]
+
+LaTeX Warning: Reference `fig:KENNLINIE_LOG_ORIG' on page 8 undefined on input 
+line 380.
+
+
+LaTeX Warning: Reference `fig:KENNLINIE_FINAL' on page 8 undefined on input lin
+e 389.
+
+
+LaTeX Warning: Reference `fig:KENNLINIE_FINAL' on page 8 undefined on input lin
+e 401.
+
 [8]
  4.
+
+LaTeX Warning: Reference `chap:VERSUCH_1_FRAGESTELLUNG' on page 9 undefined on 
+input line 420.
+
+
+LaTeX Warning: Reference `tab:Aufg3Tabelle' on page 9 undefined on input line 4
+24.
+
 [9
 
-] [10] [11] [12
+]
+
+LaTeX Warning: Reference `tab:Aufg3Tabelle' on page 10 undefined on input line 
+451.
+
+
+LaTeX Warning: Reference `eq:_KENNLINIE' on page 10 undefined on input line 466
+.
+
+
+LaTeX Warning: Reference `eq:_KENNLINIE' on page 10 undefined on input line 470
+.
+
+[10]
+
+LaTeX Warning: Reference `eq:Messergebnis68L' on page 11 undefined on input lin
+e 477.
+
+
+LaTeX Warning: Reference `eq:Messergebnis68B' on page 11 undefined on input lin
+e 478.
+
+
+LaTeX Warning: Reference `eq:Messergebnis95L' on page 11 undefined on input lin
+e 478.
+
+
+LaTeX Warning: Reference `eq:Messergebnis95B' on page 11 undefined on input lin
+e 478.
+
+
+LaTeX Warning: Reference `tab:Aufg3Tabelle2' on page 11 undefined on input line
+ 482.
+
+
+LaTeX Warning: Reference `tab:Aufg3Tabelle2' on page 11 undefined on input line
+ 504.
+
+[11] [12
 
 ] (appendix/bibliography.tex
 No file TGAI_Laborbericht.bbl.
 )
 
 Package natbib Warning: There were undefined citations.
+
+
+Package lastpage Warning: Rerun to get the references right on input line 544.
 
 
 AED: lastpage setting LastPage
@@ -2123,18 +2197,21 @@ Package rerunfilecheck Info: File `TGAI_Laborbericht.out' has not changed.
 (rerunfilecheck)             Checksum: 3BFCE5A168F2A958788823B25E5C21CE;4380.
 
 
-LaTeX Warning: There were multiply-defined labels.
+LaTeX Warning: There were undefined references.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 544.
  ) 
 Here is how much of TeX's memory you used:
- 37714 strings out of 493673
- 779196 string characters out of 3143956
+ 37684 strings out of 493673
+ 778527 string characters out of 3143956
  942566 words of memory out of 3000000
- 40231 multiletter control sequences out of 15000+200000
+ 40224 multiletter control sequences out of 15000+200000
  46035 words of font info for 81 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,12n,79p,714b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,11n,79p,714b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Progr
 am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fo
@@ -2146,9 +2223,9 @@ Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKT
 eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type
 1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri
 8a.pfb>
-Output written on TGAI_Laborbericht.pdf (19 pages, 841142 bytes).
+Output written on TGAI_Laborbericht.pdf (18 pages, 829709 bytes).
 PDF statistics:
- 350 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
+ 295 PDF objects out of 1000 (max. 8388607)
+ 71 named destinations out of 1000 (max. 500000)
  246 words of extra memory for PDF output out of 10000 (max. 10000000)
 
