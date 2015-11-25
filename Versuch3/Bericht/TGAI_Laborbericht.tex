@@ -1,0 +1,385 @@
+%---------------
+%╔═╗╔═╗╔╦╗╦ ╦╔═╗
+%╚═╗║╣  ║ ║ ║╠═╝
+%╚═╝╚═╝ ╩ ╚═╝╩  
+%---------------
+\documentclass[12pt,oneside,a4paper]{report}
+
+% DOCUMENT SETUP
+\usepackage[left=3cm, 
+			right=2.5cm, 
+			top=2.5cm, 
+			bottom=2.5cm, 
+			includehead, 
+			includefoot]{geometry}
+
+% line spacing
+\usepackage{setspace}
+\setstretch{1,25} % 15/12 --> 1.25
+
+%de­fines Adobe Times Ro­man as de­fault text font
+\usepackage{mathptmx}
+\usepackage{times} % needed for acronym package
+
+%PDF linking package
+\usepackage[hidelinks]{hyperref}
+
+% Language Setup
+\usepackage[ngerman]{babel}
+% language specific bibliography style
+\usepackage[numbers]{natbib}
+\usepackage[fixlanguage]{babelbib}
+\selectbiblanguage{german}
+% bliographystyle setup
+% default style names: apalike alphadin ieeetr IEEEtranSN apalike2 alphadin 
+% babel specific: babplain, babplai3, babalpha, babunsrt, bababbrv, bababbr3 unsrt 
+\bibliographystyle{unsrturl}
+
+% encoding setup
+% T1 font encoding for languages that use a latin alphabet
+\usepackage[T1]{fontenc} 
+
+% enhanced input encoding handling - utf8 for äÄüÜöÖß...
+\usepackage[utf8]{inputenc}
+%\usepackage{ucs}%utf8x suppart
+
+% after babel - set chapter string
+\AtBeginDocument{\renewcommand{\chaptername}{}}
+
+% enumeration
+\usepackage{enumitem}
+% tabular extension tabularx
+\usepackage{tabularx}
+
+% math packages
+\usepackage{amsmath}
+\usepackage{nicefrac}
+\usepackage{amsthm}
+\usepackage{amsbsy}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{MnSymbol}
+
+% patches for latex
+\usepackage{fixltx2e}
+
+%special characters
+\usepackage{amssymb}
+\usepackage{upgreek,textgreek}
+
+% acronym package
+\usepackage[printonlyused, footnote]{acronym}
+
+% breakable text in \seqsplit{}
+\usepackage{seqsplit}
+
+% \textmu
+\usepackage{textcomp}
+
+% package provides a way to compile sections of a document using the same preamble as the main document
+\usepackage{subfiles}
+
+% driver-independent color extension - used by listings,tabularx
+\usepackage[usenames,dvipsnames,table,xcdraw]{xcolor}
+
+% -- SYNTAX HIGHLIGHTING --
+\usepackage{listings}
+%\input{cfgs/listings/listings_def_lang_bash-cmd.tex} % adds style BASH_CMD
+%\input{cfgs/listings/listings_def_lang_bash-script.tex} % adds style BASH_SCRIPT
+\input{cfgs/listings/listings_def_lang_latex.tex} % adds style LATEX
+%\input{cfgs/listings/listings_def_lang_matlab.tex} % adds style MATLAB
+\input{cfgs/listings/listings_def_lang_python.tex} % adds style PYTHON
+%\input{cfgs/listings/listings_def_lang_c++.tex} % adds style CPP
+%\input{cfgs/listings/listings_def_lang_c.tex} % adds style C
+%\input{cfgs/listings/listings_def_lang_json.tex} % adds style JSON
+
+% HEADLINE CFG
+\usepackage{fancyhdr} % Headers and footers
+\usepackage{lastpage}
+\usepackage{nopageno}
+\setlength{\headheight}{1.5cm}
+\pagestyle{fancy} % All pages have headers and footers
+\fancyhead{} % Blank out the default header
+\fancyfoot{} % Blank out the default footer
+\fancyhead[L]{}
+\fancyhead[C]{}
+\fancyhead[R]{}
+\fancyfoot[L]{}
+\fancyfoot[C]{\thepage}
+\fancyfoot[R]{}
+% override plain page style for \part, \chapter or 
+% \maketitle, which implicit specifies plain page style
+\input{cfgs/fancyhdr/fancyhdr_pagestyle_plain.tex}
+% set list pagestyle
+\input{cfgs/fancyhdr/fancyhdr_pagestyle_lists.tex}
+
+\renewcommand{\chaptermark}[1]{\markright{#1}{}}
+\renewcommand{\sectionmark}[1]{\markright{#1}{}}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+	
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+% floating prevention packages
+\usepackage{float}    % used with [H] positioning parameter
+\usepackage{placeins} % \FloatBarrier 
+
+% tikz packages
+\usepackage{tikz}
+\usepackage{caption}
+\usepackage[list=true,listformat=simple]{subcaption}
+\usepackage{standalone}
+\usepackage{pgfplots}
+
+
+% include only specified tex files - uncommend unneeded
+\includeonly{preface/cover,
+             preface/abstract,
+             preface/tableofcontents,
+             preface/listoffigures,
+             preface/listoftables,
+             preface/lstlistoflistings,
+             appendix/bibliography}
+
+%-------------------
+%╔═╗╔╦╗╦═╗╦╔╗╔╔═╗╔═╗
+%╚═╗ ║ ╠╦╝║║║║║ ╦╚═╗
+%╚═╝ ╩ ╩╚═╩╝╚╝╚═╝╚═╝
+%-------------------
+\newcommand{\strLecture}{Signale, Systeme und Sensoren}
+\newcommand{\strDate}{\today}
+\newcommand{\strAuthorA}{A. Author}
+\newcommand{\strAuthorB}{B. Author}
+\newcommand{\strAuthorAEmail}{aauthor@htwg-konstanz.de}
+\newcommand{\strAuthorBEmail}{bauthor@htwg-konstanz.de}
+% Versuchsbeschreibung 
+\newcommand{\strTopic}{VERSUCH NAME}
+\newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
+% hyperref customization
+\hypersetup{
+	pdftitle    ={\strTopic}, % title
+	pdfsubject	={\strLecture}, % subject of the document
+	pdfauthor	={\strAuthorA, \strAuthorB}, % author
+	pdfkeywords	={}, % list of keywords
+	pdfcreator	={}, % creator of the document
+	pdfproducer	={}, % producer of the document
+	colorlinks=false, % false: boxed links; true: colored links
+	linkcolor=red, % color of internal links (change box color with linkbordercolor)
+    citecolor=green, % color of links to bibliography
+    filecolor=magenta, % color of file links
+    urlcolor=cyan, % color of external links
+	%bookmarks=true, % show bookmarks bar?
+	unicode=true, % non-Latin characters in Acrobat’s bookmarks
+	pdftoolbar=true, % show Acrobat’s toolbar?
+	pdfmenubar=true, % show Acrobat’s menu?
+    pdffitwindow=false, % window fit to page when opened
+	pdfnewwindow=true % links in new PDF window
+}
+
+%-----------------------------------------
+% ╔╗ ╔═╗╔═╗╦╔╗╔  ╔╦╗╔═╗╔═╗╦ ╦╔╦╗╔═╗╔╗╔╔╦╗ 
+% ╠╩╗║╣ ║ ╦║║║║   ║║║ ║║  ║ ║║║║║╣ ║║║ ║  
+% ╚═╝╚═╝╚═╝╩╝╚╝  ═╩╝╚═╝╚═╝╚═╝╩ ╩╚═╝╝╚╝ ╩  
+%-----------------------------------------
+
+\begin{document}
+\pagenumbering{Roman} 
+
+%\setcounter{section}{0}
+\include{preface/cover}
+
+\include{preface/abstract}
+\clearpage
+
+%
+% TABLE OF CONTENTS
+%
+\include{preface/tableofcontents}
+
+%
+% Abbildungsverzeichnis
+%
+\include{preface/listoffigures}
+
+%
+% Tabellenverzeichnis
+%
+\include{preface/listoftables}
+
+%
+% Listingverzeichnis
+%
+\include{preface/lstlistoflistings}
+
+
+%--------------------------
+% ╔═╗╦ ╦╔═╗╔═╗╔╦╗╔═╗╦═╗╔═╗ 
+% ║  ╠═╣╠═╣╠═╝ ║ ║╣ ╠╦╝╚═╗ 
+% ╚═╝╩ ╩╩ ╩╩   ╩ ╚═╝╩╚═╚═╝ 
+%--------------------------
+
+\pagenumbering{arabic} 
+\setcounter{page}{1}
+%
+% CHAPTER Einleitung
+%
+\chapter{Einleitung}
+\label{chap:EINL}
+
+\cite{Franz2015j}
+
+%
+% CHAPTER Versuch 1
+%
+\chapter{Versuch 1 - Bestimmung der Tonhöhe eines akustischen Signals}
+\label{chap:VERSUCH_1}
+Im nachfolgenden Versuch soll die Tonhöhe eines Akkustischen Signals gemessen werden. Dabei werden zwei verschiedene Verfahren zur Ermittlung der Tonhöhe bzw. Grundfrequenz durchgeführt. Zum einen durch direktes auslesen der Daten und zum anderen durch das Amplitudenspektrum mithilfe der Fouriertransformation.
+
+\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
+\label{chap:VERSUCH_1_FRAGESTELLUNG}
+Was ist die Tonhöhe bzw. Grundfrequenz eines akustischen Signals verursacht durch eine Mundharmonika?
+Messprinzip ist aufgebaut aus einem Audiosensor in Form eines Mikrophons [Messmittel], welches an ein Oszilloskop angeschlossen ist, dass die eingehenden Informationen als Spannungswerte pro Zeit darstellt.
+Der Aufbau des Versuchs besteht aus einer Mundharmonika, die einen Ton in das Mikrophon abgibt und dieser vom Oszilloskop aufgezeichnet wird.
+
+\section{Messwerte}
+\label{chap:VERSUCH_1_MESSWERTE}
+
+Das aperiodische Signal von einem Mundharmonika Ton, der 25 ms aufgezeichnet wurde ist in Abbildung \ref{fig:SignalKomplet} zu sehen.
+
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/V1_Signal_komplet.png}
+	\caption{Mundharmonika Signal von 25 ms Dauer}
+	\label{fig:SignalKomplet}
+\end{figure}
+
+Zur Verdeutlichung des Signals ein vergrößerter Ausschnitt des Anfangs in Abbildung \ref{fig:SignalAusschnitt} .
+
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/V1_Signal_grundfrequenz.png}
+	\caption{Mundharmonika Signal Ausschnitt}
+	\label{fig:SignalAusschnitt}
+\end{figure}
+
+\section{Auswertung}
+\label{chap:VERSUCH_1_AUSWERTUNG}
+Nachfolgend wird die Auswertung in zwei mögliche Ermittlungsverfahren unterteilt. \\
+
+\textbf{1. ermitteln der Grundfrequenz und anderer Eckdaten durch direktes ablesen aus den Daten}\\
+Die nachfolgenden Werte ergeben sich durch auslesen der Daten, die in Abbildung \ref{fig:SignalKomplet} dargestellt sind.  Die Grundperiode ermittelt sich aus auslesen der Zeit einer Periode aus den Daten. Hierfür wurde die Zeitdifferenz zwischen zwei maximal Ausschlägen gemessen. 
+Die Grundfrequenz berechnet sich dann aus dem Kehrwert der Grundperiode. \\
+\\
+Grundperiode: 0.52 ms \\
+Grundfrequenz: 1923 Hz \\
+Signaldauer: 0.025 s \\
+Abtastfrequenz: 100 kHz \\
+Signallänge M: 2500 \\
+Abtastintervall $\Delta t$: 0.00001 s \\
+
+\textbf{2. ermitteln der Grundfrequenz mit Hilfe der Fouriertransformierten des Signals} \\
+In Abbildung \ref{fig:Spektrum} ist das Amplitudenspektrum in Hertz abgebildet. Dies wurde aus dem Mundharmonika Signal mithilfe der Fouriertransformation erstellt. Die Berechnung der Ergebnisse ist dem Pythoncode in Listing \ref{lst:Code} Methode versuch1\_2 zu entnehmen.
+
+\begin{figure}[H]
+	\centering\small
+	\includegraphics[width=\textwidth]{src/V1_2_Amplitudenspektrum.png}
+	\caption{Amplitudenspektrum in Hertz (halblogarithmische Darstellung der Frequenz)}
+	\label{fig:Spektrum}
+\end{figure}
+
+\section{Interpretation}
+\label{chap:VERSUCH_1_INTERPRETATION}
+Wie aus der Abbildung \ref{fig:Spektrum} zu erkennen ist, ist der Amplitudenausschlag bei ca. 2000 Hz besonders stark. Dies entspricht auch dem durch ablesen ermittelten Wert der Grundfrequenz von 1923 Hz. Somit weisen beide Ermittlungsverfahren das gleiche Ergebnis auf. Bei der Ermittlung über das Amplitudenspektrum kann man desweiteren aussagen über das ganze Spektrum machen. Hier zum Beispiel, dass noch ein Anteil von vielfachen der Grundfrequenz enthalten sind.
+
+%
+% CHAPTER Versuch 2
+%
+\chapter{Versuch 2}
+\label{chap:VERSUCH_2}
+
+
+\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
+\label{chap:VERSUCH_2_FRAGESTELLUNG}
+
+\section{Messwerte}
+\label{chap:VERSUCH_2_MESSWERTE}
+
+\section{Auswertung}
+\label{chap:VERSUCH_2_AUSWERTUNG}
+
+\section{Interpretation}
+\label{chap:VERSUCH_2_INTERPRETATION}
+
+%
+% CHAPTER Versuch 3
+%
+\chapter{Versuch 3}
+\label{chap:VERSUCH_3}
+
+\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
+\label{chap:VERSUCH_3_FRAGESTELLUNG}
+
+\section{Messwerte}
+\label{chap:VERSUCH_3_MESSWERTE}
+
+\section{Auswertung}
+\label{chap:VERSUCH_3_AUSWERTUNG}
+
+\section{Interpretation}
+\label{chap:VERSUCH_3_INTERPRETATION}
+
+%
+% CHAPTER Versuch 4
+%
+\chapter{Versuch 4}
+\label{chap:VERSUCH_4}
+
+\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
+\label{chap:VERSUCH_4_FRAGESTELLUNG}
+
+\section{Messwerte}
+\label{chap:VERSUCH_4_MESSWERTE}
+
+\section{Auswertung}
+\label{chap:VERSUCH_4_AUSWERTUNG}
+
+\section{Interpretation}
+\label{chap:VERSUCH_4_INTERPRETATION}
+%
+% CHAPTER Anhang
+%
+\renewcommand\thesection{A.\arabic{section}}
+\renewcommand\thesubsection{\thesection.\arabic{subsection}}
+
+\chapter*{Anhang}
+\label{chap:APPENDIX}
+\addcontentsline{toc}{chapter}{Anhang}
+%\setcounter{chapter}{0}
+\addtocounter{chapter}{1}
+\setcounter{section}{0}
+
+\section{Quellcode für Versuche 1 - 2}
+\label{chap:APPENDIX_SOURCECODE}
+\begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V2, captionpos=b, label=lst:Code]
+
+# TODO Python Code
+
+\end{lstlisting}
+
+\section{Messergebnisse}
+\label{chap:APPENDIX_MEASUREMENT_SOURCE}
+
+%
+% Literaturverzeichnis
+%
+\include{appendix/bibliography}
+
+\end{document}
+%------------------------------------
+% ╔═╗╔╗╔╔╦╗  ╔╦╗╔═╗╔═╗╦ ╦╔╦╗╔═╗╔╗╔╔╦╗
+% ║╣ ║║║ ║║   ║║║ ║║  ║ ║║║║║╣ ║║║ ║ 
+% ╚═╝╝╚╝═╩╝  ═╩╝╚═╝╚═╝╚═╝╩ ╩╚═╝╝╚╝ ╩ 
+%------------------------------------
