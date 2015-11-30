@@ -151,13 +151,14 @@
 %-------------------
 \newcommand{\strLecture}{Signale, Systeme und Sensoren}
 \newcommand{\strDate}{\today}
-\newcommand{\strAuthorA}{A. Author}
-\newcommand{\strAuthorB}{B. Author}
-\newcommand{\strAuthorAEmail}{aauthor@htwg-konstanz.de}
-\newcommand{\strAuthorBEmail}{bauthor@htwg-konstanz.de}
+\newcommand{\strAuthorA}{M. Kieser}
+\newcommand{\strAuthorB}{J. Altmeyer}
+\newcommand{\strAuthorAEmail}{makieser@htwg-konstanz.de}
+\newcommand{\strAuthorBEmail}{jualtmey@htwg-konstanz.de}
 % Versuchsbeschreibung 
-\newcommand{\strTopic}{VERSUCH NAME}
-\newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
+\newcommand{\strTopic}{Fourieranalyse und Akustik}
+\newcommand{\strAbstract}{In diesem Versuch wird die Tonhöhe eines akustischen Signals und der Frequenzgang von zwei Lautsprechern ermittelt. Um die Tonhöhe eines Signals zu bestimmen, wird u.a. die Fourieranalyse verwendet. In dem dadurch entstandenen Spektrum lässt sich die Tonhöhe bzw. die Frequenz einfach ablesen. Im Ergebnis konnte eine Tonhöhe von 1923 Hz festgestellt werden. In dem jeweiligen Frequenzgang der beiden Lautsprecher zeigt sich, dass die Lautsprecher das Eingangssignal nicht linear wiedergeben. 
+}
 % hyperref customization
 \hypersetup{
 	pdftitle    ={\strTopic}, % title
@@ -207,7 +208,7 @@
 %
 % Tabellenverzeichnis
 %
-\include{preface/listoftables}
+%\include{preface/listoftables}
 
 %
 % Listingverzeichnis
@@ -229,8 +230,10 @@
 \chapter{Einleitung}
 \label{chap:EINL}
 
-\cite{Franz2015j}
-
+In den folgenden Versuchen soll u. a. gezeigt werden, wie die Tonhöhe eines akustischen Signals am Beispiel einer Mundharmonika bestimmt werden kann. Dazu wird zum einen das aufgenommene Signal analysiert und zum anderen eine Fourieranalyse angewandt, um aus dem erhaltenem Spektrum die Tonhöhe feststellen zu können. 
+Des weiteren wird der Frequenzgang von zwei Lautsprechern ermittelt und untersucht. Wie gut sind die Lautsprecher? Welche Frequenzen werden verstärkt oder abgeschwächt?
+\paragraph{}
+Diese Versuche basieren auf dem dritten Aufgabenblatt \cite{Franz2015p} aus der Vorlesung Signale Systeme und Sensoren.
 %
 % CHAPTER Versuch 1
 %
@@ -297,57 +300,80 @@ Wie aus der Abbildung \ref{fig:Spektrum} zu erkennen ist, ist der Amplitudenauss
 %
 % CHAPTER Versuch 2
 %
-\chapter{Versuch 2}
+\chapter{Versuch 2 - Frequenzgang von Lautsprechern}
 \label{chap:VERSUCH_2}
 
+Dieser Versuch zeigt, wie der Frequenzgang eines Lautsprechers ermittelt werden kann.
+Dazu werden zwei unterschiedlich große Lautsprecher verwendet.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
 
+Wie verändert ein Lautsprecher sein Eingangsignal? Welche Frequenzen werden verstärkt, abgeschwächt oder verzögert?
+Um dies beantworten zu können, benötigt man den Frequenzgang des Lautsprechers.
+\paragraph{}
+Für diesen Versuch wurde ein Funktionsgenerator, ein Oszilloskop, zwei unterschiedlich große Lautsprecher und ein Mikrofon verwendet.
+Der Funktionsgenerator ist mit dem Oszilloskop und einem Lautsprecher verbunden. Das Mikrofon ist jeweils zu diesem Lautsprecher hin ausgerichtet und auch mit dem Oszilloskop verbunden. Folgende Messungen wurden einmal für den großen und einmal für den kleinen Lautsprecher durchgeführt.
+\paragraph{}
+Mit dem Funktionsgenerator wird zunächst ein Sinussignal mit 100 Hz erzeugt.
+Dieses Signal gibt der Lautsprecher wieder und das Mikrofon nimmt es auf.
+Das original Signal des Funktionsgenerators und das Ausgangssignal des Lautsprechers werden nun auf dem Oszilloskop dargestellt.
+Dadurch kann die Amplitude und die Phasenverschiebung des Ausgangssignals abgelesen werden.
+Dies wird für die Frequenzen 200, 300, 400, 500, 700, 850 Hz, 1, 1.2, 1.5, 1.7, 2, 3, 4, 5, 6, 10 kHz wiederholt.
+
+
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
+
+In Abbildung \ref{fig:LAUT_TIEF} und \ref{fig:LAUT_HOCH} sind die Ergebnisse der oben durchgeführten Messungen für die beiden Lautsprecher zu sehen. Es ist tabellarisch die Frequenz und die dazugehörige Amplitude und Phasenverschiebung eingetragen.
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
 
+Die Messwerte wurden in Python übertragen und graphisch dargestellt (Listing \ref{lst:Code}). Abbildung \ref{fig:LAUT_TIEF_FREQUENZGANG} und \ref{fig:LAUT_HOCH_FREQUENZGANG} zeigen somit den Frequenzgang für den jeweiligen Lautsprecher. Die Spannung wurde in Dezibel und die Phase in Grad umgerechnet.
+
+
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.6]{src/AmplitudenspektrumLautsprecher1.png}
+%\caption{Messwerte des kleinen Lautsprechers}
+%\label{fig:LAUT_HOCH}
+%\centering\small
+\includegraphics[scale=0.6]{src/PhasenverschiebungLautsprecher1.png}
+\caption{Frequenzgang des großen Lautsprechers}
+\label{fig:LAUT_TIEF_FREQUENZGANG}
+\end{figure}
+
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.6]{src/AmplitudenspektrumLautsprecher2.png}
+%\caption{Messwerte des kleinen Lautsprechers}
+%\label{fig:LAUT_HOCH}
+%\centering\small
+\includegraphics[scale=0.6]{src/PhasenverschiebungLautsprecher2.png}
+\caption{Frequenzgang des kleinen Lautsprechers}
+\label{fig:LAUT_HOCH_FREQUENZGANG}
+\end{figure}
+
 \section{Interpretation}
 \label{chap:VERSUCH_2_INTERPRETATION}
 
-%
-% CHAPTER Versuch 3
-%
-\chapter{Versuch 3}
-\label{chap:VERSUCH_3}
+Generell muss man sagen, dass nur der Frequenzbereich zwischen 100 Hz und 2 kHz sinnvolle Messwerte beinhaltet. Dies liegt daran, dass das Mikrofon auch einen eigenen Frequenzgang besitzt und somit das Signal zusätzlich verfälscht. Lediglich in diesem Bereich weißt das Mikrofon einen konstanten, linearen Frequenzgang auf.
 
-\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
-\label{chap:VERSUCH_3_FRAGESTELLUNG}
+\paragraph{1. Amplitudengang}
 
-\section{Messwerte}
-\label{chap:VERSUCH_3_MESSWERTE}
+Im Amplitudengang des großen Lautsprechers (Abbbildung \ref{fig:LAUT_TIEF_FREQUENZGANG}) ist zu erkennen, dass niedrige Frequenzen weniger abgeschwächt werden als hohe Frequenzen.
+Dies ist dadurch erklärbar, dass der Lautsprecher eine große Membran hat und somit tiefe Töne besser wiedergeben kann. 
+Der kleine Lautsprecher hingegen kann die tiefen Töne kaum wiedergeben (Abbildung \ref{fig:LAUT_HOCH_FREQUENZGANG}). Niedrige Frequenzen unter 300 Hz werden sehr stark abgeschwächt.
 
-\section{Auswertung}
-\label{chap:VERSUCH_3_AUSWERTUNG}
+\paragraph{2. Phasengang}
 
-\section{Interpretation}
-\label{chap:VERSUCH_3_INTERPRETATION}
+Der Sprung der Phase des großen Lautsprechers (Abbbildung \ref{fig:LAUT_TIEF_FREQUENZGANG}) bei 300 bis 400 Hz bzw. beim kleinen Lautsprecher (Abbildung \ref{fig:LAUT_HOCH_FREQUENZGANG}) bei 500 bis 700 Hz entsteht dadurch, dass die Phasenverschiebung mehr als 360° beträgt.
+Auffallend ist im Phasengang des großen Lautsprechers, dass sich ab 1 kHz die Phase kurzzeitig erneut sprunghaft ändert. Dieser Ausreißer ist vermutlich ein Messfehler. Man würde eigentlich erwarten, dass die Phase and dieser Stelle gleichmäßig fällt.
 
-%
-% CHAPTER Versuch 4
-%
-\chapter{Versuch 4}
-\label{chap:VERSUCH_4}
+\paragraph{}
 
-\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
-\label{chap:VERSUCH_4_FRAGESTELLUNG}
-
-\section{Messwerte}
-\label{chap:VERSUCH_4_MESSWERTE}
-
-\section{Auswertung}
-\label{chap:VERSUCH_4_AUSWERTUNG}
-
-\section{Interpretation}
-\label{chap:VERSUCH_4_INTERPRETATION}
+Beide Lautsprecher sind nicht besonders gut, da sie die Amplitude und die Phase des Eingangsignals nur stark verändert wiedergeben. Sie besitzen keinen linearen Frequenzgang. 
 %
 % CHAPTER Anhang
 %
@@ -365,12 +391,122 @@ Wie aus der Abbildung \ref{fig:Spektrum} zu erkennen ist, ist der Amplitudenauss
 \label{chap:APPENDIX_SOURCECODE}
 \begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V2, captionpos=b, label=lst:Code]
 
-# TODO Python Code
+# -*- coding: utf-8 -*-
+"""
+Created on 2016-10-27
+@author: Julian Altmeyer, Marcel Kieser
+"""
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+
+def versuch1_1():
+    #lese OsziDaten aus csv
+    oszi = np.genfromtxt('v3_mundharm_tonhoehe2.csv', delimiter=",")
+    
+    # Anzeige
+    dpi=75
+    fig, ax = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    ax.plot(oszi[:,0] , oszi[:,1], color = "blue", label="Signal f(t) eines Tons aus Mundharmonika")
+    # lässt X-Achse bei 0 beginnen
+    ax.autoscale(enable=True, axis='x', tight=True)
+    ax.set_xlabel("t [s]")
+    ax.set_ylabel("Spannung [V]")
+    ax.legend(loc='upper right');
+    
+    # als png abspeichern
+    #plt.savefig('V1_Signal_grundfrequenz.png', dpi=dpi)
+    plt.savefig('V1_Signal_komp.png', dpi=dpi)
+
+def versuch1_2():
+    #lese OsziDaten aus csv
+    oszi = np.genfromtxt('v3_mundharm_tonhoehe2.csv', delimiter=",")
+    
+    #fft
+    # n = Anzahl der Schwingungen innerhalb der gesamten Signaldauer
+    c = np.fft.fft(oszi[:,1])
+    n = np.abs(c)
+    
+    # spiegelung eleminieren
+    half = len(n)/2+1
+    print(half)
+    count = np.arange(0, int(half)) / 0.025
+    print(count)
+    
+    # Anzahl der Schwingungen innerhalb der gesamten Signaldauer dargestellt
+    dpi=75
+    fig, axN = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    axN.semilogx(count[:],n[:half], color = "blue", label=" Amplitudenspektrum ")
+    # lässt X-Achse bei 0 beginnen
+    axN.autoscale(enable=True, axis='x', tight=True)
+    axN.legend(loc='upper right');
+    axN.set_xlabel("Frequenz [Hz]")
+    axN.set_ylabel("Spannung [V]")
+    
+    # als png abspeichern    
+    plt.savefig('V1_2_Amplitudenspektrum.png', dpi=dpi)
+
+def versuch2(file):
+    # einlesen der Messwerte
+    l = np.genfromtxt(file, delimiter=",")
+    l[:,1] = l[:,1]/1000 # V
+    l[:,1] = 20 * np.log10(l[:,1]) # dB
+    l[:,2] = l[:,2]/1000 # s
+
+    #print(l)
+    
+    # Amplitudengang log
+    dpi=75
+    fig, ax = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    ax.semilogx(l[:,0], l[:,1], color = "blue", label=" Amplitudengang ")
+    ax.legend(loc='upper right');
+    ax.set_xlabel("Frequenz [Hz]")
+    ax.set_ylabel("Amplitude [dB]")
+        
+    # umrechnen von Delta-t nach Grad
+    l[:,2] = -1 * l[:,2]*l[:,0]*360
+    #print(l)
+    
+    # Phasengang log
+    fig, ax2 = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    ax2.semilogx(l[:,0], l[:,2], color = "blue", label=" Phasengang ")
+    ax2.legend(loc='upper right');
+    ax2.set_xlabel("Frequenz [Hz]")
+    ax2.set_ylabel("Phase [Grad]")
+    #plt.plot(l[:,0], l[:,1])
+    #plt.plot(l[:,0], l[:,2])
+        
+    # Amplitudengang     
+
+def main():    
+    #versuch1_1()
+    #versuch1_2()
+    versuch2('Aufg2_Messungen/1Lautsprecher_Messwerte.csv')
+    versuch2('Aufg2_Messungen/2Lautsprecher_Messwerte.csv')
+    
+    
+if __name__ == "__main__":
+    main()
 
 \end{lstlisting}
 
 \section{Messergebnisse}
 \label{chap:APPENDIX_MEASUREMENT_SOURCE}
+
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.6]{src/1Lautsprecher_Messwerte.jpg}
+\caption{Messwerte des großen Lautsprechers}
+\label{fig:LAUT_TIEF}
+\end{figure}
+
+\begin{figure}
+\centering\small
+\includegraphics[scale=0.65]{src/2Lautsprecher_Messwerte.jpg}
+\caption{Messwerte des kleinen Lautsprechers}
+\label{fig:LAUT_HOCH}
+\end{figure}
 
 %
 % Literaturverzeichnis

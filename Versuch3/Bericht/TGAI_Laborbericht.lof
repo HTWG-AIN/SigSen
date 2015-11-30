@@ -1,9 +1,11 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2.1}{\ignorespaces Mundharmonika Signal von 25 ms Dauer\relax }}{3}{figure.caption.8}
-\contentsline {figure}{\numberline {2.2}{\ignorespaces Mundharmonika Signal Ausschnitt\relax }}{4}{figure.caption.9}
-\contentsline {figure}{\numberline {2.3}{\ignorespaces Amplitudenspektrum in Hertz (halblogarithmische Darstellung der Frequenz)\relax }}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {2.1}{\ignorespaces Mundharmonika Signal von 25 ms Dauer\relax }}{3}{figure.caption.7}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces Mundharmonika Signal Ausschnitt\relax }}{4}{figure.caption.8}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces Amplitudenspektrum in Hertz (halblogarithmische Darstellung der Frequenz)\relax }}{5}{figure.caption.9}
 \addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Frequenzgang des gro\IeC {\ss }en Lautsprechers\relax }}{9}{figure.caption.12}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Frequenzgang des kleinen Lautsprechers\relax }}{10}{figure.caption.13}
+\contentsline {figure}{\numberline {4.3}{\ignorespaces Messwerte des gro\IeC {\ss }en Lautsprechers\relax }}{14}{figure.caption.18}
+\contentsline {figure}{\numberline {4.4}{\ignorespaces Messwerte des kleinen Lautsprechers\relax }}{15}{figure.caption.19}

@@ -66,7 +66,8 @@ def versuch2(file):
     # Amplitudengang log
     dpi=75
     fig, ax = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
-    ax.semilogx(l[:,0], l[:,1], color = "blue", label=" xxx ")
+    ax.semilogx(l[:,0], l[:,1], color = "blue", label=" Amplitudengang ")
+    ax.legend(loc='upper right');
     ax.set_xlabel("Frequenz [Hz]")
     ax.set_ylabel("Amplitude [dB]")
         
@@ -76,19 +77,20 @@ def versuch2(file):
     
     # Phasengang log
     fig, ax2 = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
-    ax2.semilogx(l[:,0], l[:,2], color = "blue", label=" xxx ")
+    ax2.semilogx(l[:,0], l[:,2], color = "blue", label=" Phasengang ")
+    ax2.legend(loc='upper right');
     ax2.set_xlabel("Frequenz [Hz]")
-    ax2.set_ylabel(" Winkel Phi [°]")
+    ax2.set_ylabel("Phase [Grad]")
     #plt.plot(l[:,0], l[:,1])
     #plt.plot(l[:,0], l[:,2])
         
     # Amplitudengang     
 
 def main():    
-    versuch1_1()
+    #versuch1_1()
     #versuch1_2()
-    #versuch2('Aufg2_Messungen/1Lautsprecher_Messwerte.csv')
-    #versuch2('Aufg2_Messungen/2Lautsprecher_Messwerte.csv')
+    versuch2('Aufg2_Messungen/1Lautsprecher_Messwerte.csv')
+    versuch2('Aufg2_Messungen/2Lautsprecher_Messwerte.csv')
     
     
 if __name__ == "__main__":

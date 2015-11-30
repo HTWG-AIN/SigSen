@@ -1,10 +1,19 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.26)  30 NOV 2015 14:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.26)  26 NOV 2015 22:05
 entering extended mode
-**TGAI_Laborbericht.tex
-(TGAI_Laborbericht.tex
+**examples.tex
+(examples.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
-("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
+("C:\Program Files\MiKTeX 2.9\tex\latex\subfiles\subfiles.cls"
+Document Class: subfiles 2012/05/23 Federico Garcia
+("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
+Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
+\every@verbatim=\toks14
+\verbatim@line=\toks15
+\verbatim@in@stream=\read1
+)
+Preamble taken from file `TGAI_Laborbericht.tex'
+(TGAI_Laborbericht.tex ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
 Document Class: report 2014/09/29 v1.4h Standard LaTeX document class
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\size12.clo"
 File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
@@ -27,7 +36,7 @@ Package: geometry 2010/09/12 v5.6 Page Geometry
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
-\KV@toks@=\toks14
+\KV@toks@=\toks16
 )
 ("C:\Program Files\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
@@ -51,7 +60,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@layoutheight=\dimen108
 \Gm@layouthoffset=\dimen109
 \Gm@layoutvoffset=\dimen110
-\Gm@dimlist=\toks15
+\Gm@dimlist=\toks17
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\geometry\geometry.cfg"))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\setspace\setspace.sty"
@@ -137,15 +146,18 @@ Package: letltxmacro 2010/09/02 v1.4 Let assignment for LaTeX macros (HO)
 Package: hopatch 2011/06/24 v1.1 Wrapper for package hooks (HO)
 Package: xcolor-patch 2011/01/30 xcolor patch
 Package: atveryend 2011/06/30 v1.8 Hooks at the very end of document (HO)
-Package atveryend Info: \enddocument detected (standard20110627).
 Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
-)
-("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
+
+
+Package auxhook Warning: Cannot patch \document,
+(auxhook)                using \AtBeginDocument instead.
+
+) ("C:\Program Files\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 )
 \@linkdim=\dimen111
@@ -250,8 +262,8 @@ LaTeX Font Info:    Redeclaring font encoding T1 on input line 48.
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\inputenc.sty"
 Package: inputenc 2015/03/17 v1.2c Input encoding file
-\inpenc@prehook=\toks16
-\inpenc@posthook=\toks17
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\utf8.def"
 File: utf8.def 2015/06/27 v1.1n UTF-8 support for inputenc
@@ -471,7 +483,7 @@ Now handling font encoding PD1 ...
 Package: enumitem 2011/09/28 v3.5.2 Customized lists
 \labelindent=\skip46
 \enit@outerparindent=\dimen116
-\enit@toks=\toks18
+\enit@toks=\toks20
 \enit@inbox=\box26
 \enitdp@description=\count104
 )
@@ -482,7 +494,7 @@ Package: tabularx 2014/10/28 v2.10 `tabularx' package (DPC)
 Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \col@sep=\dimen117
 \extrarowheight=\dimen118
-\NC@list=\toks19
+\NC@list=\toks21
 \extratabsurround=\skip47
 \backup@length=\skip48
 )
@@ -492,7 +504,7 @@ Package: array 2014/10/28 v2.4c Tabular extension package (FMi)
 \TX@target=\dimen122
 \TX@delta=\dimen123
 \TX@cols=\count105
-\TX@ftn=\toks20
+\TX@ftn=\toks22
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
@@ -504,7 +516,7 @@ Package: amstext 2000/06/29 v2.01
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
-\@emptytoks=\toks21
+\@emptytoks=\toks23
 \ex@=\dimen124
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
@@ -534,21 +546,21 @@ LaTeX Font Info:    Redeclaring font encoding OMS on input line 567.
 \dotsspace@=\muskip11
 \c@parentequation=\count113
 \dspbrk@lvl=\count114
-\tag@help=\toks22
+\tag@help=\toks24
 \row@=\count115
 \column@=\count116
 \maxfields@=\count117
-\andhelp@=\toks23
+\andhelp@=\toks25
 \eqnshift@=\dimen127
 \alignsep@=\dimen128
 \tagshift@=\dimen129
 \tagwidth@=\dimen130
 \totwidth@=\dimen131
 \lineht@=\dimen132
-\@envbody=\toks24
+\@envbody=\toks26
 \multlinegap=\skip50
 \multlinetaggap=\skip51
-\mathdisplay@stack=\toks25
+\mathdisplay@stack=\toks27
 LaTeX Info: Redefining \[ on input line 2665.
 LaTeX Info: Redefining \] on input line 2666.
 )
@@ -563,15 +575,15 @@ Package: ifthen 2014/09/29 v1.1c Standard LaTeX ifthen package (DPC)
 ))
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amscls\amsthm.sty"
 Package: amsthm 2015/03/04 v2.20.2
-\thm@style=\toks26
-\thm@bodyfont=\toks27
-\thm@headfont=\toks28
-\thm@notefont=\toks29
-\thm@headpunct=\toks30
+\thm@style=\toks28
+\thm@bodyfont=\toks29
+\thm@headfont=\toks30
+\thm@notefont=\toks31
+\thm@headpunct=\toks32
 \thm@preskip=\skip55
 \thm@postskip=\skip56
 \thm@headsep=\skip57
-\dth@everypar=\toks31
+\dth@everypar=\toks33
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
@@ -1220,7 +1232,7 @@ Package: suffix 2006/07/15 1.5a Variant command support
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 )
-\AC@clearlist=\toks32
+\AC@clearlist=\toks34
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\seqsplit\seqsplit.sty"
 Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins,
@@ -1228,13 +1240,7 @@ Package: seqsplit 2006/08/07 v0.1 Splitting long sequences (DNA, RNA, proteins,
 )
 ("C:\Program Files\MiKTeX 2.9\tex\latex\subfiles\subfiles.sty"
 Package: subfiles 2012/05/23 Federico Garcia
-
-("C:\Program Files\MiKTeX 2.9\tex\latex\tools\verbatim.sty"
-Package: verbatim 2014/10/28 v1.5q LaTeX2e package for verbatim enhancements
-\every@verbatim=\toks33
-\verbatim@line=\toks34
-\verbatim@in@stream=\read1
-))
+)
 ("C:\Program Files\MiKTeX 2.9\tex\latex\xcolor\xcolor.sty"
 Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
 
@@ -1831,43 +1837,41 @@ Package hyperref Info: Option `pdftoolbar' set `true' on input line 181.
 Package hyperref Info: Option `pdfmenubar' set `true' on input line 181.
 Package hyperref Info: Option `pdffitwindow' set `false' on input line 181.
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 181.
-
-(TGAI_Laborbericht.aux (preface/cover.aux) (preface/abstract.aux)
-(preface/tableofcontents.aux) (preface/listoffigures.aux)
-(preface/lstlistoflistings.aux) (appendix/bibliography.aux))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 189.
-LaTeX Font Info:    Try loading font information for TS1+cmr on input line 189.
-
+))
+(examples.aux
+No file preface/listacronym.aux.
+(appendix/bibliography.aux))
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 3.
+LaTeX Font Info:    Try loading font information for TS1+cmr on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\ts1cmr.fd"
 File: ts1cmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 189.
-LaTeX Font Info:    Try loading font information for LGR+cmr on input line 189.
-
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for LGR/cmr/m/n on input line 3.
+LaTeX Font Info:    Try loading font information for LGR+cmr on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\cbfonts-fd\lgrcmr.fd"
 File: lgrcmr.fd 2013/09/01 v1.0 Greek European Computer Regular
 )
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 189.
-LaTeX Font Info:    ... okay on input line 189.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 189.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 3.
+LaTeX Font Info:    ... okay on input line 3.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 3.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
@@ -1876,7 +1880,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 *geometry* detected driver: pdftex
 *geometry* verbose mode - [ preamble ] result:
 * driver: pdftex
-* paper: a4paper
+* paper: <default>
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
 * modes: includehead includefoot 
@@ -1907,7 +1911,7 @@ File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 \AtBeginShipoutBox=\box48
-Package hyperref Info: Link coloring OFF on input line 189.
+Package hyperref Info: Link coloring OFF on input line 3.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
@@ -1916,11 +1920,11 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count164
 )
-LaTeX Info: Redefining \ref on input line 189.
-LaTeX Info: Redefining \pageref on input line 189.
-LaTeX Info: Redefining \nameref on input line 189.
+LaTeX Info: Redefining \ref on input line 3.
+LaTeX Info: Redefining \pageref on input line 3.
+LaTeX Info: Redefining \nameref on input line 3.
 
-(TGAI_Laborbericht.out) (TGAI_Laborbericht.out)
+(examples.out) (examples.out)
 \@outlinefile=\write5
 
 babelbib: Set bibliography fall-back language to ngerman
@@ -1949,7 +1953,7 @@ babelbib: Set language for keywords in the bibliography fixed to german
 \c@lstlisting=\count171
 Package lastpage Info: Please have a look at the pageslts package at
 (lastpage)             https://www.ctan.org/pkg/pageslts
-(lastpage)             ! on input line 189.
+(lastpage)             ! on input line 3.
  ABD: EveryShipout initializing macros
 Package caption Info: Begin \AtBeginDocument code.
 Package caption Info: End \AtBeginDocument code.
@@ -1958,246 +1962,504 @@ Package caption Info: End \AtBeginDocument code.
 Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
 ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into 
 your preamble.
- on input line 189.
+ on input line 3.
 
-(preface/cover.tex <preface/htwg-logo.pdf, id=74, 1597.97pt x 174.6525pt>
+<preface/htwg-logo.pdf, id=74, 1597.97pt x 174.6525pt>
 File: preface/htwg-logo.pdf Graphic file (type pdf)
 
 <use preface/htwg-logo.pdf>
-Package pdftex.def Info: preface/htwg-logo.pdf used on input line 7.
+Package pdftex.def Info: preface/htwg-logo.pdf used on input line 11.
 (pdftex.def)             Requested size: 446.70818pt x 48.8224pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 14.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 18.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 17.
-LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
- [1
-
-
-{C:/Users/Julian Altmeyer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
-/preface/htwg-logo.pdf>]) (preface/abstract.tex
-LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 9.
-
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 21
+.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ztmcm.fd"
 File: ot1ztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OT1/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 9.
-
+LaTeX Font Info:    Try loading font information for OML+ztmcm on input line 21
+.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\omlztmcm.fd"
 File: omlztmcm.fd 2000/01/03 Fontinst v1.801 font definitions for OML/ztmcm.
 )
-LaTeX Font Info:    Try loading font information for OT1+ptm on input line 9.
+LaTeX Font Info:    Try loading font information for OT1+ptm on input line 21.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ot1ptm.fd"
 File: ot1ptm.fd 2001/06/04 font definitions for OT1/ptm.
 )
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 9.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <24.88> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <14.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 21.
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
+ [1
 
-Underfull \hbox (badness 10000) in paragraph at lines 16--17
-[]|[]\T1/ptm/m/n/12 juergen.keppler@htwg-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 17--18
-[]|[]\T1/ptm/m/n/12 martin.miller@htwg-
- []
-
-)pdfTeX warning (ext4): destination with the same identifier (name{page.I}) has
- been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.195 \include{preface/abstract}
-                                 [1
-
-
-] (preface/tableofcontents.tex
-(TGAI_Laborbericht.toc
+{C:/Users/Julian Altmeyer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
+/preface/htwg-logo.pdf>] (examples.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <12> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <9> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 6.
 )
 \tf@toc=\write6
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.49 \listoffigures
+                    [1
+
+] (examples.lof)
+\tf@lof=\write7
  [2
 
+] (examples.lot
 
+Package natbib Warning: Citation `Franz2015b' on page 3 undefined on input line
+ 3.
 
+)
+\tf@lot=\write8
+ [3
 
-]) (preface/listoffigures.tex (TGAI_Laborbericht.lof)
-\tf@lof=\write7
-[3
-
-
-
-]) (preface/lstlistoflistings.tex (TGAI_Laborbericht.lol)
-\tf@lol=\write8
+] (examples.lol)
+\tf@lol=\write9
  [4
 
-
-
-])
+]
  1.
-[1
-
-
-]
- 2.
-<src/V1_Signal_komplet.png, id=156, 770.88pt x 578.16pt>
-File: src/V1_Signal_komplet.png Graphic file (type png)
-
-<use src/V1_Signal_komplet.png>
-Package pdftex.def Info: src/V1_Signal_komplet.png used on input line 257.
-(pdftex.def)             Requested size: 441.01773pt x 330.76323pt.
- [2
-
-]
-<src/V1_Signal_grundfrequenz.png, id=164, 770.88pt x 578.16pt>
-File: src/V1_Signal_grundfrequenz.png Graphic file (type png)
-
-<use src/V1_Signal_grundfrequenz.png>
-Package pdftex.def Info: src/V1_Signal_grundfrequenz.png used on input line 266
-.
-(pdftex.def)             Requested size: 441.01773pt x 330.76323pt.
- [3 <./src/V1_Signal_komplet.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 273--274
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--285
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 275--285
-
- []
-
-[4 <./src/V1_Signal_grundfrequenz.png>]
-<src/V1_2_Amplitudenspektrum.png, id=178, 770.88pt x 578.16pt>
-File: src/V1_2_Amplitudenspektrum.png Graphic file (type png)
-
-<use src/V1_2_Amplitudenspektrum.png>
-Package pdftex.def Info: src/V1_2_Amplitudenspektrum.png used on input line 291
-.
-(pdftex.def)             Requested size: 441.01773pt x 330.76323pt.
- [5 <./src/V1_2_Amplitudenspektrum.png>]
-[6]
- 3.
-[7
-
-]
-<src/AmplitudenspektrumLautsprecher1.png, id=202, 659.46375pt x 500.87125pt>
-File: src/AmplitudenspektrumLautsprecher1.png Graphic file (type png)
-
-<use src/AmplitudenspektrumLautsprecher1.png>
-Package pdftex.def Info: src/AmplitudenspektrumLautsprecher1.png used on input 
-line 338.
-(pdftex.def)             Requested size: 395.68129pt x 300.52505pt.
-
-<src/PhasenverschiebungLautsprecher1.png, id=203, 665.48625pt x 500.87125pt>
-File: src/PhasenverschiebungLautsprecher1.png Graphic file (type png)
-
-<use src/PhasenverschiebungLautsprecher1.png>
-Package pdftex.def Info: src/PhasenverschiebungLautsprecher1.png used on input 
-line 342.
-(pdftex.def)             Requested size: 399.29483pt x 300.52505pt.
-
-<src/AmplitudenspektrumLautsprecher2.png, id=204, 659.46375pt x 500.87125pt>
-File: src/AmplitudenspektrumLautsprecher2.png Graphic file (type png)
-
-<use src/AmplitudenspektrumLautsprecher2.png>
-Package pdftex.def Info: src/AmplitudenspektrumLautsprecher2.png used on input 
-line 349.
-(pdftex.def)             Requested size: 395.68129pt x 300.52505pt.
-
-<src/PhasenverschiebungLautsprecher2.png, id=205, 665.48625pt x 500.87125pt>
-File: src/PhasenverschiebungLautsprecher2.png Graphic file (type png)
-
-<use src/PhasenverschiebungLautsprecher2.png>
-Package pdftex.def Info: src/PhasenverschiebungLautsprecher2.png used on input 
-line 353.
-(pdftex.def)             Requested size: 399.29483pt x 300.52505pt.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 371.
-
-
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 86.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
-) [8] [9 <./src/AmplitudenspektrumLautsprecher1.png> <./src/PhasenverschiebungL
-autsprecher1.png>]
-[10 <./src/AmplitudenspektrumLautsprecher2.png> <./src/PhasenverschiebungLautsp
-recher2.png>] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+)
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 93.
+ [5
+
+
+]
+Overfull \hbox (4.40645pt too wide) in paragraph at lines 103--104
+\T1/ptm/m/n/12 pi-lie-ren der L[]T[]X  Da-tei (Tex-ma-ker F1) aus-ge-führt wer-
+den. An-schlie-ÿend muss die L[]T[]X  Da-
+ []
+
+
+Package natbib Warning: Citation `Franz2015' on page 6 undefined on input line 
+108.
+
+
+Package natbib Warning: Citation `Franz2015a' on page 6 undefined on input line
+ 112.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang2.sty"
+File: lstlang2.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang3.sty"
+File: lstlang3.sty 2015/06/04 1.6 listings language file
+)
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstmisc.sty"
+File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
+)
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 392.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 394.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 394.
-LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 394.
+nput line 137.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 400.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 138.
+ [6]
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 139.
+LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 139.
+ [7] [8]
 
-[11
-
-] [12] <src/1Lautsprecher_Messwerte.jpg, id=311, 689.4558pt x 931.25056pt>
-File: src/1Lautsprecher_Messwerte.jpg Graphic file (type jpg)
-
-<use src/1Lautsprecher_Messwerte.jpg>
-Package pdftex.def Info: src/1Lautsprecher_Messwerte.jpg used on input line 499
-.
-(pdftex.def)             Requested size: 413.67667pt x 558.75465pt.
-
-<src/2Lautsprecher_Messwerte.jpg, id=312, 646.50677pt x 796.00243pt>
-File: src/2Lautsprecher_Messwerte.jpg Graphic file (type jpg)
-
-<use src/2Lautsprecher_Messwerte.jpg>
-Package pdftex.def Info: src/2Lautsprecher_Messwerte.jpg used on input line 506
-.
-(pdftex.def)             Requested size: 420.22441pt x 517.39545pt.
- [13] [14 <./src/1Lautsprecher_Messwerte.jpg>] [15 <./src/2Lautsprecher_Messwer
-te.jpg>] (appendix/bibliography.tex
-(TGAI_Laborbericht.bbl) [16
+Package natbib Warning: Citation `Franz2015b' on page 9 undefined on input line
+ 201.
 
 
-]) 
+Package natbib Warning: Citation `Franz2015b' on page 9 undefined on input line
+ 201.
+
+[9]
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223937 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 368530 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_fkt_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 218.
+Package epstopdf Info: Output file is already uptodate.
+
+<media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf, id=242, 489
+.83pt x 391.4625pt>
+File: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-conve
+rted-to.pdf used on input line 218.
+(pdftex.def)             Requested size: 441.01773pt x 352.46231pt.
+
+[10 <./media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223937 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 368530 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_fkt_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 240.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-conve
+rted-to.pdf used on input line 240.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 15011 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4442 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_hist_sample
+s_5000.eps>
+(epstopdf)             \includegraphics on input line 246.
+Package epstopdf Info: Output file is already uptodate.
+
+<media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf, id=259, 48
+9.83pt x 391.4625pt>
+File: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-conv
+erted-to.pdf used on input line 246.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+
+Overfull \hbox (1.39172pt too wide) in paragraph at lines 238--250
+[]$[]$ $[]$ 
+ []
+
+Package hyperref Info: bookmark level for unknown subfigure defaults to 0 on in
+put line 250.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223937 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 368530 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_fkt_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 279.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+<use media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-conve
+rted-to.pdf used on input line 279.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 15011 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4442 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_hist_sample
+s_5000.eps>
+(epstopdf)             \includegraphics on input line 285.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-conv
+erted-to.pdf used on input line 285.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223600 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 366769 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_fkt_samples_50
+00.eps>
+(epstopdf)             \includegraphics on input line 291.
+Package epstopdf Info: Output file is already uptodate.
+
+<media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf, id=262, 489.
+83pt x 391.4625pt>
+File: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-conver
+ted-to.pdf used on input line 291.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 14839 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4572 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_hist_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 297.
+Package epstopdf Info: Output file is already uptodate.
+
+<media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf, id=263, 489
+.83pt x 391.4625pt>
+File: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-conve
+rted-to.pdf used on input line 297.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+
+Overfull \hbox (1.39172pt too wide) in paragraph at lines 277--301
+[]$[]$ $[]$
+ []
+
+[11 <./media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf>]
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223937 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_fkt_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 368530 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_fkt_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 309.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_fkt_samples_5000-eps-conve
+rted-to.pdf used on input line 309.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 15011 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/ramp_hist_samples_5
+000-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4442 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/ramp
+_hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/ramp_hist_sample
+s_5000.eps>
+(epstopdf)             \includegraphics on input line 314.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf Graphi
+c file (type pdf)
+
+<use media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/ramp_hist_samples_5000-eps-conv
+erted-to.pdf used on input line 314.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223600 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 366769 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_fkt_samples_50
+00.eps>
+(epstopdf)             \includegraphics on input line 320.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-conver
+ted-to.pdf used on input line 320.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 14839 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4572 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_hist_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 326.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-conve
+rted-to.pdf used on input line 326.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 223600 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_fkt_samples_500
+0-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 366769 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+fkt_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_fkt_samples_50
+00.eps>
+(epstopdf)             \includegraphics on input line 332.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf Graphic 
+file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-conver
+ted-to.pdf used on input line 332.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+Package epstopdf Info: Source file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00.eps>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 14839 bytes
+(epstopdf)             Output file: <media/matlab/HISTOGRAM/sin_hist_samples_50
+00-eps-converted-to.pdf>
+(epstopdf)                    date: 2015-11-26 14:44:33
+(epstopdf)                    size: 4572 bytes
+(epstopdf)             Command: <epstopdf --outfile=media/matlab/HISTOGRAM/sin_
+hist_samples_5000-eps-converted-to.pdf media/matlab/HISTOGRAM/sin_hist_samples_
+5000.eps>
+(epstopdf)             \includegraphics on input line 338.
+Package epstopdf Info: Output file is already uptodate.
+File: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf Graphic
+ file (type pdf)
+
+<use media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf>
+Package pdftex.def Info: media/matlab/HISTOGRAM/sin_hist_samples_5000-eps-conve
+rted-to.pdf used on input line 338.
+(pdftex.def)             Requested size: 220.06471pt x 175.86977pt.
+
+Overfull \hbox (1.39172pt too wide) in paragraph at lines 307--342
+[]$[]$[] $[]$
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 307--342
+$[]$$[]$
+ []
+
+[12 <./media/matlab/HISTOGRAM/sin_fkt_samples_5000-eps-converted-to.pdf> <./med
+ia/matlab/HISTOGRAM/sin_hist_samples_5000-eps-converted-to.pdf>]
+
+LaTeX Warning: Text page 13 contains only floats.
+
+
+Overfull \vbox (5.12617pt too high) has occurred while \output is active []
+
+
+[13] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+) [14]
+[15] (appendix/bibliography.tex
+No file examples.bbl.
+)
+
+Package natbib Warning: There were undefined citations.
+
+
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 516.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 516.
-(TGAI_Laborbericht.aux (preface/cover.aux) (preface/abstract.aux)
-(preface/tableofcontents.aux) (preface/listoffigures.aux)
-(preface/lstlistoflistings.aux) (appendix/bibliography.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 516.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 516.
-Package rerunfilecheck Info: File `TGAI_Laborbericht.out' has not changed.
-(rerunfilecheck)             Checksum: CAC7F74EDE0BBB5BFF68B7CBD6A00CFB;2839.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 516.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 421.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 421.
+(examples.aux
+No file preface/listacronym.aux.
+(appendix/bibliography.aux))
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 421.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 421.
+Package rerunfilecheck Info: File `examples.out' has not changed.
+(rerunfilecheck)             Checksum: 75763EE84DBCD7605C07CF3EC360695D;2832.
  ) 
 Here is how much of TeX's memory you used:
- 38357 strings out of 493673
- 786549 string characters out of 3143927
- 964566 words of memory out of 3000000
- 40772 multiletter control sequences out of 15000+200000
- 70223 words of font info for 126 fonts, out of 3000000 for 9000
+ 39754 strings out of 493673
+ 806929 string characters out of 3143927
+ 1023540 words of memory out of 3000000
+ 42197 multiletter control sequences out of 15000+200000
+ 93373 words of font info for 175 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,12n,97p,714b,2198s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Progr
-am Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.
-9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts
-/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/u
-tmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Pro
-gram Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
-Output written on TGAI_Laborbericht.pdf (21 pages, 3490083 bytes).
+ 70i,12n,147p,745b,3244s stack positions out of 5000i,500n,10000p,200000b,50000s
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Progr
+am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/MiKTeX 2.9/fo
+nts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnS
+ymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol12
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol9.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><C:/Program Files/MiKTeX 2.9/
+fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmri8a.pfb>
+
+Output written on examples.pdf (16 pages, 967264 bytes).
 PDF statistics:
- 410 PDF objects out of 1000 (max. 8388607)
- 155 named destinations out of 1000 (max. 500000)
- 199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 413 PDF objects out of 1000 (max. 8388607)
+ 128 named destinations out of 1000 (max. 500000)
+ 174 words of extra memory for PDF output out of 10000 (max. 10000000)
 
