@@ -133,20 +133,24 @@ def getInputData(filename):
 
 
 def windowing(rec):
+    # Inrervalle für die Windows berechnen
     steps = []
     for i in range(0, len(rec), int(WINDOWSIZE / 2)):
         steps.append(i)
     steps.append(len(rec))
 
+    # Windows erstellen
     windows = []
     for i in range(len(steps) - 3):
         windows.append(rec[steps[i]:steps[i + 2]])
 
     #----------------------------------------------------
 
+    # Gaus anwenden
     for i in range(len(windows)):
         windows[i] = windows[i] * win.gaussian(WINDOWSIZE, std=WINDOWSIZE/4)
     
+    # lokale Fouriertransformation
     result = np.zeros(WINDOWSIZE)
     for i in range(len(windows)):
         windows[i] = np.fft.fft(windows[i]/((2**15)-1))
@@ -176,6 +180,7 @@ def getMeans(pathname):
 
 
 def speechRecognition(referenceDict, data):
+    data = windowing(data)
     maximum = 0
     for key in referenceDict:
         coefficient = stats.pearsonr(referenceDict[key], data)[0]
@@ -215,6 +220,7 @@ def versuch1d():
 
 
 def versuch2():
+    # Referenzspektrum einlesen (Prototypen)
     reference = getMeans("Referenz/Referenz")
 
     # Testdaten in Dictionaries abspeichern
@@ -226,16 +232,39 @@ def versuch2():
         for i in range(5):
             dataJulian = getInputData("TestJulian/TestJulian" + name + str(i) + ".csv")
             dataMarcel = getInputData("TestMarcel/TestMarcel" + name + str(i) + ".csv")
-            dataJulian = windowing(dataJulian)
-            dataMarcel = windowing(dataMarcel)
             testJulian[name].append(dataJulian)
             testMarcel[name].append(dataMarcel)
-        
+    
+    #Referenzspektren plotten
+    for key in reference:
+        plotFFT2(reference[key], 'Referenzspektrum' + key + ".png")
+    
     # Spracherkennung
-    for key in testMarcel:
+    print("---Julian---")
+    for key in testJulian:
+        detections = 0
         for i in range(5):
+            word = speechRecognition(reference, testJulian[key][i])
             print("Wort:" + key)
-            print("Erkannt: " + speechRecognition(reference, testMarcel[key][i]))
+            print("Erkannt: " + word)
+            if word == key:
+                detections += 1
+        detectionRate = detections / 5
+        print("Detektionsrate " + key + ": " + str(detectionRate))
+
+    print()
+
+    print("---Marcel---")
+    for key in testMarcel:
+        detections = 0
+        for i in range(5):
+            word = speechRecognition(reference, testMarcel[key][i])
+            print("Wort:" + key)
+            print("Erkannt: " + word)
+            if word == key:
+                detections += 1
+        detectionRate = detections / 5
+        print("Detektionsrate " + key + ": " + str(detectionRate))
 
 
 def main():
