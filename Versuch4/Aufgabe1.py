@@ -216,13 +216,6 @@ def versuch1d():
 
 def versuch2():
     reference = getMeans("Referenz/Referenz")
-    #testJulian = getMeans("TestJulian/TestJulian")
-    #testMarcel = getMeans("TestMarcel/TestMarcel")  
-    
-#    for key in reference:
-#        plotFFT2(reference[key])
-#        plotFFT2(testJulian[key])
-#        plotFFT2(testMarcel[key])
 
     # Testdaten in Dictionaries abspeichern
     testJulian = {}
@@ -237,18 +230,6 @@ def versuch2():
             dataMarcel = windowing(dataMarcel)
             testJulian[name].append(dataJulian)
             testMarcel[name].append(dataMarcel)
-
-#    for key in reference:
-#        for i in range(5):
-#            print("Julian (" + key + "):" + str(stats.pearsonr(reference[key], testJulian[key][i])[0]))
-#            print("Marcel (" + key + "):" + str(stats.pearsonr(reference[key], testMarcel[key][i])[0]))
-#
-#    r = stats.pearsonr(reference["Hoch"], reference["Links"])[0]
-#    print(r)
-#    
-#    for key in testJulian:
-#        plotFFT2(testJulian[key][0])
-#        plotFFT(getInputData("TestJulian/TestJulian" + key + str(0) + ".csv"))
         
     # Spracherkennung
     for key in testMarcel:
