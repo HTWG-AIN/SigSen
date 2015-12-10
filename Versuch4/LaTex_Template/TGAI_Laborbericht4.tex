@@ -151,12 +151,12 @@
 %-------------------
 \newcommand{\strLecture}{Signale, Systeme und Sensoren}
 \newcommand{\strDate}{\today}
-\newcommand{\strAuthorA}{A. Author}
-\newcommand{\strAuthorB}{B. Author}
-\newcommand{\strAuthorAEmail}{aauthor@htwg-konstanz.de}
-\newcommand{\strAuthorBEmail}{bauthor@htwg-konstanz.de}
+\newcommand{\strAuthorA}{M. Kieser}
+\newcommand{\strAuthorB}{J. Altmeyer}
+\newcommand{\strAuthorAEmail}{makieser@htwg-konstanz.de}
+\newcommand{\strAuthorBEmail}{jualtmey@htwg-konstanz.de}
 % Versuchsbeschreibung 
-\newcommand{\strTopic}{VERSUCH NAME}
+\newcommand{\strTopic}{Aufbau eines einfachen Spracherkenners}
 \newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
 % hyperref customization
 \hypersetup{
@@ -275,21 +275,103 @@ Die Berechnung der Ergebnisse ist dem Pythoncode in Listing \ref{lst:Code} Metho
 %
 % CHAPTER Versuch 2
 %
-\chapter{Versuch 2}
+\chapter{Versuch 2 - Spracherkennung}
 \label{chap:VERSUCH_2}
 
+Dieser Versuch zeigt die Funktionsweise eines einfachen Spracherkenners.
+Dazu wird ein Spracherkenner so aufgebaut, dass er die Worte ''Hoch'', ''Tief'', ''Links'' und ''Rechts'' erkennt. Mit diesen Befehlen könnte beispielsweise ein Gabelstapler in einem Hochregallager sprachgesteuert werden. Der Spracherkenner basiert auf dem Prinzip des Prototyp-Klassifikators, wie es in der Vorlesung 10 von Herrn Franz \cite{Franz2015i} beschrieben ist.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
 
+Wie ist ein Spracherkenner aufgebaut und wie funktioniert er?
+Antworten darauf liefern die folgenden Kapitel, insbesondere Kapitel \ref{chap:VERSUCH_2_AUSWERTUNG}.
+
+\paragraph{}
+
+Für den Spracherkenner wird ein Referenzspektrum bzw. einen Prototyp für jedes Wort, welches er später erkennen soll, benötigt. Zudem ist es sinnvoll einen Testdatensatz aufzunehmen.
+Dazu wird der selbe Versuchsaufbau wie in Versuch 1 verwendet.
+Mit dem Mikrofon wird diesmal ein Referenzdatensatz und ein Testdatensatz von zwei Sprechern A und B aufgenommen.
+Der Referenzdatensatz besteht aus den Worten ''Hoch'', ''Tief'', ''Links'' und ''Rechts'', jeweils fünf mal, von Sprecher A gesprochen. Dieser dient dem Spracherkenner später als Vergleichswert. Der Testdatensatz besteht ebenfalls aus den oben genannten Worten, jeweils fünf mal, einmal von Sprecher A und einmal von Sprecher B gesprochen.
+
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
+
+Alle in Kapitel \ref{chap:VERSUCH_2_FRAGESTELLUNG} gemachten Aufnahmen (Referenzsignale und Testsignale) sind getriggert und auf die Länge von einer Sekunde zu geschnitten.
+Für die Testsignale ist an dieser Stelle keine weitere Bearbeitung notwendig.
+Das Referenzspektrum für später soll jedoch schon hier berechnet werden.
+Dazu wird auf jedes Referenzsignal die Windowing-Methode aus Versuch 1 angewandt.
+Das Referenzspektrum für jedes Wort erhalten wir durch zusätzliche Mittelung der jeweils fünf Spektren.
+In den Abbildungen \ref{fig:REF_HOCH}, \ref{fig:REF_TIEF}, \ref{fig:REF_LINKS} und  \ref{fig:REF_RECHTS} ist jeweils das Referenzspektrum der Worte ''Hoch'', ''Tief'', ''Links'' und ''Rechts'' abgebildet.
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.5]{src/ReferenzspektrumHoch.png}
+\caption{Referenzspektrum des Wortes "Hoch"}
+\label{fig:REF_HOCH}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.5]{src/ReferenzspektrumTief.png}
+\caption{Referenzspektrum des Wortes "Tief"}
+\label{fig:REF_TIEF}
+
+\centering\small
+\includegraphics[scale=0.5]{src/ReferenzspektrumLinks.png}
+\caption{Referenzspektrum des Wortes "Links"}
+\label{fig:REF_LINKS}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.5]{src/ReferenzspektrumRechts.png}
+\caption{Referenzspektrum des Wortes "Rechts"}
+\label{fig:REF_RECHTS}
+\end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
 
+Mit den Messwerten aus Kapitel \ref{chap:VERSUCH_2_MESSWERTE} kann nun ein Spracherkenner aufgebaut und getestet werden.
+Unser Spracherkenner funktioniert folgendermaßen:
+
+\paragraph{}
+
+Ein beliebiges Signal (also ein Wort) aus dem Testdatensatz wird dem Spracherkenner übergeben. Dieser berechnet zunächst das Spektrum des Signals mit der Windowing-Methode.
+Danach vergleicht bzw. korreliert er jedes Referenzspektrum mit dem Eingabespektrum. Dazu wird jeweils der Korrelationskoeffizient nach Bravais-Pearson berechnet. Ein Koeffizient nahe an 1 bedeutet eine hohe Ähnlichkeit der Signale, nahe an 0 das Gegenteil. Der Spracherkenner entscheidet sich nun für das Wort, welches die höchste Übereinstimmung mit einem der Referenzspektren hat, d.h. das Wort bei dem der Korrelationskoeffizient insgesamt betrachtet am größten ist.
+In Python wurde dafür eine Methode speechRecognition() erstellt, siehe Listing \ref{chap:APPENDIX_SOURCECODE}.
+
+\paragraph{}
+
+Um den oben gezeigten Spracherkenner zu testen, werden ihm alle Testspektren übergeben. Das bedeutet jeweils fünf mal die Worte ''Hoch'', ''Tief'', ''Links'' und ''Rechts'' einmal von Sprecher A und einmal von Sprecher B gesprochen.
+Die Tabelle \ref{tab:DETEKTIONSRATE} zeigt nun die Detektionsrate unseres Spracherkenners für das jeweilige Wort pro Sprecher. Insgesamt ergibt sich eine Detektionsrate von 1.0 für Sprecher A und 0.5 für Sprecher B.
+
+\begin{table}[H]
+\centering 
+\begin{tabular}{ccc}
+\hline
+\textbf{Wort} &\textbf{Sprecher A} & \textbf{Sprecher B} \\
+\hline
+Hoch & 1.0 & 0.6 \\
+\hline
+Tief & 1.0 & 0.4 \\
+\hline
+Links & 1.0 & 0.0 \\
+\hline
+Rechts & 1.0 & 1.0 \\
+\hline
+\end{tabular} 
+\caption{Detektionsraten des Spracherkenners für das jeweilige Wort}
+\label{tab:DETEKTIONSRATE}
+\end{table}
+
 \section{Interpretation}
 \label{chap:VERSUCH_2_INTERPRETATION}
+
+Wie die Tabelle \ref{tab:DETEKTIONSRATE} zeigt, funktioniert der Spracherkenner hervorragend für Sprecher A. Alle Wörter wurden richtig erkannt. Von Sprecher A stammen jedoch auch die Referenzspektren, wodurch dieses Ergebnis nicht besonders überrascht.
+Bei Sprecher B schneidet der Spracherkenner eher schlecht ab. Lediglich das Wort ''Rechts'' wurde immer korrekt erfasst, das Wort ''Links'' wurde sogar nie erkannt.
+Der Spracherkenner arbeitet nur für Sprecher A zuverlässig.
 
 %
 % CHAPTER Anhang
@@ -308,13 +390,287 @@ Die Berechnung der Ergebnisse ist dem Pythoncode in Listing \ref{lst:Code} Metho
 \label{chap:APPENDIX_SOURCECODE}
 \begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V2, captionpos=b, label=lst:Code]
 
-# TODO python code
+#-*-coding:utf-8-*-
+"""
+CreatedonMonDec714:09:282015
+
+@author:edc10
+"""
+
+#import pyaudio
+import numpy as np
+import scipy.signal as win
+import scipy.stats as stats
+import matplotlib.pyplot as plt
+
+#FORMAT = pyaudio.paInt16
+SAMPLEFREQ = 44100
+SEC=2
+READBYTES = int(44100*SEC)
+TRIGGER = 800
+WINDOWSIZE = 512
+WINDOWTIME = WINDOWSIZE / SAMPLEFREQ
+
+
+def plotRecord(rec, filename=''):
+    myDpi = 75
+    fig, ax = plt.subplots(figsize=(800/myDpi, 600/myDpi), dpi=myDpi)
+    ax.autoscale(enable=True, axis='x', tight=True)
+    time = np.linspace(0, len(rec)/SAMPLEFREQ, len(rec))
+    amp = rec/((2**15)-1)
+    ax.plot(time, amp)
+    ax.set_xlabel('Time [$s$]')
+    ax.set_ylabel('Amplitude [$V$]')
+    if filename is not '':
+        fig.savefig(filename, transparent=True, dpi=myDpi)
+    return
+    
+    
+def trigger(rec):
+    for i in range(len(rec)):
+        if rec[i] > TRIGGER:
+            return rec[i:]
+    return []
+
+
+def cut(rec):
+    if len(rec) < SAMPLEFREQ:
+        size = SAMPLEFREQ - len(rec)
+        rec = np.append(rec, np.zeros(size))
+
+    return rec[:SAMPLEFREQ]
+
+
+def getInputDataPyAudio():
+    p = pyaudio.PyAudio()
+    print('running')
+    
+    stream = p.open(format=FORMAT, channels=1, rate=SAMPLEFREQ,
+                    input=True, frames_per_buffer=READBYTES)
+    data = stream.read(READBYTES)
+    decoded = np.fromstring(data, 'Int16')
+
+    stream.stop_stream()
+    stream.close()
+    p.terminate()
+    print('done')
+    return decoded
+
+
+def plotFFT(rec, filename=''):
+    
+    #fft
+    # n = Anzahl der Schwingungen innerhalb der gesamten Signaldauer
+    amp = rec/((2**15)-1)
+    c = np.fft.fft(amp)
+    n = np.abs(c)
+    
+    # spiegelung eleminieren
+    half = len(n)/2+1
+    #print(half)
+    count = np.arange(0, int(half))
+    #print(count)
+    
+    # Anzahl der Schwingungen innerhalb der gesamten Signaldauer dargestellt
+    dpi=75
+    fig, axN = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    axN.plot(count[:],n[:half], color = "blue", label=" Amplitudenspektrum ")
+    # lässt X-Achse bei 0 beginnen
+    axN.autoscale(enable=True, axis='x', tight=True)
+    axN.legend(loc='upper right');
+    axN.set_xlabel("Frequenz [Hz]")
+    axN.set_ylabel("Amplitude [$|Y(f)|$]")
+    
+    # als png abspeichern    
+    if filename is not '':
+        fig.savefig(filename, transparent=True, dpi=dpi)
+    return
+
+
+def plotFFT2(rec, filename=''):  
+    # spiegelung eleminieren
+    half = len(rec)/2+1
+    count = np.arange(0, int(half)) / WINDOWTIME
+    
+    # Anzahl der Schwingungen innerhalb der gesamten Signaldauer dargestellt
+    dpi=75
+    fig, axN = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    axN.plot(count[:],rec[:half], color = "blue", label=" Amplitudenspektrum ")
+    # lässt X-Achse bei 0 beginnen
+    axN.autoscale(enable=True, axis='x', tight=True)
+    axN.legend(loc='upper right');
+    axN.set_xlabel("Frequenz [Hz]")
+    axN.set_ylabel("Amplitude [$|Y(f)|$]")
+    
+    # als png abspeichern    
+    if filename is not '':
+        fig.savefig(filename, transparent=True, dpi=dpi)
+    return
+
+
+def record5():
+    for i in range(5):
+        data = getInputDataPyAudio()
+        triggered = trigger(data)
+        cutted = cut(triggered)
+        plotRecord(cutted)
+        np.savetxt("TestMarcelRechts" + str(i) + ".csv", cutted, delimiter=",")
+        print("fertig")
+        input()
+    return
+
+
+def getInputData(filename):
+    return np.genfromtxt(filename, delimiter=',')
+
+
+def windowing(rec):
+    # Inrervalle für die Windows berechnen
+    steps = []
+    for i in range(0, len(rec), int(WINDOWSIZE / 2)):
+        steps.append(i)
+    steps.append(len(rec))
+
+    # Windows erstellen
+    windows = []
+    for i in range(len(steps) - 3):
+        windows.append(rec[steps[i]:steps[i + 2]])
+
+    #----------------------------------------------------
+
+    # Gaus anwenden
+    for i in range(len(windows)):
+        windows[i] = windows[i] * win.gaussian(WINDOWSIZE, std=WINDOWSIZE/4)
+    
+    # lokale Fouriertransformation
+    result = np.zeros(WINDOWSIZE)
+    for i in range(len(windows)):
+        windows[i] = np.fft.fft(windows[i]/((2**15)-1))
+        windows[i] = np.abs(windows[i])
+        result = result + windows[i]
+    
+    result = result / len(windows)
+    return result
+
+
+def getMeans(pathname):
+    files = ['Hoch', 'Tief', 'Links', 'Rechts']
+    dic = {}
+    for name in files:
+        result = []
+        for i in range(5):
+            data = getInputData(pathname + name + str(i) + ".csv")
+            result.append(windowing(data))
+    
+        summ = np.zeros(WINDOWSIZE)
+        for res in result:
+            summ = summ + res
+        
+        mean = summ / len(result)
+        dic[name] = mean
+    return dic
+
+
+def speechRecognition(referenceDict, data):
+    data = windowing(data)
+    maximum = 0
+    for key in referenceDict:
+        coefficient = stats.pearsonr(referenceDict[key], data)[0]
+        if coefficient > maximum:
+            maximum = coefficient
+            bestKey = key
+    return bestKey
+
+
+def versuch1a():
+    decoded = getInputDataPyAudio()
+    #np.savetxt("Aufnahme1.csv", decoded, delimiter=",")
+    plotRecord(decoded)
+    #plotRecord(decoded, 'v1.png')
+
+
+def versuch1b():
+    decoded = getInputDataPyAudio()
+    triggered = trigger(decoded)
+    cutted = cut(triggered)
+    plotRecord(cutted)
+
+
+def versuch1bc():
+    data = np.genfromtxt('Aufnahme1.csv', delimiter=',')
+    triggered = trigger(data)
+    cutted = cut(triggered)
+    plotRecord(cutted, 'Aufnahme1TriggerCut.png')
+    np.savetxt("Aufnahme1TriggerCut.csv", cutted, delimiter=",")
+    plotFFT(cutted, 'Aufnahme1TriggerCutFFT.png')
+
+
+def versuch1d():
+    data = getInputData('Aufnahme1TriggerCut.csv')
+    data = windowing(data)
+    plotFFT2(data)
+
+
+def versuch2():
+    # Referenzspektrum einlesen (Prototypen)
+    reference = getMeans("Referenz/Referenz")
+
+    # Testdaten in Dictionaries abspeichern
+    testJulian = {}
+    testMarcel = {}
+    for name in ['Hoch', 'Tief', 'Links', 'Rechts']:
+        testJulian[name] = []
+        testMarcel[name] = []
+        for i in range(5):
+            dataJulian = getInputData("TestJulian/TestJulian" + name + str(i) + ".csv")
+            dataMarcel = getInputData("TestMarcel/TestMarcel" + name + str(i) + ".csv")
+            testJulian[name].append(dataJulian)
+            testMarcel[name].append(dataMarcel)
+    
+    #Referenzspektren plotten
+    for key in reference:
+        plotFFT2(reference[key], 'Referenzspektrum' + key + ".png")
+    
+    # Spracherkennung
+    print("---Julian---")
+    for key in testJulian:
+        detections = 0
+        for i in range(5):
+            word = speechRecognition(reference, testJulian[key][i])
+            print("Wort:" + key)
+            print("Erkannt: " + word)
+            if word == key:
+                detections += 1
+        detectionRate = detections / 5
+        print("Detektionsrate " + key + ": " + str(detectionRate))
+
+    print()
+
+    print("---Marcel---")
+    for key in testMarcel:
+        detections = 0
+        for i in range(5):
+            word = speechRecognition(reference, testMarcel[key][i])
+            print("Wort:" + key)
+            print("Erkannt: " + word)
+            if word == key:
+                detections += 1
+        detectionRate = detections / 5
+        print("Detektionsrate " + key + ": " + str(detectionRate))
+
+
+def main():
+    #versuch1a()
+    #versuch1bc()
+    #record5()
+    #versuch1d()
+    versuch2()
+
+
+if __name__ == "__main__":
+    main()
 
 \end{lstlisting}
-
-
-\section{Messergebnisse}
-\label{chap:APPENDIX_MEASUREMENT_SOURCE}
 
 %
 % Literaturverzeichnis
