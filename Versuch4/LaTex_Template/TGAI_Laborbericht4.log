@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.26)  10 DEC 2015 14:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  10 DEC 2015 15:55
 entering extended mode
-**TGAI_Laborbericht.tex
-(TGAI_Laborbericht.tex
+**TGAI_Laborbericht4.tex
+(TGAI_Laborbericht4.tex
 LaTeX2e <2015/01/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\base\report.cls"
@@ -1832,7 +1832,7 @@ Package hyperref Info: Option `pdfmenubar' set `true' on input line 180.
 Package hyperref Info: Option `pdffitwindow' set `false' on input line 180.
 Package hyperref Info: Option `pdfnewwindow' set `true' on input line 180.
 
-(TGAI_Laborbericht.aux (preface/cover.aux) (preface/abstract.aux)
+(TGAI_Laborbericht4.aux (preface/cover.aux) (preface/abstract.aux)
 (preface/tableofcontents.aux) (preface/listoffigures.aux)
 (preface/listoftables.aux) (preface/lstlistoflistings.aux)
 (appendix/bibliography.aux))
@@ -1921,7 +1921,7 @@ LaTeX Info: Redefining \ref on input line 188.
 LaTeX Info: Redefining \pageref on input line 188.
 LaTeX Info: Redefining \nameref on input line 188.
 
-(TGAI_Laborbericht.out) (TGAI_Laborbericht.out)
+(TGAI_Laborbericht4.out) (TGAI_Laborbericht4.out)
 \@outlinefile=\write5
 
 babelbib: Set bibliography fall-back language to ngerman
@@ -1961,7 +1961,7 @@ ick labels; missing features). Consider writing \pgfplotsset{compat=1.12} into
 your preamble.
  on input line 188.
 
-(preface/cover.tex <preface/htwg-logo.pdf, id=130, 1597.97pt x 174.6525pt>
+(preface/cover.tex <preface/htwg-logo.pdf, id=74, 1597.97pt x 174.6525pt>
 File: preface/htwg-logo.pdf Graphic file (type pdf)
 
 <use preface/htwg-logo.pdf>
@@ -1976,8 +1976,8 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
  [1
 
 
-{C:/Users/Julian Altmeyer/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <.
-/preface/htwg-logo.pdf>]) (preface/abstract.tex
+{C:/Users/Marcel/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map} <./preface/
+htwg-logo.pdf>]) (preface/abstract.tex
 LaTeX Font Info:    Try loading font information for OT1+ztmcm on input line 9.
 
 
@@ -2020,33 +2020,32 @@ l.194 \include{preface/abstract}
 
 
 ] (preface/tableofcontents.tex
-(TGAI_Laborbericht.toc
+(TGAI_Laborbericht4.toc
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 2.
+)
+\tf@toc=\write6
  [2
 
 
 
 
-])
-\tf@toc=\write6
- [3]) (preface/listoffigures.tex
-(TGAI_Laborbericht.lof)
+]) (preface/listoffigures.tex
+(TGAI_Laborbericht4.lof)
 \tf@lof=\write7
+ [3
+
+
+
+]) (preface/listoftables.tex (TGAI_Laborbericht4.lot)
+\tf@lot=\write8
  [4
 
 
 
-]) (preface/listoftables.tex (TGAI_Laborbericht.lot)
-\tf@lot=\write8
-
-[5
-
-
-
-]) (preface/lstlistoflistings.tex (TGAI_Laborbericht.lol)
+]) (preface/lstlistoflistings.tex (TGAI_Laborbericht4.lol)
 \tf@lol=\write9
- [6
+ [5
 
 
 
@@ -2067,50 +2066,49 @@ Package natbib Warning: Citation `Franz2015j' on page 1 undefined on input line
  3.
 [3
 
-]
- 4.
-[4
+] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+File: lstlang1.sty 2015/06/04 1.6 listings language file
+)
+Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
+nput line 289.
+ [4
 
 ]
- 5.
-[5
-
-] [6
-
-] (appendix/bibliography.tex
-No file TGAI_Laborbericht.bbl.
+(appendix/bibliography.tex
+No file TGAI_Laborbericht4.bbl.
 )
 
 Package natbib Warning: There were undefined citations.
 
 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 343.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 343.
-(TGAI_Laborbericht.aux (preface/cover.aux) (preface/abstract.aux)
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 304.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 304.
+(TGAI_Laborbericht4.aux (preface/cover.aux) (preface/abstract.aux)
 (preface/tableofcontents.aux) (preface/listoffigures.aux)
 (preface/listoftables.aux) (preface/lstlistoflistings.aux)
 (appendix/bibliography.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 343.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 343.
-Package rerunfilecheck Info: File `TGAI_Laborbericht.out' has not changed.
-(rerunfilecheck)             Checksum: 485898756DC434C216B8AEA6290805DB;4359.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 343.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 304.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 304.
+Package rerunfilecheck Info: File `TGAI_Laborbericht4.out' has not changed.
+(rerunfilecheck)             Checksum: 9986F0D212377F442063BDB4ED4A47C3;2374.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 304.
  ) 
 Here is how much of TeX's memory you used:
- 37624 strings out of 493673
- 777843 string characters out of 3143927
- 938566 words of memory out of 3000000
- 40181 multiletter control sequences out of 15000+200000
- 38325 words of font info for 69 fonts, out of 3000000 for 9000
+ 38040 strings out of 493673
+ 781137 string characters out of 3143956
+ 937567 words of memory out of 3000000
+ 40604 multiletter control sequences out of 15000+200000
+ 45539 words of font info for 74 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,12n,79p,714b,609s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,11n,97p,715b,1436s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/times/utmr8a.pfb>
-Output written on TGAI_Laborbericht.pdf (13 pages, 110132 bytes).
+s/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times
+/utmri8a.pfb>
+Output written on TGAI_Laborbericht4.pdf (10 pages, 109344 bytes).
 PDF statistics:
- 259 PDF objects out of 1000 (max. 8388607)
- 48 named destinations out of 1000 (max. 500000)
- 266 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 182 PDF objects out of 1000 (max. 8388607)
+ 34 named destinations out of 1000 (max. 500000)
+ 154 words of extra memory for PDF output out of 10000 (max. 10000000)
 
