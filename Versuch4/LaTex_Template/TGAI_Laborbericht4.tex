@@ -229,7 +229,7 @@
 \chapter{Einleitung}
 \label{chap:EINL}
 
-\cite{Franz2015j}
+
 
 %
 % CHAPTER Versuch 1
@@ -237,9 +237,20 @@
 \chapter{Versuch 1- Fourieranalyse lang andauernder Signale}
 \label{chap:VERSUCH_1}
 
+Lang andauernde Signale sind für die Fourieranalyse sehr rechen intensiv. Deshalb bedient man sich der Methode des Windowing, welches nach Franz2015 \cite{Franz2015j} das Signal in oft überlappende Fenster zerlegt. Diese Zerlegung ermöglicht eine lokale Fourieranalyse eines Fensters. Diese Analyse ist wesentlich schneller durchgeführt, da man nur einen Teil des Signals betrachtet.
+
+a) automatisierte Aufnahme eines Audiosignals und dessen Speicherung
+
+b) Aufbereitung des Audiosignals durch Triggerung und Zeitangleichung
+
+c) Erstellung des Amplitudenspektrums des Audiosignals
+
+d) Anwendung des Windowing-Verfahrens  auf das Audiosignal
+
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_1_FRAGESTELLUNG}
+Frage: Ist das Amplitudenspektrum eines Audiosignals durch die Windowing Methode richtig dargestellt.
 
 Aufbau: Mikrofon
 
@@ -248,6 +259,13 @@ Aufbau: Mikrofon
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
+\textbf{a)automatisierte Aufnahme}
+
+\textbf{b) Aufbereitung des Audiosignals}
+
+\textbf{c) Erstellung des Amplitudenspektrums}
+
+\textbf{d) Anwendung des Windowing-Verfahrens}
 
 Die Berechnung der Ergebnisse ist dem Pythoncode in Listing \ref{lst:Code} Methode versuch1\_2 zu entnehmen.
 
