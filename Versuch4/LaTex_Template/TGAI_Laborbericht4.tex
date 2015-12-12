@@ -157,7 +157,7 @@
 \newcommand{\strAuthorBEmail}{jualtmey@htwg-konstanz.de}
 % Versuchsbeschreibung 
 \newcommand{\strTopic}{Aufbau eines einfachen Spracherkenners}
-\newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
+\newcommand{\strAbstract}{ Erstellung eines einfachen Spracherkenners mit dem Prinzip des Prototyp-Klassifikators. Weiterhin wird das Windowing Verfahren behandelt und implementiert. Dieses wird für die Ermittlung der Spektren für den Spracherkenner benötigt.}
 % hyperref customization
 \hypersetup{
 	pdftitle    ={\strTopic}, % title
@@ -228,6 +228,10 @@
 %
 \chapter{Einleitung}
 \label{chap:EINL}
+Im nachfolgenden Versuch geht es um die Erstellung eines einfachen Spracherkenners. Dieser wird nach dem Prinzip des Prototyp-Klassifikators umgesetzt. Die zu unterscheidenden Prototypen sind dabei "Hoch", "Tief", "Links", und "Rechts". Der Spracherkenner vergleicht diese im voraus aufgenommenen Prototypen anhand ihres Spektrums mit dem gesprochenen Wort des Benutzers. Bei jedem gesprochenen Wort entscheidet der Spracherkenner wie stark das Wort mit einem der Prototypen korreliert.
+Der Spracherkenner wählt den Prototypen, wo es zu der größten Übereinstimmung kommt. \\
+Für den Vergleich der Spektren benötigt man die Windowing Methode, welche in Kapitel \ref{chap:VERSUCH_1} vorbereitend behandelt wird.
+Der eigentliche Spracherkenner wird in Kapitel \ref{chap:VERSUCH_2} erstellt.
 
 
 
@@ -237,7 +241,13 @@
 \chapter{Versuch 1- Fourieranalyse lang andauernder Signale}
 \label{chap:VERSUCH_1}
 
-Lang andauernde Signale sind für die Fourieranalyse sehr rechen intensiv. Deshalb bedient man sich der Methode des Windowing, welches nach Franz2015 \cite{Franz2015j} das Signal in oft überlappende Fenster zerlegt. Diese Zerlegung ermöglicht eine lokale Fourieranalyse eines Fensters. Diese Analyse ist wesentlich schneller durchgeführt, da man nur einen Teil des Signals betrachtet.
+Lang andauernde Signale sind für die Fourieranalyse sehr rechenintensiv. Deshalb bedient man sich der Methode des Windowing, welches nach Franz2015 \cite{Franz2015i} das Signal in oft überlappende Fenster zerlegt. Diese Zerlegung ermöglicht eine lokale Fourieranalyse eines Fensters. Diese Analyse ist wesentlich schneller durchgeführt, da man nur einen Teil des Signals betrachtet.
+In dem nachfolgenden Versuch wird die Windowing Methode implementiert und anschließend auf ihre Korrektheit anhand eines Beispiel Signals geprüft.
+
+\section{Fragestellung, Aufbau, Messprinzip, Messmittel}
+\label{chap:VERSUCH_1_FRAGESTELLUNG}
+\textbf{Fragestellung:} Ist das Amplitudenspektrum eines Audiosignals durch die Windowing Methode richtig dargestellt.\\
+\textbf{Aufbau:} Der Antwort auf diese Frage wird sich in 5 Schritten genähert:
 
 a) automatisierte Aufnahme eines Audiosignals und dessen Speicherung
 
@@ -247,30 +257,56 @@ c) Erstellung des Amplitudenspektrums des Audiosignals
 
 d) Anwendung des Windowing-Verfahrens  auf das Audiosignal
 
-
-\section{Fragestellung, Messprinzip, Aufbau, Messmittel}
-\label{chap:VERSUCH_1_FRAGESTELLUNG}
-Frage: Ist das Amplitudenspektrum eines Audiosignals durch die Windowing Methode richtig dargestellt.
-
-Aufbau: Mikrofon
+e) Vergleich der Beiden Amplitudenspektren in Kapitel \ref{chap:VERSUCH_1_INTERPRETATION} \\\\
+\textbf{Messprinzip und Messmittel:} Es wird ein Mikrofon als Messmittel eingesetzt. Das Mikrofon erzeugt je nach empfangenen Ton einen entsprechenden Spannungswert. Mithilfe dieses Messprinzips lassen sich die Informationen weiterverarbeiten. 
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
+Nachfolgend die Messwerte zu den Schritten a) und b):
+
+\begin{figure}[H]
+\centering\small
+\includegraphics [scale=0.8]{src/v1.png}
+\caption{ \textbf{a)} unbearbeitetes Audiosignal des Wortes <<Aua>>}
+\label{fig:AUA_unbearbeitet}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics [scale=0.45]{src/Aufnahme1TriggerCut.png}
+\caption{ \textbf{b)} aufbereitetes Audiosignal aus a), getriggert und eine Sekunde lang}
+\label{fig:AUA_TriggerCut}
+\end{figure}
+
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
-\textbf{a)automatisierte Aufnahme}
+\textbf{Schritt c)}\\
+Aus dem aufbereiteten Audiosignal aus Abbildung \ref{fig:AUA_TriggerCut} wird mittels der Fouriertransformation das Amplitudenspektrum in Abbildung \ref{fig:AUA_TriggerCutFFT} erzeugt. Dabei wird das ganze Signal komplett betrachtet. Die Berechnung der Ergebnisse sind dem Pythoncode in Listing \ref{lst:Code} zu entnehmen.\\
+\textbf{Schritt d)}\\
+Verglichen zu dem in Schritt c) berechneten Amplitudenspektrum, wird nun das Amplitudenspektrum aus mehreren Teilbereichen mittels der Windowing Methode zusammengestellt. Die Zusammenführung des Signals entsteht durch Mittlung der einzelnen Teilbereiche. Das Ergebnis ist in Abbildung \ref{fig:AUA_TriggerCutWindow} dargestellt.
+Die Berechnung des Windowing sind speziell der Methode <<windowing(rec)>> aus Listing \ref{lst:Code} zu entnehmen.
 
-\textbf{b) Aufbereitung des Audiosignals}
+\begin{figure}[H]
+\centering\small
+\includegraphics [scale=0.45]{src/Aufnahme1TriggerCutFFT.png}
+\caption{ \textbf{c)} Amplitudenspektrum des aufbereiteten Audiosignals}
+\label{fig:AUA_TriggerCutFFT}
+\end{figure}
 
-\textbf{c) Erstellung des Amplitudenspektrums}
+\begin{figure}[H]
+\centering\small
+\includegraphics [scale=0.45]{src/Aufnahme1TriggerCutWindow.png}
+\caption{ \textbf{d)} Amplitudenspektrum nach Windowing des aufbereiteten Audiosignals}
+\label{fig:AUA_TriggerCutWindow}
+\end{figure}
 
-\textbf{d) Anwendung des Windowing-Verfahrens}
 
-Die Berechnung der Ergebnisse ist dem Pythoncode in Listing \ref{lst:Code} Methode versuch1\_2 zu entnehmen.
 
 \section{Interpretation}
 \label{chap:VERSUCH_1_INTERPRETATION}
+In Abbildung \ref{fig:AUA_TriggerCutWindow} sieht man einen geglätteten Verlauf des in Abbildung \ref{fig:AUA_TriggerCutFFT} gezeigten Amplitudenspektrums.
+Vergleicht man nun Abbildung \ref{fig:AUA_TriggerCutFFT} und Abbildung \ref{fig:AUA_TriggerCutWindow} so erkennt man, dass die Amplitudenspektren vom  Profil einander entsprechen. Dies zeigt die korrekte Berechnung der Windowing Methode. 
 
 %
 % CHAPTER Versuch 2
@@ -608,7 +644,7 @@ def versuch1bc():
 def versuch1d():
     data = getInputData('Aufnahme1TriggerCut.csv')
     data = windowing(data)
-    plotFFT2(data)
+    plotFFT2(data, "Aufnahme1TriggerCutWindow")
 
 
 def versuch2():

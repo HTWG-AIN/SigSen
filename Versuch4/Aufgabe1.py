@@ -216,7 +216,7 @@ def versuch1bc():
 def versuch1d():
     data = getInputData('Aufnahme1TriggerCut.csv')
     data = windowing(data)
-    plotFFT2(data)
+    plotFFT2(data, "Aufnahme1TriggerCutWindow")
 
 
 def versuch2():
@@ -271,8 +271,8 @@ def main():
     #versuch1a()
     #versuch1bc()
     #record5()
-    #versuch1d()
-    versuch2()
+    versuch1d()
+    #versuch2()
 
 
 if __name__ == "__main__":

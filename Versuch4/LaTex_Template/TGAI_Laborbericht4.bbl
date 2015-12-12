@@ -1,9 +1,10 @@
 \begin{thebibliography}{1}
 
-\bibitem{Franz2015j}
+\bibitem{Franz2015i}
 Prof. Dr. Matthias~O. Franz.
-\newblock Vorlesung 11 - lineare systeme: Lineare und nichtlineare systeme,
-  elementare lineare systeme, frequenzgang.
+\newblock Vorlesung 10 - sprache und spracherkennung:
+  Kurzzeit-fouriertransformation, erzeugung und wahrnehmung von sprache,
+  mustererkennung durch korrelation.
 \newblock In {\em Vorlesung Technische Grundlagen der angewandten Informatik},
   2015.
 

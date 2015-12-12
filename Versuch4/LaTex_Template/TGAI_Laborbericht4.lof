@@ -1,4 +1,12 @@
 \select@language {ngerman}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {2.1}{\ignorespaces \textbf {a)} unbearbeitetes Audiosignal des Wortes <<Aua>>\relax }}{3}{figure.caption.8}
+\contentsline {figure}{\numberline {2.2}{\ignorespaces \textbf {b)} aufbereitetes Audiosignal aus a), getriggert und eine Sekunde lang\relax }}{4}{figure.caption.9}
+\contentsline {figure}{\numberline {2.3}{\ignorespaces \textbf {c)} Amplitudenspektrum des aufbereiteten Audiosignals\relax }}{5}{figure.caption.10}
+\contentsline {figure}{\numberline {2.4}{\ignorespaces \textbf {d)} Amplitudenspektrum nach Windowing des aufbereiteten Audiosignals\relax }}{5}{figure.caption.11}
 \addvspace {10\p@ }
+\contentsline {figure}{\numberline {3.1}{\ignorespaces Referenzspektrum des Wortes "Hoch"\relax }}{8}{figure.caption.13}
+\contentsline {figure}{\numberline {3.2}{\ignorespaces Referenzspektrum des Wortes "Tief"\relax }}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {3.3}{\ignorespaces Referenzspektrum des Wortes "Links"\relax }}{9}{figure.caption.14}
+\contentsline {figure}{\numberline {3.4}{\ignorespaces Referenzspektrum des Wortes "Rechts"\relax }}{10}{figure.caption.15}
