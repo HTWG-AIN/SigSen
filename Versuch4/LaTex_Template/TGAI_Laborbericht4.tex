@@ -328,7 +328,7 @@ Antworten darauf liefern die folgenden Kapitel, insbesondere Kapitel \ref{chap:V
 Für den Spracherkenner wird ein Referenzspektrum bzw. einen Prototyp für jedes Wort, welches er später erkennen soll, benötigt. Zudem ist es sinnvoll einen Testdatensatz aufzunehmen.
 Dazu wird der selbe Versuchsaufbau wie in Versuch 1 verwendet.
 Mit dem Mikrofon wird diesmal ein Referenzdatensatz und ein Testdatensatz von zwei Sprechern A und B aufgenommen.
-Der Referenzdatensatz besteht aus den Worten ''Hoch'', ''Tief'', ''Links'' und ''Rechts'', jeweils fünf mal, von Sprecher A gesprochen. Dieser dient dem Spracherkenner später als Vergleichswert. Der Testdatensatz besteht ebenfalls aus den oben genannten Worten, jeweils fünf mal, einmal von Sprecher A und einmal von Sprecher B gesprochen.
+Der Referenzdatensatz besteht aus den Worten ''Hoch'', ''Tief'', ''Links'' und ''Rechts'', jeweils fünf mal, von Sprecher A gesprochen. Dieser dient dem Spracherkenner später als Vergleichswert. Der Testdatensatz besteht ebenfalls aus den oben genannten Worten, jeweils fünf mal, einmal wieder von Sprecher A und einmal von Sprecher B gesprochen.
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
@@ -380,7 +380,7 @@ In Python wurde dafür eine Methode speechRecognition() erstellt, siehe Listing 
 
 \paragraph{}
 
-Um den oben gezeigten Spracherkenner zu testen, werden ihm alle Testspektren übergeben. Das bedeutet jeweils fünf mal die Worte ''Hoch'', ''Tief'', ''Links'' und ''Rechts'' einmal von Sprecher A und einmal von Sprecher B gesprochen.
+Um den oben gezeigten Spracherkenner zu testen, werden ihm alle Testsignale übergeben. Das bedeutet jeweils fünf mal die Worte ''Hoch'', ''Tief'', ''Links'' und ''Rechts'' einmal von Sprecher A und einmal von Sprecher B gesprochen.
 Die Tabelle \ref{tab:DETEKTIONSRATE} zeigt nun die Detektionsrate unseres Spracherkenners für das jeweilige Wort pro Sprecher. Insgesamt ergibt sich eine Detektionsrate von 1.0 für Sprecher A und 0.5 für Sprecher B.
 
 \begin{table}[H]
