@@ -241,13 +241,30 @@
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
-Bei einem Eingangsspannungsbereichs von -10 V bis 10V des 11-Bit-AD-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0098 V$
+
+
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
+Bei einem Eingangsspannungsbereichs von -10 V bis 10V des 11-Bit-AD-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0098 V$
+
+Standardabweichung:
+Multimeter Philips Std s=0.02862533842594704
+AD Wandler Std s=0.0029325756597230355
 
 \section{Interpretation}
 \label{chap:VERSUCH_1_INTERPRETATION}
+Multimeter Philips:
+Standardabweichung s= 30mV
+Dies bedeutet, dass eine analoge Eingangsspannung in eine um $\pm30mV$ abweichende Ausgangsspannung gewandelt wird. Der folgende AD Wandler kann dies wesentlich genauer.
+
+AD Wandler:
+Standardabweichung s= 3mV
+Dies bedeutet, dass eine analoge Eingangsspannung in eine um $\pm3mV$ abweichende Ausgangsspannung gewandelt wird.
+
+Der theoretischer Quantisierungsfehler = 10mV beschreibt die Genauigkeit des AD-Wandlers. So kann der AD Wandler beispielsweise eine Eingangsspannung von 1mV nicht von 9mV unterscheiden.
+
+Quantisierungsfehler ist schuld!!!!!!
 
 %
 % CHAPTER Versuch 2
@@ -261,13 +278,21 @@ Bei einem Eingangsspannungsbereichs von -10 V bis 10V des 11-Bit-AD-Wandlers erg
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
-Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0049 V$
+
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
+Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0049 V$
 
 \section{Interpretation}
 \label{chap:VERSUCH_2_INTERPRETATION}
+Der theoretischer Quantisierungsfehler = 5mV beschreibt die Genauigkeit des DA-Wandlers. So kann der DA Wandler beispielsweise eine Eingangsspannung von 1mV nicht von 5mV unterscheiden.
+
+DA Wandler:
+Standardabweichung s=28mV
+Dies bedeutet, dass eine digitale Eingabewert in eine um $\pm28mV$ abweichende Ausgangsspannung gewandelt wird.
+
+DA Wandler ist schuld!!!!!!!!!!!!!!!!!
 
 %
 % CHAPTER Versuch 3
@@ -278,14 +303,32 @@ Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt s
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_3_FRAGESTELLUNG}
 
+
 \section{Messwerte}
 \label{chap:VERSUCH_3_MESSWERTE}
 
+\begin{figure}[H]
+\centering\small
+\includegraphics[width=\textwidth]{src/Sinus.png}
+\caption{generierter Sinus}
+\label{fig:SINUS}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[width=\textwidth]{src/Sinus_Ausschnitt.png}
+\caption{Sinus Ausschnitt}
+\label{fig:SINUS_A}
+\end{figure}
+
 \section{Auswertung}
 \label{chap:VERSUCH_3_AUSWERTUNG}
+Durch ablesen aus der Abbildung \ref{fig:SINUS_A} ergibt sich ein $\Delta t = 10ms$ 
 
 \section{Interpretation}
 \label{chap:VERSUCH_3_INTERPRETATION}
+Somit ergibt sich ca. eine maximale Ausgabefrequenz von 100Hz
+
 
 %
 % CHAPTER Versuch 4
@@ -298,9 +341,68 @@ Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt s
 
 \section{Messwerte}
 \label{chap:VERSUCH_4_MESSWERTE}
+Abtastfrequenz= 8000Hz
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/1000fft.png}
+\caption{1000Hz FFT}
+\label{fig:1000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/2000fft.png}
+\caption{2000Hz FFT}
+\label{fig:2000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/3000fft.png}
+\caption{3000Hz FFT}
+\label{fig:3000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/4000fft.png}
+\caption{4000Hz FFT}
+\label{fig:4000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/5000fft.png}
+\caption{5000Hz FFT}
+\label{fig:5000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/6000fft.png}
+\caption{6000Hz FFT}
+\label{fig:6000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/7000fft.png}
+\caption{7000Hz FFT}
+\label{fig:7000_FFT}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/8000fft.png}
+\caption{8000Hz FFT}
+\label{fig:8000_FFT}
+\end{figure}
+
 
 \section{Auswertung}
 \label{chap:VERSUCH_4_AUSWERTUNG}
+Bei obiger Abtastfrequenz ergibt sich eine Nyquist-Frequenz = 4000Hz.
 
 \section{Interpretation}
 \label{chap:VERSUCH_4_INTERPRETATION}
@@ -321,8 +423,135 @@ Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt s
 \label{chap:APPENDIX_SOURCECODE}
 \begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V4, captionpos=b, label=lst:Code]
 
-#-*-coding:utf-8-*-
+# -*- coding: utf-8 -*-
 """
+Created on Mon Jan 11 14:15:07 2016
+
+@author: edc07
+"""
+
+
+import numpy as np
+import matplotlib.pyplot as plt
+
+#import redlab as rl
+#import time
+#from TekTDS2000 import *
+
+
+def versuch1():
+    out(1)
+    #print(str(get_input(4000, 8000)))
+    print('fertig')
+
+
+def versuch2():
+    #print(str(np.mean(get_input(4000, 8000))))
+
+    mult_array = np.array([0.103, 0.196, 0.2, 0.2, 0.194, 0.198, 0.199, 0.199, 0.2, 0.198])
+    ad_array = np.array([0.015, 0.018, 0.013, 0.015, 0.016, 0.013, 0.012, 0.012, 0.014, 0.022])
+    print("Multimeter Philips Std s={}".format(getStd(mult_array)))
+    print("AD Wandler Std s={}".format(getStd(ad_array)))
+
+def versuch3():
+    da_array = np.array([0.011, 0.019, 0.027, 0.041, 0.049, 0.058, 0.072, 0.080, 0.090, 0.096])
+    print("DA Wandler Std s={}".format(getStd(da_array)))
+
+def versuch4():    
+    for x in get_sin():
+       out(x)
+        time.sleep(0.01)
+    
+    save_input_oszi()
+    print(getInputData('sinus.csv')[0])
+    
+    plotRecord(getInputData('sinus.csv'))
+
+
+def versuch5():
+    np.savetxt('8000.csv', rl.cbVInScan(0, 0, 0, 4000, 8000, 1))
+    
+    plotFFT(getInputData('1000.csv'), 8000,'1000fft.png')
+    plotFFT(getInputData('2000.csv'), 8000,'2000fft.png')
+    plotFFT(getInputData('3000.csv'), 8000,'3000fft.png')
+    plotFFT(getInputData('4000.csv'), 8000,'4000fft.png')
+    plotFFT(getInputData('5000.csv'), 8000,'5000fft.png')
+    plotFFT(getInputData('6000.csv'), 8000,'6000fft.png')
+    plotFFT(getInputData('7000.csv'), 8000,'7000fft.png')
+    plotFFT(getInputData('8000.csv'), 8000,'8000fft.png')
+
+
+def plotFFT(rec, sampleRate, filename=''):
+    
+    #fft
+    # n = Anzahl der Schwingungen innerhalb der gesamten Signaldauer
+    c = np.fft.fft(rec)
+    n = np.abs(c)
+    sampleTime = 1 / sampleRate
+    
+    count = np.arange(0, len(n))* (1 / (len(n) * sampleTime))
+    
+    # Anzahl der Schwingungen innerhalb der gesamten Signaldauer dargestellt
+    dpi=75
+    fig, axN = plt.subplots(figsize=(800/dpi,600/dpi), dpi=dpi)
+    axN.plot(count[:],n[:], color = "blue", label=" Amplitudenspektrum ")
+    # lässt X-Achse bei 0 beginnen
+    axN.autoscale(enable=True, axis='x', tight=True)
+    axN.legend(loc='upper right');
+    axN.set_xlabel("Frequenz [Hz]")
+    axN.set_ylabel("Amplitude")
+    
+    # als png abspeichern    
+    if filename is not '':
+        fig.savefig(filename, transparent=True, dpi=dpi)
+    return
+
+
+def getStd(e_array):
+    return np.std(e_array)
+
+def plotRecord(rec):
+    myDpi = 75
+    fig, ax = plt.subplots(figsize=(800/myDpi, 600/myDpi), dpi=myDpi)
+    ax.autoscale(enable=True, axis='x', tight=True)
+    ax.plot(rec[400:2100,0], rec[400:2100,1])
+    ax.set_xlabel('Time [$s$]')
+    ax.set_ylabel('Amplitude [$V$]')
+
+
+def save_input_oszi():
+    scope = TekTDS2000()
+
+    x,y = scope.getData(1,1,2500)
+    np.savetxt("sinus.csv" , np.transpose([x,y]), delimiter=",")
+
+
+def getInputData(filename):
+    return np.genfromtxt(filename, delimiter=',')
+
+
+def get_input(number, samplerate):
+    return rl.cbVInScan(0, 0, 0, number, samplerate, 1)
+
+
+def out(voltage):
+    rl.cbVOut(0, 0, 101, voltage)
+
+
+def get_sin(fs=100):
+    val = np.linspace(0, 2 * np.pi, fs)
+    return np.sin(val) + 1
+
+
+def main():
+    versuch1()
+    versuch2()
+    versuch3()
+    versuch4()
+    versuch5()
+
+if __name__ == '__main__':
+    main()
 \end{lstlisting}
 
 \section{Messergebnisse}

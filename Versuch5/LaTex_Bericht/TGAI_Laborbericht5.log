@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  13 JAN 2016 13:37
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  13 JAN 2016 16:39
 entering extended mode
 **TGAI_Laborbericht5.tex
 (TGAI_Laborbericht5.tex
@@ -2058,79 +2058,150 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
  2.
 [2
 
-]
+] [3]
  3.
-[3
-
-]
- 4.
 [4
 
 ]
- 5.
-[5
+ 4.
+<src/Sinus.png, id=239, 649.42625pt x 494.84875pt>
+File: src/Sinus.png Graphic file (type png)
+ <use src/Sinus.png>
+Package pdftex.def Info: src/Sinus.png used on input line 312.
+(pdftex.def)             Requested size: 441.01773pt x 336.05476pt.
+ [5
 
-] ("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
+]
+Overfull \vbox (50.31891pt too high) has occurred while \output is active []
+
+
+[6 <./src/Sinus.png>]
+<src/Sinus_Ausschnitt.png, id=251, 665.48625pt x 494.84875pt>
+File: src/Sinus_Ausschnitt.png Graphic file (type png)
+
+<use src/Sinus_Ausschnitt.png>
+Package pdftex.def Info: src/Sinus_Ausschnitt.png used on input line 319.
+(pdftex.def)             Requested size: 441.01773pt x 327.93767pt.
+ [7 <./src/Sinus_Ausschnitt.png>]
+ 5.
+<src/1000fft.png, id=258, 770.88pt x 578.16pt>
+File: src/1000fft.png Graphic file (type png)
+ <use src/1000fft.png>
+Package pdftex.def Info: src/1000fft.png used on input line 348.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+
+<src/2000fft.png, id=259, 770.88pt x 578.16pt>
+File: src/2000fft.png Graphic file (type png)
+ <use src/2000fft.png>
+Package pdftex.def Info: src/2000fft.png used on input line 355.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+ [8
+
+ <./src/1000fft.png>] <src/3000fft.png, id=265, 770.88pt x 578.16pt>
+File: src/3000fft.png Graphic file (type png)
+
+<use src/3000fft.png>
+Package pdftex.def Info: src/3000fft.png used on input line 362.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+ <src/4000fft.png, id=266, 770.88pt x 578.16pt>
+File: src/4000fft.png Graphic file (type png)
+
+<use src/4000fft.png>
+Package pdftex.def Info: src/4000fft.png used on input line 369.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+ [9 <./src/2000fft.png> <./src/3000fft.png>]
+<src/5000fft.png, id=273, 770.88pt x 578.16pt>
+File: src/5000fft.png Graphic file (type png)
+ <use src/5000fft.png>
+Package pdftex.def Info: src/5000fft.png used on input line 376.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+
+<src/6000fft.png, id=274, 770.88pt x 578.16pt>
+File: src/6000fft.png Graphic file (type png)
+ <use src/6000fft.png>
+Package pdftex.def Info: src/6000fft.png used on input line 383.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+ [10 <./src/4000fft.png> <./src/5000fft.png>]
+<src/7000fft.png, id=281, 770.88pt x 578.16pt>
+File: src/7000fft.png Graphic file (type png)
+ <use src/7000fft.png>
+Package pdftex.def Info: src/7000fft.png used on input line 390.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+
+<src/8000fft.png, id=282, 770.88pt x 578.16pt>
+File: src/8000fft.png Graphic file (type png)
+ <use src/8000fft.png>
+Package pdftex.def Info: src/8000fft.png used on input line 397.
+(pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
+ [11 <./src/6000fft.png> <./src/7000fft.png>] [12 <./src/8000fft.png>]
+("C:\Program Files\MiKTeX 2.9\tex\latex\listings\lstlang1.sty"
 File: lstlang1.sty 2015/06/04 1.6 listings language file
 )
 Package hyperref Info: bookmark level for unknown lstlisting defaults to 0 on i
-nput line 322.
+nput line 424.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <10> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 324.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <7.4> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 324.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
 LaTeX Font Info:    Font shape `OT1/ptm/bx/n' in size <6> not available
-(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 324.
-LaTeX Font Info:    Try loading font information for TS1+ptm on input line 324.
+(Font)              Font shape `OT1/ptm/b/n' tried instead on input line 426.
+LaTeX Font Info:    Try loading font information for TS1+ptm on input line 426.
 
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\psnfss\ts1ptm.fd"
 File: ts1ptm.fd 2001/06/04 font definitions for TS1/ptm.
 )
-<src/2GenauigkeitsWerteAD.jpg, id=222, 3119.655pt x 4059.165pt>
+LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 434.
+ [13
+
+] [14] [15]
+<src/2GenauigkeitsWerteAD.jpg, id=422, 3119.655pt x 4059.165pt>
 File: src/2GenauigkeitsWerteAD.jpg Graphic file (type jpg)
 
 <use src/2GenauigkeitsWerteAD.jpg>
-Package pdftex.def Info: src/2GenauigkeitsWerteAD.jpg used on input line 333.
+Package pdftex.def Info: src/2GenauigkeitsWerteAD.jpg used on input line 562.
 (pdftex.def)             Requested size: 441.01773pt x 573.7917pt.
- [6
-
-] [7]
+ [16] [17]
 Overfull \vbox (1.43639pt too high) has occurred while \output is active []
 
 
-[8 <./src/2GenauigkeitsWerteAD.jpg>]
-<src/3GenauigkeitsWerteDA.jpg, id=240, 3244.12pt x 4255.9pt>
+[18 <./src/2GenauigkeitsWerteAD.jpg>]
+<src/3GenauigkeitsWerteDA.jpg, id=452, 3244.12pt x 4255.9pt>
 File: src/3GenauigkeitsWerteDA.jpg Graphic file (type jpg)
 
 <use src/3GenauigkeitsWerteDA.jpg>
-Package pdftex.def Info: src/3GenauigkeitsWerteDA.jpg used on input line 340.
+Package pdftex.def Info: src/3GenauigkeitsWerteDA.jpg used on input line 569.
 (pdftex.def)             Requested size: 441.01773pt x 578.54799pt.
- [9 <./src/3GenauigkeitsWerteDA.jpg>]
+ [19 <./src/3GenauigkeitsWerteDA.jpg>]
 (appendix/bibliography.tex
 No file TGAI_Laborbericht5.bbl.
 ) 
 AED: lastpage setting LastPage
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 350.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 350.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 579.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 579.
 (TGAI_Laborbericht5.aux (preface/cover.aux) (preface/abstract.aux)
 (preface/tableofcontents.aux) (preface/listoffigures.aux)
 (preface/listoftables.aux) (preface/lstlistoflistings.aux)
 (appendix/bibliography.aux))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 350.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 350.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 579.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 579.
 Package rerunfilecheck Info: File `TGAI_Laborbericht5.out' has not changed.
-(rerunfilecheck)             Checksum: AB7D9C2FA8A888949F25A596F62FBFB3;4398.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 350.
+(rerunfilecheck)             Checksum: 92D0EAF74AF7DE96F2291EDA8249100E;4401.
+
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 579.
  ) 
 Here is how much of TeX's memory you used:
- 38193 strings out of 493673
- 783599 string characters out of 3143956
- 938567 words of memory out of 3000000
- 40713 multiletter control sequences out of 15000+200000
- 64002 words of font info for 120 fonts, out of 3000000 for 9000
+ 38495 strings out of 493673
+ 788041 string characters out of 3143956
+ 963567 words of memory out of 3000000
+ 40855 multiletter control sequences out of 15000+200000
+ 68197 words of font info for 124 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 56i,12n,97p,715b,1631s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 56i,12n,97p,715b,2198s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Progr
 am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/typ
@@ -2140,9 +2211,9 @@ onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb
 ><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
 s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/urw/times/utmri8a.pfb>
-Output written on TGAI_Laborbericht5.pdf (16 pages, 1911746 bytes).
+Output written on TGAI_Laborbericht5.pdf (26 pages, 2138613 bytes).
 PDF statistics:
- 285 PDF objects out of 1000 (max. 8388607)
- 53 named destinations out of 1000 (max. 500000)
- 244 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 527 PDF objects out of 1000 (max. 8388607)
+ 200 named destinations out of 1000 (max. 500000)
+ 294 words of extra memory for PDF output out of 10000 (max. 10000000)
 
