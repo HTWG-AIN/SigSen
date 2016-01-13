@@ -229,12 +229,11 @@
 \chapter{Einleitung}
 \label{chap:EINL}
 
-\cite{Franz2015j}
 
 %
 % CHAPTER Versuch 1
 %
-\chapter{Versuch 1}
+\chapter{Versuch 1 - Genauigkeit der AD-Wandlung}
 \label{chap:VERSUCH_1}
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
@@ -242,6 +241,7 @@
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
+Bei einem Eingangsspannungsbereichs von -10 V bis 10V des 11-Bit-AD-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0098 V$
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
@@ -252,7 +252,7 @@
 %
 % CHAPTER Versuch 2
 %
-\chapter{Versuch 2}
+\chapter{Versuch 2 - Genauigkeit der DA-Wandlung}
 \label{chap:VERSUCH_2}
 
 
@@ -261,6 +261,7 @@
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
+Bei einem Ausgangspannungsbereichs von 0V bis 5V des 10-Bit-DA-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0049 V$
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
@@ -271,7 +272,7 @@
 %
 % CHAPTER Versuch 3
 %
-\chapter{Versuch 3}
+\chapter{Versuch 3 - Zeitverhalten der DA-Wandlung}
 \label{chap:VERSUCH_3}
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
@@ -289,7 +290,7 @@
 %
 % CHAPTER Versuch 4
 %
-\chapter{Versuch 4}
+\chapter{Versuch 4 - Abtasttheorem}
 \label{chap:VERSUCH_4}
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
@@ -316,24 +317,30 @@
 \addtocounter{chapter}{1}
 \setcounter{section}{0}
 
-\section{Quellcode}
+\section{Quellcode für Versuche 1 - 4}
 \label{chap:APPENDIX_SOURCECODE}
+\begin{lstlisting}[style=PYTHON, frame=single, caption=QuellCodeV1 bis V4, captionpos=b, label=lst:Code]
 
-\subsection{Quellcode Versuch 1}
-\label{chap:APPENDIX_SOURCECODE_V1}
-
-\subsection{Quellcode Versuch 2}
-\label{chap:APPENDIX_SOURCECODE_V2}
-
-\subsection{Quellcode Versuch 3}
-\label{chap:APPENDIX_SOURCECODE_V3}
-
-\subsection{Quellcode Versuch 4}
-\label{chap:APPENDIX_SOURCECODE_V4}
-
+#-*-coding:utf-8-*-
+"""
+\end{lstlisting}
 
 \section{Messergebnisse}
 \label{chap:APPENDIX_MEASUREMENT_SOURCE}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[width=\textwidth]{src/2GenauigkeitsWerteAD.jpg}
+\caption{Genauigkeitswerte der AD Wandlung}
+\label{fig:AD_WERTE}
+\end{figure}
+
+\begin{figure}[H]
+\centering\small
+\includegraphics[width=\textwidth]{src/3GenauigkeitsWerteDA.jpg}
+\caption{Genauigkeitswerte der DA Wandlung}
+\label{fig:DA_WERTE}
+\end{figure}
 
 %
 % Literaturverzeichnis
