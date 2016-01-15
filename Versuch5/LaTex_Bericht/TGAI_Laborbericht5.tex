@@ -156,7 +156,7 @@
 \newcommand{\strAuthorAEmail}{jualtmey@htwg-konstanz.de}
 \newcommand{\strAuthorBEmail}{makieser@htwg-konstanz.de}
 % Versuchsbeschreibung 
-\newcommand{\strTopic}{VERSUCH NAME}
+\newcommand{\strTopic}{Digitalisierung}
 \newcommand{\strAbstract}{Zusammenfassung etwa 100 Worte.}
 % hyperref customization
 \hypersetup{
@@ -300,35 +300,48 @@ DA Wandler ist schuld!!!!!!!!!!!!!!!!!
 \chapter{Versuch 3 - Zeitverhalten der DA-Wandlung}
 \label{chap:VERSUCH_3}
 
+In diesen Versuch soll das Zeitverhalten des DA-Wandlers genauer untersucht werden.
+Hierfür wird mit einem Programm eine Sinusspannung ausgegeben und analysiert.
+
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_3_FRAGESTELLUNG}
 
+Welche Genauigkeit hat die DA-Wandlung in Bezug auf die Sample Rate?
+Um dies zu überprüfen, wird ein einfacher Sinus generiert, siehe dazu Listing \ref{lst:Code} die Methode \textit{get\_sin()}. Dieser besteht aus 100 Werten und ist um 1 auf der Y-Achse nach oben verschoben, da der DA-Wandler nur positive Spannungen im Bereich von 0 bis 5 Volt ausgeben kann. Die einzelnen Werte des Sinus werden nun hintereinander mit einer Pause von 10 ms auf die Karte des DA-Wandlers geschrieben (Listing \ref{lst:Code},  Methode \textit{versuch4()}). Mit dem Oszilloskop wird dieses Signal aufgezeichnet.
 
 \section{Messwerte}
 \label{chap:VERSUCH_3_MESSWERTE}
 
+Das erzeugte Sinus Signal des DA-Wandlers wurde mit dem Oszilloskop aufgenommen und abgespeichert. Dieser Sinus wird in Abbildung \ref{fig:SINUS} dargestellt.
+In Abbildung \ref{fig:SINUS_A} ist ein Teilausschnitt des Signals zu sehen.
+
 \begin{figure}[H]
 \centering\small
-\includegraphics[width=\textwidth]{src/Sinus.png}
-\caption{generierter Sinus}
+\includegraphics[scale=0.5]{src/Sinus.png}
+\caption{Generierter Sinus}
 \label{fig:SINUS}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
-\includegraphics[width=\textwidth]{src/Sinus_Ausschnitt.png}
+\includegraphics[scale=0.5]{src/Sinus_Ausschnitt.png}
 \caption{Sinus Ausschnitt}
 \label{fig:SINUS_A}
 \end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_3_AUSWERTUNG}
-Durch ablesen aus der Abbildung \ref{fig:SINUS_A} ergibt sich ein $\Delta t = 10ms$ 
+In dem Ausschnitt des Sinus (Abbildung \ref{fig:SINUS_A}) sind nun die einzelnen Stufen zu erkennen. Da das Signal Spannungsschwankungen aufweißt, ist es schwer, einen Stufenübergang eindeutig zu bestimmen. Durch ablesen bzw. Vermessen der Dauer der Stufen ergibt sich somit ein mittleres $\Delta t$ von ungefähr $10ms$ und damit eine Frequenz von ca. 100 Hz.
+Die Zeit $\Delta t$ variiert ein wenig von Stufe zu Stufe.
 
 \section{Interpretation}
 \label{chap:VERSUCH_3_INTERPRETATION}
-Somit ergibt sich ca. eine maximale Ausgabefrequenz von 100Hz
+Da ein Sinus Signal mit einer Sample Rate von 100 Hz auf die Karte des DA-Wandlers geschrieben wurde, war zu erwarten, dass die einzelnen Stufen bzw. Samples auch in diesem Zeit-Bereich liegen.
+Es wurden aber auch leichte Abweichungen (Jitter) festgestellt, was zeigt, dass die DA-Wandlung nicht optimal ist.
 
+Auffallend ist auch, dass das komplette Sinus Signal eine Dauer von 1.6 Sekunden aufweist.
+Eigentlich müsste das Signal genau eine Sekunde lang sein (Sinus mit 1 Hz), weil wir 100 Sinus-Werte mit einer Sample Rate von 100 Hz auf die Karte schreiben.
+Das könnte daran liegen, dass der DA-Wandler maximal 100 Samples pro Sekunde ausgeben kann und wir somit genau an der Grenzfrequenz liegen. Dadurch kommt der DA-Wandler eventuell nicht ''hinterher'' und ist ab und zu langsamer.
 
 %
 % CHAPTER Versuch 4
@@ -336,76 +349,103 @@ Somit ergibt sich ca. eine maximale Ausgabefrequenz von 100Hz
 \chapter{Versuch 4 - Abtasttheorem}
 \label{chap:VERSUCH_4}
 
+Dieser Versuch zeigt, was passiert, wenn man das Abtasttheorem nicht einhält und ignoriert.
+Anhand von diversen Sinus Signalen wird dies untersucht.
+
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_4_FRAGESTELLUNG}
 
+Es soll geklärt werden, welche Auswirkungen und welche Bedeutung das Abtasttheorem für die AD-Wandlung hat.
+Dafür werden mit einem externen Sinusgenerator 8 Signale erzeugt.
+Diese Unterscheiden sich in ihrer Frequenz. Beginnend mit 1000 Hz wird die Frequenz in 1000 Hz Schritten erhöht, bis eine Frequenz von 8000 Hz erreicht ist.
+Der AD-Wandler nimmt diese Signale auf und mit dem Programm (Listing \ref{lst:Code}) werden sie abgespeichert und verarbeitet.
+
 \section{Messwerte}
 \label{chap:VERSUCH_4_MESSWERTE}
-Abtastfrequenz= 8000Hz
+
+Folgend sind die Spektren aller erzeugten Signale abgebildet.
+Abbildung \ref{fig:8000_TIME} zeigt zusätzlich den zeitlichen Verlauf des erzeugten Signals mit 8000 Hz.
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/1000fft.png}
-\caption{1000Hz FFT}
+\caption{Spektrum Sinus mit 1000 Hz}
 \label{fig:1000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/2000fft.png}
-\caption{2000Hz FFT}
+\caption{Spektrum Sinus mit 2000 Hz}
 \label{fig:2000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/3000fft.png}
-\caption{3000Hz FFT}
+\caption{Spektrum Sinus mit 3000 Hz}
 \label{fig:3000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/4000fft.png}
-\caption{4000Hz FFT}
+\caption{Spektrum Sinus mit 4000 Hz}
 \label{fig:4000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/5000fft.png}
-\caption{5000Hz FFT}
+\caption{Spektrum Sinus mit 5000 Hz}
 \label{fig:5000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/6000fft.png}
-\caption{6000Hz FFT}
+\caption{Spektrum Sinus mit 6000 Hz}
 \label{fig:6000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/7000fft.png}
-\caption{7000Hz FFT}
+\caption{Spektrum Sinus mit 7000 Hz}
 \label{fig:7000_FFT}
 \end{figure}
 
 \begin{figure}[H]
 \centering\small
 \includegraphics[scale=0.4]{src/8000fft.png}
-\caption{8000Hz FFT}
+\caption{Spektrum Sinus mit 8000 Hz}
 \label{fig:8000_FFT}
 \end{figure}
 
+\begin{figure}[H]
+\centering\small
+\includegraphics[scale=0.4]{src/Sinus8000Hz.png}
+\caption{Zeitverlauf Sinus 8000 Hz}
+\label{fig:8000_TIME}
+\end{figure}
 
 \section{Auswertung}
 \label{chap:VERSUCH_4_AUSWERTUNG}
-Bei obiger Abtastfrequenz ergibt sich eine Nyquist-Frequenz = 4000Hz.
+
+Da der AD-Wandler eine Abtastfrequenz von 8000 Hz besitzt, liegt die Nyquist-Frequenz bei der Hälfte, also 4000 Hz.
+Das Abtasttheorem besagt nun, das die maximal vorkommende Frequenz im abgetasteten Signal nicht größer als die Nyquist-Frequenz sein darf, um das Signal verlustfrei rekonstruieren zu können. D.h. es sollten in diesem Fall nur Frequenzen mit höchstens 4000 Hz aufgenommen werden.
 
 \section{Interpretation}
 \label{chap:VERSUCH_4_INTERPRETATION}
+
+Die aufgenommenen Spektren zeigen nun sehr schön, dass sich ab der Nyquist-Frequenz die beiden Peeks ''überholen''.
+Man würde dadurch beispielsweise denken, dass die Frequenz des Signals mit 6000 Hz (Abbildung \ref{fig:6000_FFT}) 5000 Hz beträgt, in Wahrheit liegt sie jedoch bei 6000 Hz.
+Dieser Fehler gilt für alle Frequenzen über der Nyquist-Frequenz.
+Im zeitlichen Verlauf in Abbildung \ref{fig:8000_TIME} kann man erkennen, dass das aufgenommene Signal keineswegs 8000 Hz beträgt, wie es eigentlich sein sollte. Stattdessen liegt die Frequenz des Sinus bei ca. 10 Hz.
+Anmerkung: Eigentlich müssten es 0 Hz sein, aber aufgrund von Ungenauigkeiten entsteht dieser Wert.
+
+Offensichtlich führt das Überschreiten der Nyquist-Frequenz zu einer Fehlinterpretation des Signals (Spektrums). Dadurch werden Frequenzen ermittelt bzw. hinzugefügt, welche in dem originalen Signal gar nicht vorgekommen sind.
+
 %
 % CHAPTER Anhang
 %
@@ -434,9 +474,9 @@ Created on Mon Jan 11 14:15:07 2016
 import numpy as np
 import matplotlib.pyplot as plt
 
-#import redlab as rl
-#import time
-#from TekTDS2000 import *
+import redlab as rl
+import time
+from TekTDS2000 import *
 
 
 def versuch1():
