@@ -228,28 +228,34 @@
 %
 \chapter{Einleitung}
 \label{chap:EINL}
-
+In dieser Versuchsreihe, werden Analog-Digital bzw. Digital-Analog Umwandlungen betrachtet. 
+Zunächst wird die Genauigkeit eines AD bzw. DA Wandlers betrachtet. Daraufhin wird das Zeitverhalten der DA Wandlung anhand eines Sinus Signals betrachtet. Abschließend wird unter Beachtung/ nicht Beachtung des Abtasttheorems das Verhalten der DA-Wandlung im Grenzbereich analysiert.
 
 %
 % CHAPTER Versuch 1
 %
 \chapter{Versuch 1 - Genauigkeit der AD-Wandlung}
 \label{chap:VERSUCH_1}
+Nachfolgend wird eine Messung der Genauigkeit einer Analog-Digital Wandlung durchgeführt.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_1_FRAGESTELLUNG}
+Wie genau ist, der AD-Wandler des ME-RedLab USB-1208LS?
+Um dies heraus zu finden, wird zum einen der theoretische Quantisierungsfehler betrachtet, welcher die Genauigkeit in Volt angibt, zum anderen wird der Messfehler im Vergleich zu einem Feinmessgerät(Keithley TRMS 179)ermittelt.
+Um Vergleichswerte zu haben, wird der Messfehler des Multimeter Philips PM 2503 ebenfalls im Vergleich zu einem Feinmessgerät ermittelt.
 
 \section{Messwerte}
 \label{chap:VERSUCH_1_MESSWERTE}
-
+Siehe Abbildung \ref{fig:AD_WERTE} im Anhang \ref{chap:APPENDIX_MEASUREMENT_SOURCE}.
 
 
 \section{Auswertung}
 \label{chap:VERSUCH_1_AUSWERTUNG}
+\textbf{theoretischer Quantisierungsfehler:}
 Bei einem Eingangsspannungsbereichs von -10 V bis 10V des 11-Bit-AD-Wandlers ergibt sich ein theoretischer Quantisierungsfehler von $\Delta U = 0,0098 V$
 
-Standardabweichung:
-Multimeter Philips Std s=0.02862533842594704
+\textbf{Standardabweichung:}\\
+Multimeter Philips Std s=0.02862533842594704\\
 AD Wandler Std s=0.0029325756597230355
 
 \section{Interpretation}
@@ -264,21 +270,23 @@ Dies bedeutet, dass eine analoge Eingangsspannung in eine um $\pm3mV$ abweichend
 
 Der theoretischer Quantisierungsfehler = 10mV beschreibt die Genauigkeit des AD-Wandlers. So kann der AD Wandler beispielsweise eine Eingangsspannung von 1mV nicht von 9mV unterscheiden.
 
-Quantisierungsfehler ist schuld!!!!!!
+Zusammenfassend kann man sagen, dass im wesentlichen der Quantisierungsfehler an der Ungenauigkeit des  AD-Wandlers schuld ist. Eine Erhöhung der Bit Zahl würde hier also auch zu einer Erhöhung der Genauigkeit der AD-Wandlung führen.
 
 %
 % CHAPTER Versuch 2
 %
 \chapter{Versuch 2 - Genauigkeit der DA-Wandlung}
 \label{chap:VERSUCH_2}
-
+Nachfolgend wird eine Messung der Genauigkeit einer Digital-Analog Wandlung durchgeführt.
 
 \section{Fragestellung, Messprinzip, Aufbau, Messmittel}
 \label{chap:VERSUCH_2_FRAGESTELLUNG}
+Wie genau ist, der DA-Wandler des ME-RedLab USB-1208LS?
+Um dies heraus zu finden, wird zum einen der theoretische Quantisierungsfehler betrachtet, welcher die Genauigkeit in Volt angibt, zum anderen wird der Messfehler im Vergleich zu einem Feinmessgerät(Keithley TRMS 179)ermittelt.
 
 \section{Messwerte}
 \label{chap:VERSUCH_2_MESSWERTE}
-
+Siehe Abbildung \ref{fig:DA_WERTE} im Anhang \ref{chap:APPENDIX_MEASUREMENT_SOURCE}.
 
 \section{Auswertung}
 \label{chap:VERSUCH_2_AUSWERTUNG}
@@ -292,7 +300,7 @@ DA Wandler:
 Standardabweichung s=28mV
 Dies bedeutet, dass eine digitale Eingabewert in eine um $\pm28mV$ abweichende Ausgangsspannung gewandelt wird.
 
-DA Wandler ist schuld!!!!!!!!!!!!!!!!!
+Zusammenfassend ist zu sagen, dass die Ungenauigkeit des DA Wandlers überwiegend von der großen Standardabweichung abhängt. Der Fehler der durch Quantisierung entsteht ist vergleichsweise gering. Eine Erhöhung der Bit zahl würde demnach keine signifikante Auswirkung auf die Genauigkeit haben.
 
 %
 % CHAPTER Versuch 3
