@@ -1,7 +1,6 @@
 \select@language {ngerman}
 \contentsline {chapter}{Abbildungsverzeichnis}{IV}{section*.2}
-\contentsline {chapter}{Tabellenverzeichnis}{V}{section*.4}
-\contentsline {chapter}{Listingverzeichnis}{VI}{chapter*.7}
+\contentsline {chapter}{Listingverzeichnis}{V}{chapter*.5}
 \contentsline {chapter}{\numberline {1}Einleitung}{1}{chapter.1}
 \contentsline {chapter}{\numberline {2}Versuch 1 - Genauigkeit der AD-Wandlung}{2}{chapter.2}
 \contentsline {section}{\numberline {2.1}Fragestellung, Messprinzip, Aufbau, Messmittel}{2}{section.2.1}
@@ -23,6 +22,6 @@
 \contentsline {section}{\numberline {5.2}Messwerte}{9}{section.5.2}
 \contentsline {section}{\numberline {5.3}Auswertung}{14}{section.5.3}
 \contentsline {section}{\numberline {5.4}Interpretation}{14}{section.5.4}
-\contentsline {chapter}{Anhang}{15}{chapter*.19}
+\contentsline {chapter}{Anhang}{15}{chapter*.17}
 \contentsline {section}{\numberline {A.1}Quellcode f\IeC {\"u}r Versuche 1 - 4}{15}{section.6.1}
 \contentsline {section}{\numberline {A.2}Messergebnisse}{20}{section.6.2}

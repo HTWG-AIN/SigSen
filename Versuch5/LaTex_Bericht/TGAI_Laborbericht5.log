@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  18 JAN 2016 13:36
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9 64-bit) (preloaded format=pdflatex 2015.10.27)  18 JAN 2016 15:43
 entering extended mode
 **TGAI_Laborbericht5.tex
 (TGAI_Laborbericht5.tex
@@ -2037,15 +2037,10 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 
 
-]) (preface/listoftables.tex (TGAI_Laborbericht5.lot)
-\tf@lot=\write8
+]) (preface/lstlistoflistings.tex
+(TGAI_Laborbericht5.lol)
+\tf@lol=\write8
  [5
-
-
-
-]) (preface/lstlistoflistings.tex (TGAI_Laborbericht5.lol)
-\tf@lol=\write9
- [6
 
 
 
@@ -2064,7 +2059,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
 
 ] [5]
  4.
-<src/Sinus.png, id=253, 649.42625pt x 494.84875pt>
+<src/Sinus.png, id=248, 649.42625pt x 494.84875pt>
 File: src/Sinus.png Graphic file (type png)
  <use src/Sinus.png>
 Package pdftex.def Info: src/Sinus.png used on input line 328.
@@ -2072,7 +2067,7 @@ Package pdftex.def Info: src/Sinus.png used on input line 328.
  [6
 
 ]
-<src/Sinus_Ausschnitt.png, id=260, 665.48625pt x 494.84875pt>
+<src/Sinus_Ausschnitt.png, id=254, 665.48625pt x 494.84875pt>
 File: src/Sinus_Ausschnitt.png Graphic file (type png)
 
 <use src/Sinus_Ausschnitt.png>
@@ -2080,7 +2075,7 @@ Package pdftex.def Info: src/Sinus_Ausschnitt.png used on input line 335.
 (pdftex.def)             Requested size: 332.74231pt x 247.42377pt.
  [7 <./src/Sinus.png> <./src/Sinus_Ausschnitt.png>] [8]
  5.
-<src/1000fft.png, id=274, 770.88pt x 578.16pt>
+<src/1000fft.png, id=271, 770.88pt x 578.16pt>
 File: src/1000fft.png Graphic file (type png)
  <use src/1000fft.png>
 Package pdftex.def Info: src/1000fft.png used on input line 379.
@@ -2088,49 +2083,49 @@ Package pdftex.def Info: src/1000fft.png used on input line 379.
  [9
 
 ]
-<src/2000fft.png, id=279, 770.88pt x 578.16pt>
+<src/2000fft.png, id=276, 770.88pt x 578.16pt>
 File: src/2000fft.png Graphic file (type png)
  <use src/2000fft.png>
 Package pdftex.def Info: src/2000fft.png used on input line 386.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
 
-<src/3000fft.png, id=280, 770.88pt x 578.16pt>
+<src/3000fft.png, id=277, 770.88pt x 578.16pt>
 File: src/3000fft.png Graphic file (type png)
  <use src/3000fft.png>
 Package pdftex.def Info: src/3000fft.png used on input line 393.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
  [10 <./src/1000fft.png> <./src/2000fft.png>]
-<src/4000fft.png, id=287, 770.88pt x 578.16pt>
+<src/4000fft.png, id=284, 770.88pt x 578.16pt>
 File: src/4000fft.png Graphic file (type png)
  <use src/4000fft.png>
 Package pdftex.def Info: src/4000fft.png used on input line 400.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
 
-<src/5000fft.png, id=288, 770.88pt x 578.16pt>
+<src/5000fft.png, id=285, 770.88pt x 578.16pt>
 File: src/5000fft.png Graphic file (type png)
  <use src/5000fft.png>
 Package pdftex.def Info: src/5000fft.png used on input line 407.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
  [11 <./src/3000fft.png> <./src/4000fft.png>]
-<src/6000fft.png, id=295, 770.88pt x 578.16pt>
+<src/6000fft.png, id=292, 770.88pt x 578.16pt>
 File: src/6000fft.png Graphic file (type png)
  <use src/6000fft.png>
 Package pdftex.def Info: src/6000fft.png used on input line 414.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
 
-<src/7000fft.png, id=296, 770.88pt x 578.16pt>
+<src/7000fft.png, id=293, 770.88pt x 578.16pt>
 File: src/7000fft.png Graphic file (type png)
  <use src/7000fft.png>
 Package pdftex.def Info: src/7000fft.png used on input line 421.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
  [12 <./src/5000fft.png> <./src/6000fft.png>]
-<src/8000fft.png, id=304, 770.88pt x 578.16pt>
+<src/8000fft.png, id=300, 770.88pt x 578.16pt>
 File: src/8000fft.png Graphic file (type png)
  <use src/8000fft.png>
 Package pdftex.def Info: src/8000fft.png used on input line 428.
 (pdftex.def)             Requested size: 308.34654pt x 231.2599pt.
 
-<src/Sinus8000Hz.png, id=305, 659.46375pt x 496.85625pt>
+<src/Sinus8000Hz.png, id=301, 659.46375pt x 496.85625pt>
 File: src/Sinus8000Hz.png Graphic file (type png)
 
 <use src/Sinus8000Hz.png>
@@ -2159,7 +2154,7 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <10> not available
  [15
 
 ] [16] [17]
-<src/2GenauigkeitsWerteAD.jpg, id=446, 3119.655pt x 4059.165pt>
+<src/2GenauigkeitsWerteAD.jpg, id=444, 3119.655pt x 4059.165pt>
 File: src/2GenauigkeitsWerteAD.jpg Graphic file (type jpg)
 
 <use src/2GenauigkeitsWerteAD.jpg>
@@ -2170,7 +2165,7 @@ Overfull \vbox (1.43639pt too high) has occurred while \output is active []
 
 
 [20 <./src/2GenauigkeitsWerteAD.jpg>]
-<src/3GenauigkeitsWerteDA.jpg, id=476, 3244.12pt x 4255.9pt>
+<src/3GenauigkeitsWerteDA.jpg, id=474, 3244.12pt x 4255.9pt>
 File: src/3GenauigkeitsWerteDA.jpg Graphic file (type jpg)
 
 <use src/3GenauigkeitsWerteDA.jpg>
@@ -2185,34 +2180,58 @@ Package atveryend Info: Empty hook `BeforeClearDocument' on input line 627.
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 627.
 (TGAI_Laborbericht5.aux (preface/cover.aux) (preface/abstract.aux)
 (preface/tableofcontents.aux) (preface/listoffigures.aux)
-(preface/listoftables.aux) (preface/lstlistoflistings.aux)
-(appendix/bibliography.aux))
+(preface/lstlistoflistings.aux) (appendix/bibliography.aux))
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 627.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 627.
-Package rerunfilecheck Info: File `TGAI_Laborbericht5.out' has not changed.
-(rerunfilecheck)             Checksum: 8D9160E6885FFE4189A782E53A60C3EE;4401.
+
+
+Package rerunfilecheck Warning: File `TGAI_Laborbericht5.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `TGAI_Laborbericht5.out':
+(rerunfilecheck)             Before: 8D9160E6885FFE4189A782E53A60C3EE;4401
+(rerunfilecheck)             After:  BF1260A78D1D4D729D205A1C968C7CFC;4260.
+
+LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 627.
  ) 
 Here is how much of TeX's memory you used:
- 38507 strings out of 493673
- 788237 string characters out of 3143956
+ 38502 strings out of 493673
+ 788136 string characters out of 3143956
  963567 words of memory out of 3000000
  40863 multiletter control sequences out of 15000+200000
  69909 words of font info for 125 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  56i,12n,97p,715b,2200s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Progr
-am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/typ
-e1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
-ic/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsf
-onts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb
-><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program File
-s/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/font
-s/type1/urw/times/utmri8a.pfb>
-Output written on TGAI_Laborbericht5.pdf (28 pages, 2186371 bytes).
+pdfTeX warning (dest): name{figure.caption.21} has been referenced but does n
+ot exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.20} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{figure.caption.17} has been referenced but does not
+ exist, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.19} has been referenced but does not exist
+, replaced by a fixed one
+
+pdfTeX warning (dest): name{chapter*.7} has been referenced but does not exist,
+ replaced by a fixed one
+
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Program
+ Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/MiKT
+eX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1
+/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public
+/mnsymbol/MnSymbol12.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfon
+ts/cm/cmmi10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/urw/symbol/usyr.pfb><
+C:/Program Files/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files/
+MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files/MiKTeX 2.9/fonts/
+type1/urw/times/utmri8a.pfb>
+Output written on TGAI_Laborbericht5.pdf (27 pages, 2196260 bytes).
 PDF statistics:
  551 PDF objects out of 1000 (max. 8388607)
- 203 named destinations out of 1000 (max. 500000)
+ 205 named destinations out of 1000 (max. 500000)
  299 words of extra memory for PDF output out of 10000 (max. 10000000)
 
